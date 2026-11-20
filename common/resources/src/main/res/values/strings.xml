@@ -31,7 +31,7 @@
     <string name="app_name">Vortex</string>
     <string name="qs_tile_label" translatable="false">Vortex Quickie</string>
 
-    <!-- Activities -->
+
     <string name="activity_name">Activity Name</string>
     <string name="activity_details">Activity Details</string>
     <string name="activity_state">Activity State</string>

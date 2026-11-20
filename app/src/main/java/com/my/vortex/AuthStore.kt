@@ -14,7 +14,6 @@ import kotlinx.coroutines.flow.map
 
 private val Context.authDataStore by preferencesDataStore(name = "vortex_auth")
 
-/** OAuth credentials are deliberately separate from the existing RPC credentials. */
 internal class AuthStore(context: Context) {
     private val store = context.applicationContext.authDataStore
 
@@ -59,7 +58,6 @@ internal sealed interface AuthState {
     data class SignedIn(val user: User) : AuthState
 }
 
-/** Do not log or persist the callback URI: it contains a bearer credential. */
 internal class OAuthCallback(val token: String, val id: String, val username: String, val avatar: String?) {
     companion object {
         fun fromIntent(intent: Intent?): OAuthCallback? {

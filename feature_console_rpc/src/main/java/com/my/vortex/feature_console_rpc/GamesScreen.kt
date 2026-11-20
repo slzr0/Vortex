@@ -325,7 +325,6 @@ fun SingleChoiceGameItem(
     }
 }
 
-// <-------------- Previews --------------->
 private val fakeGames = buildList {
     repeat(10) {
         this.add(

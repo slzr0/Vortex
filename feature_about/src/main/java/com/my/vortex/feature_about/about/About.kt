@@ -42,7 +42,6 @@ import com.my.vortex.resources.R
 import com.my.vortex.ui.components.BackButton
 import com.my.vortex.ui.components.SettingItem
 
-// These are upstream resources, not a Vortex release service.
 const val github_Repository = "https://github.com/dead8309/Kizzy"
 const val github_Release = "$github_Repository/releases"
 const val github_Issues = "$github_Repository/issues/new"

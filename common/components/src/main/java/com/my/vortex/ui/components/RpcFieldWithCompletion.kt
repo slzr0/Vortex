@@ -103,7 +103,6 @@ fun RpcFieldWithCompletions(
         }
     }
 
-    // check for template state on recomposition
     val checkTemplateState = {
         val cursor = textFieldValue.selection.start
         val text = textFieldValue.text
@@ -115,7 +114,6 @@ fun RpcFieldWithCompletions(
             if (templateStartIndex != -1 && !textBefore.substring(templateStartIndex)
                     .contains("}}")
             ) {
-                // in a template
                 lastTemplateCursorPosition = cursor
                 lastTemplateText = text
 
@@ -136,11 +134,8 @@ fun RpcFieldWithCompletions(
 
                 showSuggestions = true
             } else if (lastTemplateCursorPosition != -1 && text == lastTemplateText) {
-                // text hasn't changed but cursor might have moved due to keyboard change
-                // keep suggestions visible
                 showSuggestions = showSuggestions && filteredPlaceholders.isNotEmpty()
             } else {
-                // check for regular word
                 val currentWord = getCurrentWord(textBefore)
                 if (currentWord.length >= MIN_CHARS_TO_TRIGGER) {
                     filteredPlaceholders = completionList.filter { (key, _) ->

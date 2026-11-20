@@ -1,11 +1,9 @@
 [versions]
-# project level
 gradle = "8.13.2"
 kotlin = "1.9.23"
 version-name = "6.2"
 version-code ="14"
 
-# app level
 accompanist = "0.31.0-alpha"
 activity-compose = "1.9.3"
 android-svg = "1.4"
@@ -34,10 +32,8 @@ kotlinx-serialization-json = "1.6.3"
 
 [libraries]
 
-# Javax
 javax = { module = "javax.inject:javax.inject", version.ref = "javax" }
 
-# Androidx
 core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
 datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
 lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle-ktx" }
@@ -47,18 +43,15 @@ kotlinx-coroutine = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
 compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "compose-navigation" }
 
-# Material3
 material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
 material3-windows-size = { module = "androidx.compose.material3:material3-window-size-class", version.ref = "material3" }
 
-# Compose
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose" }
 compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
 
-# Accompanist
 accompanist-navigation-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
 accompanist-systemUiController = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
 accompanist-permission = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist" }
@@ -66,15 +59,12 @@ accompanist-flowLayout = { module = "com.google.accompanist:accompanist-flowlayo
 accompanist-pager-layouts = { group = "com.google.accompanist", name = "accompanist-pager", version.ref = "accompanist" }
 accompanist-pager-indicators = { group = "com.google.accompanist", name = "accompanist-pager-indicators", version.ref = "accompanist" }
 
-# Hilt
 hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 
-# gradle plugins
 android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
-# Ktor
 ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
 ktor-websockets = { module = "io.ktor:ktor-client-websockets", version.ref = "ktor" }
@@ -82,7 +72,6 @@ ktor-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation",
 ktor-kotlinx-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
 
-# Third-party libraries
 blankj-utilcodex = { module = "com.blankj:utilcodex", version.ref = "blankj-utilcodex" }
 crashx = { module = "com.github.TutorialsAndroid:crashx", version.ref = "crashx" }
 mmkv = { module = "com.tencent:mmkv", version.ref = "mmkv" }
@@ -93,7 +82,6 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
 
-# KotlinX
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
 
 [plugins]

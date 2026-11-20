@@ -1,6 +1,3 @@
-/**
- * ReadYou: https://github.com/Ashinch/ReadYou
- */
 
 package com.my.vortex.feature_settings.style.svg
 

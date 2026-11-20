@@ -2,9 +2,6 @@
 
 package com.my.vortex.feature_settings.style
 
-/**
- * source: https://github.com/JunkFood02/Seal
- */
 
 import android.graphics.Color.parseColor
 import androidx.compose.animation.*

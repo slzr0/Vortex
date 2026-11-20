@@ -93,8 +93,6 @@ class AppDetectionService : Service() {
             this,
             0, restartIntent, PendingIntent.FLAG_IMMUTABLE
         )
-        // Adding action to notification builder here to avoid having multiple Exit buttons
-        // https://github.com/dead8309/Kizzy/issues/197
         notificationBuilder
             .setSmallIcon(R.drawable.ic_apps)
             .addAction(R.drawable.ic_apps, getString(R.string.restart), restartPendingIntent)

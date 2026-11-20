@@ -23,7 +23,6 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import com.my.vortex.resources.R
 
-// TODO get seed color from colorscheme.kt
 const val DEFAULT_SEED_COLOR =  0xFFAF92F1.toInt()
 data class AppSettings(
     val darkTheme: DarkThemePreference = DarkThemePreference(),

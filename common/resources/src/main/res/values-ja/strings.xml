@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Vortex</string>
 
-    <!-- Activities -->
+
     <string name="activity_name">アクティビティ名</string>
     <string name="activity_details">アクティビティの詳細</string>
     <string name="activity_state">アクティビティの場所</string>

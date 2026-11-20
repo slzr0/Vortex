@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Vortex</string>
 
-    <!-- النشاطات -->
+
     <string name="activity_name">اسم النشاط</string>
     <string name="activity_details">تفاصيل النشاط</string>
     <string name="activity_state">حالة النشاط</string>

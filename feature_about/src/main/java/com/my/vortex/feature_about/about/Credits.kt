@@ -139,9 +139,6 @@ fun Credits(state: CreditScreenState, onBackPressed: () -> Unit) {
                     }
 
                     is CreditScreenState.LoadingCompleted -> {
-                        // dirty way to enable LazyVerticalGird,
-                        // TODO update this part once compose team release out a better
-                        //  implementation of nested scrolling
                         val itemsPerRowAccordingToScreenWidth =
                             floor((LocalConfiguration.current.screenWidthDp.dp / 90).value)
                         val totalHeightForLazyGrid =

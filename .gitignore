@@ -12,7 +12,6 @@ local.properties
 /app/debug/
 /buildSrc/build/
 
-# User-specific configurations
 .idea/caches/
 .idea/libraries/
 .idea/shelf/

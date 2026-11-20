@@ -113,7 +113,6 @@ fun CrashScreen(trace: String?) {
     }
 }
 
-// This error is thrown when notification listener permission is not granted
 @Preview
 @Composable
 fun PreviewCrashScreen() = CrashScreen(trace = """

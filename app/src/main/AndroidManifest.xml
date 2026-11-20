@@ -129,7 +129,7 @@
             android:foregroundServiceType="mediaPlayback"
             android:exported="false"/>
 
-        <!-- Keep the old component so existing quick settings tiles survive upgrades. -->
+
         <service android:name="com.my.kizzy.feature_rpc_base.services.KizzyTileService"
             android:icon="@drawable/ic_tile_play" android:label="@string/qs_tile_label"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:exported="true">

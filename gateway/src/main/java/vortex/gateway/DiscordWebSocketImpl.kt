@@ -53,7 +53,6 @@ open class DiscordWebSocketImpl(
                 val url = resumeGatewayUrl ?: gatewayUrl
                 websocket = client.webSocketSession(url)
 
-                // start receiving messages
                 websocket!!.incoming.receiveAsFlow()
                     .collect {
                         when (it) {
@@ -229,7 +228,6 @@ open class DiscordWebSocketImpl(
     }
 
     override suspend fun sendActivity(presence: Presence) {
-        // TODO : Figure out a better way to wait for socket to be connected to account
         while (!isSocketConnectedToAccount()){
             delay(10.milliseconds)
         }

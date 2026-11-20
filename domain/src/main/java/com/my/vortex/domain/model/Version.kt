@@ -1,15 +1,8 @@
-// https://github.com/Ashinch/ReadYou/blob/main/app/src/main/java/me/ash/reader/data/model/general/Version.kt
 
 package com.my.vortex.domain.model
 
 import com.my.vortex.domain.model.release.Release
 
-/**
- * A class that represents a version.
- * @param numbers The version numbers.
- * @property major The major version number.
- * @property minor The minor version number.
- */
 class Version(numbers: List<String>) {
 
     private var major: Int = 0
@@ -25,12 +18,6 @@ class Version(numbers: List<String>) {
 
     override fun toString() = "$major.$minor"
 
-    /**
-     * Use [major], [minor] for comparison.
-     *
-     * 1. [major] <=> [other.major]
-     * 2. [minor] <=> [other.minor]
-     */
     operator fun compareTo(other: Version): Int = when {
         major > other.major -> 1
         major < other.major -> -1
@@ -39,9 +26,6 @@ class Version(numbers: List<String>) {
         else -> 0
     }
 
-    /**
-     * Returns whether this version is larger [current] version.
-     */
     fun whetherNeedUpdate(current: Version): Boolean = this > current
 }
 

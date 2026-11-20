@@ -109,7 +109,6 @@ class CustomScreenViewModel @Inject constructor(
                 }
             }
 
-            // Sheet Events
             UiEvent.SheetEvent.TriggerStoragePermissionRequest -> {
                 _uiState.value = _uiState.value.copy(
                     showStoragePermissionRequestDialog = !_uiState.value.showStoragePermissionRequestDialog,

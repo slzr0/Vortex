@@ -27,13 +27,8 @@ android {
 
     packagingOptions.resources.excludes.add("/META-INF/{AL2.0,LGPL2.1}")
 
-    // Disables dependency metadata when building APKs.
     dependenciesInfo {
-        // Disables dependency metadata when building APKs.
-        // This is for the signed .apk that we post to GitHub releases
         includeInApk = false
-        // Disables dependency metadata when building Android App Bundles.
-        // This is for the Google Play Store if we ever decide to publish there
         includeInBundle = true
     }
 }
@@ -58,7 +53,6 @@ dependencies {
     implementation (projects.common.resources)
     implementation (libs.material.icons.extended)
 
-    // Extras
     implementation (libs.app.compat)
     implementation (libs.accompanist.navigation.animation)
     implementation (libs.compose.navigation)
@@ -71,7 +65,6 @@ dependencies {
     implementation (libs.kotlinx.serialization.json)
 
 
-    // Material
     implementation (libs.material3)
     implementation (libs.androidx.material)
     implementation (libs.material3.windows.size)

@@ -53,7 +53,6 @@ class TemplateProcessor(
             result = result.replace(TemplateKeys.APP_NAME, detectedAppInfo.name)
         }
 
-        // NOTE: remove unreplaced placeholders
         result = result.replace(
             Regex("\\{\\{(media|app)_[^}]+\\}\\}"), ""
         )

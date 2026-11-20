@@ -43,7 +43,7 @@ fun KTextField(
     val focusRequester = remember { FocusRequester() }
 
     LaunchedEffect(Unit) {
-        delay(100)  // ???
+        delay(100)
         focusRequester.requestFocus()
     }
 

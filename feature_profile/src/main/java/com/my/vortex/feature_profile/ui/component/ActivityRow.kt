@@ -64,7 +64,6 @@ fun ActivityRow(
         rpcConfig?.type?.toIntOrNull()?.equals(2) == true || rpcConfig?.type?.toIntOrNull()
             ?.equals(3) == true
 
-    // Media
     var elapsedText by remember { mutableStateOf("00:00") }
     var sliderPosition by remember { mutableFloatStateOf(0f) }
     LaunchedEffect(elapsedState) {
@@ -221,7 +220,6 @@ fun ActivityRow(
             }
         }
         if (showTs && isPlayingMedia && rpcConfig?.timestampsStart?.toLongOrNull() != null && rpcConfig?.timestampsStop?.toLongOrNull() != null) {
-            // Seekbar for media
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -246,7 +244,6 @@ fun ActivityRow(
                     .padding(20.dp, 4.dp, 20.dp, 6.dp)
             ) {
                 ProfileText(
-                    // Time elapsed must be less than the total time
                     text = elapsedText,
                     style = MaterialTheme.typography.labelSmall
                         .copy(

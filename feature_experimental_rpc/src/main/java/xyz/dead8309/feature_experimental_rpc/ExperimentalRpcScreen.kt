@@ -213,7 +213,6 @@ fun ExperimentalRpcScreen(
                     )
                 }
 
-                // Media Display Options
                 item {
                     PreferenceSwitch(
                         title = stringResource(R.string.show_cover_art),

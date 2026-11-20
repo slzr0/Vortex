@@ -15,7 +15,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.my.vortex.resources.R
 
-/** Each mode remains independently configurable; service changes are delegated to the provider. */
 @Composable
 fun Features(homeItems: List<HomeFeature> = emptyList(), onValueUpdate: (Int) -> Unit) {
     val uriHandler = LocalUriHandler.current
