@@ -122,7 +122,6 @@ class MainActivity : AppCompatActivity() {
         if (incoming?.action != Intent.ACTION_VIEW || incoming.data == null) return
         val callback = OAuthCallback.fromIntent(incoming)
         if (callback == null) {
-            // Clear sensitive callback data so a rotation does not process it repeatedly.
             setIntent(Intent(incoming).setData(null))
             Toast.makeText(this, R.string.oauth_invalid_callback, Toast.LENGTH_LONG).show()
             return
@@ -131,7 +130,6 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             try {
                 authStore.save(callback)
-                // Recreate the navigation graph at Home even when switching accounts.
                 authGeneration++
                 setIntent(Intent(incoming).setData(null))
             } catch (_: IOException) {

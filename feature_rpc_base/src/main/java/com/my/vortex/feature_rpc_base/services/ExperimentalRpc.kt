@@ -142,7 +142,6 @@ class ExperimentalRpc : Service() {
                 notificationListenerComponent(this)
             )
 
-            // Always reload settings on start
             templateName = Prefs[Prefs.EXPERIMENTAL_RPC_TEMPLATE_NAME, TemplateKeys.APP_NAME]
             templateDetails = Prefs[Prefs.EXPERIMENTAL_RPC_TEMPLATE_DETAILS, TemplateKeys.MEDIA_TITLE]
             templateState = Prefs[Prefs.EXPERIMENTAL_RPC_TEMPLATE_STATE, TemplateKeys.MEDIA_ARTIST]
@@ -224,7 +223,6 @@ class ExperimentalRpc : Service() {
         var finalTimestamps: Timestamps?
         var effectivePackageName: String?
 
-        // Hide media on pause if enabled
         if (richMediaInfo != null &&
             Prefs[Prefs.EXPERIMENTAL_RPC_HIDE_ON_PAUSE, false] &&
             (richMediaInfo.playbackState == PlaybackState.STATE_PAUSED ||

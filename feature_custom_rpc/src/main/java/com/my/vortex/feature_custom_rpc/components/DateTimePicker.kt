@@ -255,7 +255,6 @@ private class TimePickerStateImpl(
         }
 
     companion object {
-        /** The default [Saver] implementation for [TimePickerState]. */
         fun Saver(): Saver<TimePickerStateImpl, *> =
             Saver(
                 save = { listOf(it.hour, it.minute, it.is24hour) },

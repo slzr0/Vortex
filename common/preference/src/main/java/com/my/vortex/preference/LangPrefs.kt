@@ -18,7 +18,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.core.os.LocaleListCompat
 import com.my.vortex.resources.R
 
-// Languages Index number
 const val SYSTEM_DEFAULT = 0
 private const val ENGLISH = 1
 private const val TURKISH = 2

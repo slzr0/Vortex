@@ -103,7 +103,6 @@ class MediaRpcService : Service() {
         mediaSessionManager = getSystemService(MEDIA_SESSION_SERVICE) as MediaSessionManager
         mediaSessionManager.addOnActiveSessionsChangedListener(::activeSessionsListener, notificationListenerComponent(this))
 
-        // Register first media session
         activeSessionsListener(mediaSessionManager.getActiveSessions(notificationListenerComponent(this)), false)
     }
 
@@ -169,7 +168,6 @@ class MediaRpcService : Service() {
     private fun activeSessionsListener(mediaSessions: List<MediaController>?, isEvent: Boolean = true) {
         logger.d("MediaRPC", "Active sessions changed")
 
-        // For some reason, event is occasionally fired before session list is actually updated
         if (isEvent) runBlocking { delay(1500) }
 
         if (mediaSessions?.isNotEmpty() == true) {
@@ -189,7 +187,6 @@ class MediaRpcService : Service() {
         override fun onPlaybackStateChanged(state: PlaybackState?) {
             super.onPlaybackStateChanged(state)
 
-            // Cancel all previous jobs and start new job to prevent conflict/spam
             scope.coroutineContext.cancelChildren()
             scope.launch {
                 delay(1000)

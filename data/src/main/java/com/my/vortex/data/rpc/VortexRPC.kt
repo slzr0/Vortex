@@ -58,61 +58,25 @@ class VortexRPC(
         return discordWebSocket.isWebSocketConnected()
     }
 
-    /**
-     * Use Regex to check if token are valid
-     * @return true if token is valid else false
-     *
-     * source: [#token-structure](https://gist.github.com/aydynx/5d29e903417354fd25641b98efc9d437#token-structure)
-     */
     private fun isUserTokenValid(): Boolean {
-        /*val regex = Regex(
-            "[a-z\\d]{24}\\.[a-z\\d]{6}\\.([\\w-]{107}|[\\w-]{38}|[\\w-]{27})|mfa\\.[\\w-]{84}",
-            RegexOption.IGNORE_CASE
-        )
-        return regex.matches(token)*/
         return token.isNotBlank()
     }
 
-    /**
-     * Activity Name of Rpc
-     *
-     * @param activity_name
-     * @return
-     */
     fun setName(activity_name: String?): VortexRPC {
         this.activityName = activity_name
         return this
     }
 
-    /**
-     * Details of Rpc
-     *
-     * @param details
-     * @return
-     */
     fun setDetails(details: String?): VortexRPC {
         this.details = details
         return this
     }
 
-    /**
-     * Rpc State
-     *
-     * @param state
-     * @return
-     */
     fun setState(state: String?): VortexRPC {
         this.state = state
         return this
     }
 
-    /**
-     * Party of Rpc
-     *
-     * @param current Current party size
-     * @param max Max party size
-     * @return
-     */
     fun setPartySize(current: Int?, max: Int?): VortexRPC {
         if (current != null && max != null) {
             this.party = Party(
@@ -123,65 +87,28 @@ class VortexRPC(
         return this
     }
 
-    /**
-     * Large image on rpc
-     * How to get Image ?
-     * Upload image to any discord chat and copy its media link it should look like "https://media.discordapp.net/attachments/90202992002/xyz.png" now just use the image link from attachments part
-     * so it would look like: .setLargeImage("attachments/90202992002/xyz.png")
-     * @param large_image
-     * @return
-     */
     fun setLargeImage(large_image: RpcImage?, large_text: String? = null): VortexRPC {
         this.largeText = large_text.takeIf { !it.isNullOrEmpty() }
         this.largeImage = large_image
         return this
     }
 
-    /**
-     * Small image on Rpc
-     *
-     * @param small_image
-     * @return
-     */
     fun setSmallImage(small_image: RpcImage?, small_text: String? = null): VortexRPC {
         this.smallText = small_text.takeIf { !it.isNullOrEmpty() }
         this.smallImage = small_image
         return this
     }
 
-    /**
-     * start timestamps
-     *
-     * @param start_timestamps
-     * @return
-     */
     fun setStartTimestamps(start_timestamps: Long?): VortexRPC {
         this.startTimestamps = start_timestamps
         return this
     }
 
-    /**
-     * stop timestamps
-     *
-     * @param stop_timestamps
-     * @return
-     */
     fun setStopTimestamps(stop_timestamps: Long?): VortexRPC {
         this.stopTimestamps = stop_timestamps
         return this
     }
 
-    /**
-     * Activity Types
-     * 0: Playing
-     * 1: Streaming
-     * 2: Listening
-     * 3: Watching
-     * 5: Competing
-     *
-     * @param type
-     * @return
-     */
 
     fun setType(type: Int): VortexRPC {
         if (type in 0..5)
@@ -190,70 +117,35 @@ class VortexRPC(
         return this
     }
 
-    /** Status type for profile online,idle,dnd
-     *
-     * @param status
-     * @return
-     */
     fun setStatus(status: String?): VortexRPC {
         this.status = status
         return this
     }
 
-    /** Platform type for profile xbox,playstation,pc,ios,android etc.
-     *
-     * @param platform
-     * @return
-     */
     fun setPlatform(platform: String?): VortexRPC {
         this.platform = platform
         return this
     }
 
-    /**
-     * Button1 text
-     * @param button1_Text
-     * @return
-     */
     fun setButton1(button1_Text: String?): VortexRPC {
         button1_Text?.let { buttons.add(it) }
         return this
     }
 
-    /**
-     * Button2 text
-     * @param button2_text
-     * @return
-     */
     fun setButton2(button2_text: String?): VortexRPC {
         button2_text?.let { buttons.add(it) }
         return this
     }
 
-    /**
-     * Button1 url
-     * @param url
-     * @return
-     */
     fun setButton1URL(url: String?): VortexRPC {
         url?.let { buttonUrl.add(it) }
         return this
     }
 
-    /**
-     * Button2 url
-     * @param url
-     * @return
-     */
     fun setButton2URL(url: String?): VortexRPC {
         url?.let { buttonUrl.add(it) }
         return this
     }
-    /**
-     * Streaming Url
-     * @param url The streaming type currently only supports Twitch and YouTube.
-     * Only https://twitch.tv/ and https://youtube.com/ urls will work
-     */
     fun setStreamUrl(url: String?): VortexRPC {
         this.url = url
         return this

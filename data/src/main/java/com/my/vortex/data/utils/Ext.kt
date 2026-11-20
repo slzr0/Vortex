@@ -71,11 +71,6 @@ suspend fun HttpResponse.toAttachmentAsset(): String? {
     }
 }
 
-/**
- * Converts Bitmap to file
- * @param context Context
- * @param outputPathFolder Folder name for storing the png file eg (images, media, custom)
- */
 fun Bitmap?.toFile(context: Context, outputPathFolder: String): File {
     val dir = File(context.filesDir.toString() + File.separator + outputPathFolder)
     dir.mkdirs()

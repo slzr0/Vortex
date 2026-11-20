@@ -2,7 +2,7 @@
     <string name="app_name">Vortex</string>
     <string name="qs_tile_label" translatable="false">Vortex Quickie</string>
 
-    <!-- Activities -->
+
     <string name="activity_name">نام فعالیت</string>
     <string name="activity_details">جزئیات فعالیت</string>
     <string name="activity_state">وضعیت فعالیت</string>

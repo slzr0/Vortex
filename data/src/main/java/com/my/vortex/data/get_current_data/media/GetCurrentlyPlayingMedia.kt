@@ -56,7 +56,6 @@ class GetCurrentPlayingMedia @Inject constructor(
             context.getSystemService(Service.MEDIA_SESSION_SERVICE) as MediaSessionManager
         val sessions = mediaSessionManager.getActiveSessions(componentName)
         for (mediaController in sessions) {
-            // If the app is not enabled for media rpc, skip it
             if (!Prefs.isMediaAppEnabled(mediaController.packageName)) {
                 continue
             }
@@ -102,7 +101,6 @@ class GetCurrentPlayingMedia @Inject constructor(
                         context = context,
                         bitmap = bitmap,
                         packageName = mediaController.packageName,
-                        // <Main artist>|<Album>|<Title>
                         title = "${metadata.let { metadataResolver.getAlbumArtists(it) }}|${metadata.let { metadataResolver.getAlbum(it) }?: "unknown"}|${title}"
                     )
                 }

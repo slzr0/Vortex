@@ -61,7 +61,6 @@ import com.my.vortex.resources.R
 import com.my.vortex.ui.components.Subtitle
 import com.my.vortex.ui.components.chips
 
-/** Settings destinations are shared by the full-screen hub and the compact home drawer. */
 @Composable
 fun SettingsDrawer(
     user: User?,

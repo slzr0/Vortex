@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Vortex</string>
 
-    <!-- Activities -->
+
     <string name="activity_name">Etkinlik Adı</string>
     <string name="activity_details">Etkinlik Detayı</string>
     <string name="activity_state">Etkinlik Durumu</string>

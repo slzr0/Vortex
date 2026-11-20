@@ -10,9 +10,6 @@
  *
  */
 
-/**
- * source: https://github.com/JunkFood02/Seal
- */
 package com.my.vortex.ui.theme
 
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass

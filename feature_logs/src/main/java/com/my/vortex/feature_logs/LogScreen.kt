@@ -122,7 +122,7 @@ fun LogScreen(viewModel: LogsViewModel, onBackPressed: () -> Unit = {}) {
                         ),
                         modifier = Modifier
                             .combinedClickable(
-                                onClick = { // Increase maxLines on click
+                                onClick = {
                                     isExpanded.value = !isExpanded.value
                                 },
                                 onLongClick = {
@@ -241,9 +241,6 @@ fun ToolBar(viewModel: LogsViewModel, onBackPressed: () -> Unit) {
         })
 }
 
-/**
- * source https://github.com/wingio/Logra
- */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun LogsCard(logEvent: LogEvent) {
@@ -293,7 +290,7 @@ fun LogsCard(logEvent: LogEvent) {
                         overflow = TextOverflow.Ellipsis,
                         maxLines = if (isExpanded.value) Int.MAX_VALUE else 10,
                         modifier = Modifier.combinedClickable(
-                            onClick = { // Increase maxLines on click
+                            onClick = {
                                 isExpanded.value = !isExpanded.value
                             },
                             onLongClick = {

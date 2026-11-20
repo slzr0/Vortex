@@ -15,7 +15,6 @@ package com.my.vortex.ui.theme
 import androidx.compose.ui.graphics.Color
 import com.my.vortex.domain.model.logs.LogLevel
 
-//Dark Theme
 val DISCORD_LIGHT_DARK = Color(0xFF282b30)
 val DISCORD_GREY = Color(0xFF36393e)
 val DISCORD_BLURPLE = Color(0xFF5663f1)

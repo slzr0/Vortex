@@ -75,7 +75,6 @@ open class ShortcutsActivity : Activity() {
             }
         }
 
-        // Close the activity
         finish()
     }
 

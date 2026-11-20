@@ -66,27 +66,12 @@ object Prefs {
         set(ENABLED_APPS, Json.encodeToString(enabledPackages))
     }
 
-    /**
-     * Checks if the given app is enabled in the preferences for media rpc. This is used to filter
-     * the media RPC based on the enabled media apps.
-     *
-     * @param packageName The package name of the app to check
-     */
     fun isMediaAppEnabled(packageName: String?): Boolean {
         val apps = get(ENABLED_MEDIA_APPS, Json.encodeToString(predefinedMediaApps))
         val enabledPackages: ArrayList<String> = Json.decodeFromString(apps)
         return enabledPackages.contains(packageName)
     }
 
-    /**
-     * Saves the given package name to the preferences for media rpc. This is used to filter the
-     * media RPC based on the enabled media apps.
-     *
-     * If the package name is already saved, it will be removed. If it is not saved, it will be
-     * added.
-     *
-     * @param pkg The package name of the app to save
-     */
     fun saveMediaAppToPrefs(pkg: String) {
         val apps = get(ENABLED_MEDIA_APPS, Json.encodeToString(predefinedMediaApps))
         val enabledPackages: ArrayList<String> = Json.decodeFromString(apps)
@@ -121,7 +106,6 @@ object Prefs {
     fun checkAndAutoDeleteSavedImages() {
         val lastDeleted = get(
             key = LAST_DELETED,
-            // Force delete everyone's saved images for the first time
             defaultValue = System.currentTimeMillis() - 24.hours.inWholeMilliseconds
         )
         val currentTime = System.currentTimeMillis()
@@ -132,8 +116,7 @@ object Prefs {
         }
     }
 
-    //User Preferences
-    const val USER_DATA = "user" //Json Data Referencing User_Data class
+    const val USER_DATA = "user"
     const val TOKEN = "token"
     const val USER_ID = "user-id"
     const val USER_BIO = "user-bio"
@@ -145,7 +128,6 @@ object Prefs {
     const val ENABLED_MEDIA_APPS = "enabled_media_apps"
     const val ENABLED_EXPERIMENTAL_APPS = "enabled_experimental_apps"
 
-    //Media Rpc Preferences
     const val MEDIA_RPC_ARTIST_NAME = "media_rpc_artist_name"
     const val MEDIA_RPC_ALBUM_NAME = "media_rpc_album_name"
     const val MEDIA_RPC_APP_ICON = "media_rpc_app_icon"
@@ -154,19 +136,15 @@ object Prefs {
     const val MEDIA_RPC_SHOW_PLAYBACK_STATE = "show_playback_state"
     const val MEDIA_RPC_SHOW_SONG_AS_TITLE = "show_song_as_title"
 
-    //Rpc Setting Preferences
     const val USE_RPC_BUTTONS = "use_saved_rpc_buttons"
     const val RPC_BUTTONS_DATA = "saved_rpc_buttons_data"
     const val RPC_USE_LOW_RES_ICON = "use_low_res_app_icons"
     const val CONFIGS_DIRECTORY = "configs_directory"
     const val USE_IMGUR = "use_imgur"
     const val IMGUR_CLIENT_ID = "imgur_client_id"
-    // Saved Image Asset ids
     const val SAVED_IMAGES = "saved_images"
-    // Saved ArtWork
     const val SAVED_ARTWORK = "saved_artwork"
 
-    //new
     const val DARK_THEME = "dark_theme_value"
     const val HIGH_CONTRAST = "high_contrast"
     const val DYNAMIC_COLOR = "dynamic_color"
@@ -184,17 +162,11 @@ object Prefs {
 
     const val LATEST_RELEASE = "latest_release"
 
-    // Last Deleted Time of Saved Images
     const val LAST_DELETED = "last_deleted"
 
     const val CUSTOM_ACTIVITY_APPLICATION_ID = "custom_activity_application_id_"
 
-    /**
-     * The list of media apps that are enabled by default. See [isMediaAppEnabled] and
-     * [saveMediaAppToPrefs] for more information.
-     */
     val predefinedMediaApps: List<String> = listOf(
-        // music steaming apps
         "com.google.android.apps.youtube.music",
         "com.spotify.music",
         "com.google.android.music",
@@ -208,11 +180,9 @@ object Prefs {
         "com.sonyericsson.music",
         "com.aspiro.tidal",
 
-        // music player apps
         "com.sec.android.app.music",
         "com.tbig.playerpro",
 
-        // video streaming apps
         "com.google.android.apps.youtube.kids",
         "com.google.android.apps.youtube.unplugged",
         "com.google.android.youtube.googletv",
@@ -222,7 +192,6 @@ object Prefs {
         "com.kick.mobile",
         "tv.twitch.android.app",
 
-        // video player apps
         "com.mxtech.videoplayer.ad",
         "com.mxtech.videoplayer.pro",
         "com.google.android.apps.mediashell",
@@ -230,7 +199,6 @@ object Prefs {
         "org.videolan.vlc",
     )
 
-    //Experimental RPC Preferences
     const val EXPERIMENTAL_RPC_USE_APPS_RPC = "experimental_rpc_use_apps"
     const val EXPERIMENTAL_RPC_USE_MEDIA_RPC = "experimental_rpc_use_media"
     const val EXPERIMENTAL_RPC_TEMPLATE_NAME = "experimental_rpc_template_name"

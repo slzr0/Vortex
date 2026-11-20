@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Vortex</string>
 
-    <!-- Activities -->
+
     <string name="activity_name">လုပ်ဆောင်မှု နာမည်</string>
     <string name="activity_details">လုပ်ဆောင်မှု အကြောင်းအရာ</string>
     <string name="activity_state">လုပ်ဆောင်မှု အခြေအနေ</string>

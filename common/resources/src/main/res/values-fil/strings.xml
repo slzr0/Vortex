@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Vortex</string>
 
-    <!-- Activities -->
+
     <string name="activity_name">Pangalan ng Aktibidad</string>
     <string name="activity_details">Mga Detalye ng Aktibidad</string>
     <string name="activity_state">Estado ng Aktibidad</string>
