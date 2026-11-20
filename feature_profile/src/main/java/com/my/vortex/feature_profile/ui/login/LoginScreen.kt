@@ -31,7 +31,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.my.vortex.resources.R
 
-private const val LOGIN_URL = "https://vortexlogin.wispbyte.app:15748/login"
+private const val LOGIN_URL = "https://vortexlogin.wispbyte.app/login"
 
 @Composable
 fun LoginScreen() {
