@@ -1,10 +1,10 @@
 plugins {
-    id ("kizzy.android.library")
-    id ("kizzy.android.library.compose")
+    id ("vortex.android.library")
+    id ("vortex.android.library.compose")
 }
 
 android {
-    namespace = "com.my.kizzy.navigation"
+    namespace = "com.my.vortex.navigation"
 }
 
 dependencies {

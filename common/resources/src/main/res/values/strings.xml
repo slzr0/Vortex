@@ -1,6 +1,35 @@
 <resources>
-    <string name="app_name">Kizzy</string>
-    <string name="qs_tile_label" translatable="false">Kizzy Quickie</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_apps">Apps</string>
+    <string name="nav_media">Media</string>
+    <string name="nav_custom">Custom</string>
+    <string name="presence_overview">Your presence, your way</string>
+    <string name="presence_overview_desc">Choose how you want to share your activity on Discord.</string>
+    <string name="no_apps_found">No apps found</string>
+    <string name="choose_apps">Choose which apps can appear in your presence.</string>
+    <string name="custom_details_section">Activity details</string>
+    <string name="custom_party_section">Party and timing</string>
+    <string name="custom_buttons_section">Buttons</string>
+    <string name="custom_images_section">Images</string>
+    <string name="custom_options_section">Activity options</string>
+    <string name="oauth_subtitle">Your Discord presence, in one place.</string>
+    <string name="oauth_sign_in">Sign in with Discord</string>
+    <string name="oauth_browser_unavailable">No browser is available to open Discord sign-in.</string>
+    <string name="oauth_invalid_callback">Could not complete sign-in. Please try again.</string>
+    <string name="oauth_storage_error">Could not access your session. Please try again.</string>
+    <string name="oauth_signed_in_as">Signed in as</string>
+    <string name="connect_account_title">Connect your Discord account</string>
+    <string name="connect_account_description">Sign in to manage your presence and view your profile.</string>
+    <string name="logs_empty">No log entries to show.</string>
+    <string name="console_choose_game">Choose a game below before enabling your presence.</string>
+    <string name="console_empty">No games found.</string>
+    <string name="about_upstream">Vortex is based on the Kizzy open-source project. Links below point to the upstream project.</string>
+    <string name="upstream_releases_desc">View releases from the upstream project</string>
+    <string name="presence_modes">Presence modes</string>
+    <string name="presence_mode_hint">Select a mode to configure it.</string>
+
+    <string name="app_name">Vortex</string>
+    <string name="qs_tile_label" translatable="false">Vortex Quickie</string>
 
     <!-- Activities -->
     <string name="activity_name">Activity Name</string>
@@ -105,15 +134,15 @@
     <string name="hide_on_pause">Hide RPC on Pause</string>
     <string name="idling_notification">Idling…</string>
     <string name="main_appDetection">App Detection</string>
-    <string name="main_appDetection_details">Kizzy allows you to share your current activity on Discord by detecting what app you\'re using on your device.</string>
+    <string name="main_appDetection_details">Vortex allows you to share your current activity on Discord by detecting what app you\'re using on your device.</string>
     <string name="main_mediaRpc">Media RPC</string>
-    <string name="main_mediaRpc_details">Kizzy allows you to share your current media activity on Discord, such as the song or video you\'re currently listening to or watching.</string>
+    <string name="main_mediaRpc_details">Vortex allows you to share your current media activity on Discord, such as the song or video you\'re currently listening to or watching.</string>
     <string name="main_customRpc">Custom RPC</string>
     <string name="main_consoleRpc">Console RPC</string>
-    <string name="main_consoleRpc_details">Kizzy allows you to use some predefined presets to set your presence on Discord.</string>
+    <string name="main_consoleRpc_details">Vortex allows you to use some predefined presets to set your presence on Discord.</string>
     <string name="main_experimentalRpc">Experimental RPC</string>
-    <string name="main_experimentalRpc_details">Experimental RPC is a feature in Kizzy that constantly switches between Apps RPC and Media RPC.</string>
-    <string name="main_customRpc_details">Kizzy allows you to create your own fully customisable rich presence for Discord.</string>
+    <string name="main_experimentalRpc_details">Experimental RPC is a feature in Vortex that constantly switches between Apps RPC and Media RPC.</string>
+    <string name="main_customRpc_details">Vortex allows you to create your own fully customisable rich presence for Discord.</string>
     <string name="main_comingSoon">Coming Soon</string>
     <string name="exit">Exit</string>
     <string name="logs">Logs</string>
@@ -130,7 +159,7 @@
     <string name="yes">Yes</string>
     <string name="user_profile_error">Could not Update User Profile:</string>
     <string name="no_internet_user_profile">No Internet connection. Try again later.</string>
-    <string name="user_profile_rpc_name">USING KIZZY RICH PRESENCE</string>
+    <string name="user_profile_rpc_name">USING VORTEX RICH PRESENCE</string>
     <string name="user_profile_bio">ABOUT ME</string>
     <string name="user_profile_special_button">Special Button</string>
     <string name="user_profile">User Profile</string>
