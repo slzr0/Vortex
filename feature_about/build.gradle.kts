@@ -1,12 +1,12 @@
 plugins {
-    id ("kizzy.android.library")
-    id ("kizzy.android.library.compose")
-    id ("kizzy.android.feature")
-    id ("kizzy.android.hilt")
+    id ("vortex.android.library")
+    id ("vortex.android.library.compose")
+    id ("vortex.android.feature")
+    id ("vortex.android.hilt")
 }
 
 android {
-    namespace = "com.my.kizzy.feature_about"
+    namespace = "com.my.vortex.feature_about"
 
     defaultConfig {
         buildConfigField("String","VERSION_NAME", "\"${libs.versions.version.name.get()}\"")

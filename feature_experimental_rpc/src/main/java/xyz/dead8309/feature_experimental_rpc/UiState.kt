@@ -13,7 +13,7 @@
 package xyz.dead8309.feature_experimental_rpc
 
 import androidx.compose.runtime.Immutable
-import com.my.kizzy.data.utils.AppsInfo
+import com.my.vortex.data.utils.AppsInfo
 
 @Immutable
 data class UiState(

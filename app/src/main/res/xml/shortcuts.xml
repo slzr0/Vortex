@@ -20,7 +20,7 @@
         android:shortcutShortLabel="@string/start_appDetection">
         <intent
             android:action="com.my.kizzy.intent.action.START_APP_DETECTION"
-            android:targetClass="com.my.kizzy.feature_rpc_base.services.ShortcutsActivity"
+            android:targetClass="com.my.vortex.feature_rpc_base.services.ShortcutsActivity"
             android:targetPackage="com.my.kizzy" />
     </shortcut>
 
@@ -32,7 +32,7 @@
         android:shortcutShortLabel="@string/start_mediaRPC">
         <intent
             android:action="com.my.kizzy.intent.action.START_MEDIA_RPC"
-            android:targetClass="com.my.kizzy.feature_rpc_base.services.ShortcutsActivity"
+            android:targetClass="com.my.vortex.feature_rpc_base.services.ShortcutsActivity"
             android:targetPackage="com.my.kizzy" />
     </shortcut>
 
@@ -44,7 +44,7 @@
         android:shortcutShortLabel="@string/start_experimentalRPC">
         <intent
             android:action="com.my.kizzy.intent.action.START_EXPERIMENTAL_RPC"
-            android:targetClass="com.my.kizzy.feature_rpc_base.services.ShortcutsActivity"
+            android:targetClass="com.my.vortex.feature_rpc_base.services.ShortcutsActivity"
             android:targetPackage="com.my.kizzy" />
     </shortcut>
 
@@ -56,7 +56,7 @@
         android:shortcutShortLabel="@string/stop_rpc">
         <intent
             android:action="com.my.kizzy.intent.action.STOP_RPC"
-            android:targetClass="com.my.kizzy.feature_rpc_base.services.ShortcutsActivity"
+            android:targetClass="com.my.vortex.feature_rpc_base.services.ShortcutsActivity"
             android:targetPackage="com.my.kizzy" />
     </shortcut>
 </shortcuts>

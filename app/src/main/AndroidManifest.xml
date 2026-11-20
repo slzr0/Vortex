@@ -29,14 +29,16 @@
         android:minSdkVersion="34" />
 
     <application
-        android:name=".App"
+        android:name="com.my.vortex.App"
+        android:fullBackupContent="@xml/backup_rules"
+        android:dataExtractionRules="@xml/data_extraction_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:localeConfig="@xml/locales"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Kizzy"
+        android:theme="@style/Theme.Vortex"
         tools:targetApi="tiramisu">
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -49,8 +51,9 @@
         </provider>
 
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name="com.my.vortex.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -59,14 +62,22 @@
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="vortex" android:host="callback" />
+            </intent-filter>
             <meta-data android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
+        <activity-alias android:name="com.my.kizzy.MainActivity"
+            android:targetActivity="com.my.vortex.MainActivity" android:exported="true" />
         <activity
-            android:name=".feature_crash_handler.CrashHandler"
+            android:name="com.my.vortex.feature_crash_handler.CrashHandler"
             android:exported="false" />
         <activity
-            android:name=".feature_rpc_base.services.DialogActivity"
+            android:name="com.my.vortex.feature_rpc_base.services.DialogActivity"
             android:exported="true"
             android:theme="@style/ActivityTranslucent">
             <intent-filter>
@@ -74,7 +85,7 @@
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
-        <activity android:name=".feature_rpc_base.services.ShortcutsActivity"
+        <activity android:name="com.my.vortex.feature_rpc_base.services.ShortcutsActivity"
             android:exported="true"
             android:theme="@style/ActivityTranslucent">
             <intent-filter>
@@ -84,11 +95,11 @@
         </activity>
 
         <service
-            android:name="com.my.kizzy.feature_rpc_base.services.AppDetectionService"
+            android:name="com.my.vortex.feature_rpc_base.services.AppDetectionService"
             android:foregroundServiceType="mediaPlayback"
             android:exported="false" />
         <service
-            android:name="com.my.kizzy.feature_rpc_base.services.MediaRpcService"
+            android:name="com.my.vortex.feature_rpc_base.services.MediaRpcService"
             android:exported="false"
             android:foregroundServiceType="mediaPlayback" />
         <service
@@ -100,7 +111,7 @@
             </intent-filter>
         </service>
         <service
-            android:name="com.my.kizzy.feature_rpc_base.services.CustomRpcService"
+            android:name="com.my.vortex.feature_rpc_base.services.CustomRpcService"
             android:foregroundServiceType="mediaPlayback"
             android:exported="false" >
         </service>
@@ -114,12 +125,21 @@
                 android:value="true" />
         </service>
 
-        <service android:name=".feature_rpc_base.services.ExperimentalRpc"
+        <service android:name="com.my.vortex.feature_rpc_base.services.ExperimentalRpc"
             android:foregroundServiceType="mediaPlayback"
             android:exported="false"/>
 
+        <!-- Keep the old component so existing quick settings tiles survive upgrades. -->
+        <service android:name="com.my.kizzy.feature_rpc_base.services.KizzyTileService"
+            android:icon="@drawable/ic_tile_play" android:label="@string/qs_tile_label"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:exported="true">
+            <intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter>
+        </service>
+        <activity android:name="com.my.kizzy.feature_rpc_base.services.ShortcutsActivity"
+            android:exported="true" android:theme="@style/ActivityTranslucent" />
+
         <service
-            android:name=".feature_rpc_base.services.KizzyTileService"
+            android:name="com.my.vortex.feature_rpc_base.services.VortexTileService"
             android:icon="@drawable/ic_tile_play"
             android:label="@string/qs_tile_label"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"

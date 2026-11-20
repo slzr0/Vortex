@@ -1,11 +1,11 @@
 plugins {
-    id ("kizzy.android.library")
-    id ("kizzy.android.library.compose")
-    id ("kizzy.android.feature")
+    id ("vortex.android.library")
+    id ("vortex.android.library.compose")
+    id ("vortex.android.feature")
 }
 
 android {
-    namespace = "com.my.kizzy.feature_apps_rpc"
+    namespace = "com.my.vortex.feature_apps_rpc"
 }
 
 dependencies {

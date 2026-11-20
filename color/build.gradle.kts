@@ -1,10 +1,10 @@
 
 plugins {
-    id ("kizzy.android.library")
-    id ("kizzy.android.library.compose")
+    id ("vortex.android.library")
+    id ("vortex.android.library.compose")
 }
 android {
-    namespace = "com.kizzy.color"
+    namespace = "com.vortex.color"
 }
 dependencies {
     api(libs.compose.ui)

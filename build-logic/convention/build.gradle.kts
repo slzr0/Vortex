@@ -21,27 +21,27 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplicationCompose") {
-            id = "kizzy.android.application.compose"
+            id = "vortex.android.application.compose"
             implementationClass = "AndroidApplicationComposePlugin"
         }
         register("androidApplication") {
-            id = "kizzy.android.application"
+            id = "vortex.android.application"
             implementationClass = "AndroidApplicationPlugin"
         }
         register("androidLibraryCompose") {
-            id = "kizzy.android.library.compose"
+            id = "vortex.android.library.compose"
             implementationClass = "AndroidLibraryComposePlugin"
         }
         register("androidLibrary") {
-            id = "kizzy.android.library"
+            id = "vortex.android.library"
             implementationClass = "AndroidLibraryPlugin"
         }
         register("androidFeature") {
-            id = "kizzy.android.feature"
+            id = "vortex.android.feature"
             implementationClass = "AndroidFeaturePlugin"
         }
         register("androidHilt") {
-            id = "kizzy.android.hilt"
+            id = "vortex.android.hilt"
             implementationClass = "AndroidHiltPlugin"
         }
     }

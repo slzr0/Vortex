@@ -1,13 +1,13 @@
 @file:Suppress("UnstableApiUsage")
 
 plugins {
-    id("kizzy.android.application")
-    id("kizzy.android.application.compose")
-    id("kizzy.android.hilt")
+    id("vortex.android.application")
+    id("vortex.android.application.compose")
+    id("vortex.android.hilt")
 }
 
 android {
-    namespace = "com.my.kizzy"
+    namespace = "com.my.vortex"
 
     defaultConfig {
         applicationId = "com.my.kizzy"
@@ -55,10 +55,19 @@ dependencies {
     implementation (projects.featureHome)
     implementation (projects.common.preference)
     implementation (projects.common.navigation)
+    implementation (projects.common.resources)
+    implementation (libs.material.icons.extended)
 
     // Extras
     implementation (libs.app.compat)
     implementation (libs.accompanist.navigation.animation)
+    implementation (libs.compose.navigation)
+    implementation (libs.datastore.preferences)
+    implementation (libs.lifecycle.runtime)
+    implementation (libs.kotlinx.coroutine)
+    androidTestImplementation (libs.androidx.test.ext.junit)
+    androidTestImplementation (libs.androidx.test.core)
+    androidTestImplementation (libs.junit)
     implementation (libs.kotlinx.serialization.json)
 
 
