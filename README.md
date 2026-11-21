@@ -1,19 +1,23 @@
 # Vortex
 
-Vortex is being rebuilt with Kotlin, Jetpack Compose and Material 3. This first stage contains a new loading screen, notification-access setup and in-app Discord sign-in. After sign-in, a confirmation screen allows signing out. The previous Games, Custom and Settings screens are not exposed in this build; their source remains in the repository for possible later work.
+A fresh Android project containing the first Vortex setup flow: loading, notification access, and Discord sign-in. The previous app features and modules are not part of this project.
 
-## Android support
+## Project structure
 
-The app's minimum version is Android 9 (API 28). This rebuild is intended for Android 9 through Android 14 (API 34). Android 13 and later use the runtime notification permission; on older versions, notifications can be enabled in system settings if disabled. No maximum SDK restriction is imposed, but versions beyond Android 14 have not been verified.
+- `app/`: single Kotlin, Jetpack Compose and Material 3 Android application.
+- `gradle/`, `gradlew`: Gradle wrapper.
+- `.github/workflows/build.yml`: debug APK build and artifact upload.
 
-## Sign-in and privacy
+The minimum supported version is Android 9 (API 28). Android 9–14 are the intended versions; no maximum OS version is enforced. On Android 13 and later, the app requests notification permission; on older versions it checks whether notifications are enabled in system settings. Notifications are requested for future background activity, which is not yet implemented.
 
-The existing unofficial Discord WebView sign-in extracts a user token and stores it in app-private MMKV preferences without encryption. It may violate Discord's terms or stop working. Sign-out clears local session data, but does not revoke the Discord session. MMKV data is excluded from cloud backup and device transfer. See [Privacy and Terms](TERMS_OF_SERVICE.md).
+The app has a new application ID, `com.my.vortex`, so it installs separately from the previous APK and does not migrate its data.
+
+## Discord sign-in
+
+This first version retains the previous unofficial in-app WebView sign-in. It extracts a user token and checks it against Discord before saving it encrypted with Android Keystore. Discord may change or block this approach, and it may violate Discord's terms. Sign-out removes the local session and WebView data; it does not revoke the Discord session. App backup is disabled. Never share the token.
 
 ## Build
 
-Use JDK 17 and Android SDK 36, then run `./gradlew assembleDebug`. GitHub Actions builds and uploads the debug APK for pushes to `main` or manual runs.
+Use JDK 17 and Android SDK 36 and run `./gradlew assembleDebug`. The workflow builds on pushes to `main` and can be started manually, uploading the debug APK as an artifact.
 
-## Attribution
-
-Original copyright and attribution notices remain in the source and in [License](License). Bundled game catalog data and its attribution remain in [catalog attribution](data/src/main/assets/catalog/ATTRIBUTION.txt), including the [ODbL](data/src/main/assets/licenses/nintendo-odbl.txt) and [MIT](data/src/main/assets/licenses/xbox-mit.txt) notices.
+The retained WebView source includes its original copyright notice. See [License](License).

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<full-backup-content>
-    <exclude domain="file" path="datastore/vortex_auth.preferences_pb" />
-    <exclude domain="file" path="mmkv/" />
-</full-backup-content>

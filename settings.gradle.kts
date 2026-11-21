@@ -1,7 +1,4 @@
-@file:Suppress("UnstableApiUsage")
-
 pluginManagement {
-    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -13,29 +10,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven("https://jitpack.io")
     }
 }
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-include(
-    ":app",
-    ":gateway",
-    ":color",
-    ":common:preference",
-    ":common:resources",
-    ":domain",
-    ":data",
-    ":common:components",
-    ":theme",
-    ":feature_crash_handler",
-    ":feature_profile",
-    ":feature_about",
-    ":feature_settings",
-    ":feature_logs",
-    ":feature_rpc_base",
-    ":feature_console_rpc",
-    ":feature_custom_rpc",
-    ":common:navigation",
-
-)
 rootProject.name = "Vortex"
+include(":app")
