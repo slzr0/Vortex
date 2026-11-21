@@ -170,7 +170,9 @@ internal fun ComponentActivity.Vortex(
                     })
             }
             animatedComposable(Routes.HOME) {
-                val release = Prefs.getSavedLatestRelease()
+                val release = Prefs.getSavedLatestRelease()?.takeIf {
+                    it.htmlUrl?.startsWith("https://github.com/slzr0/Vortex/") == true
+                }
                 val viewModel by viewModels<HomeScreenViewModel>()
                 val state = viewModel.aboutScreenState.collectAsState().value
                 val showBadge = release
@@ -300,7 +302,7 @@ internal fun ComponentActivity.Vortex(
                     onEvent = { viewModel.onUiEvent(it) },
                     isSearchBarVisible = viewModel.isSearchBarVisible.value,
                     state = viewModel.state.value,
-                    serviceEnabled = AppUtils.customRpcRunning()
+                    serviceEnabled = AppUtils.customRpcRunning() && Prefs[Prefs.ACTIVE_CUSTOM_RPC_MODE, ""] == "console"
                 )
             }
             animatedComposable(Routes.LANGUAGES) {

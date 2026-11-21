@@ -235,7 +235,7 @@ class MediaRpcService : Service() {
         mediaSessionManager.removeOnActiveSessionsChangedListener(::activeSessionsListener)
         currentMediaController?.unregisterCallback(mediaControllerCallback)
         scope.cancel()
-        vortexRPC.closeRPC()
+        vortexRPC.shutdownRPC()
         wakeLock?.let {
             if (it.isHeld) it.release()
         }

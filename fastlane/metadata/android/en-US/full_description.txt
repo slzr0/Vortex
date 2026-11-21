@@ -1,1 +1,3 @@
-<p><i>Kizzy</i> is a Discord Rich Presence manager for Android, with a clean UI and Material You theme. It is easy to set up and offers predefined presets (Nintendo,Wii Rpc have 300+ options). You can create custom configs with your own images and links.</p>
+<p>Vortex brings your Discord presence together in one Android dashboard. Share app and media activity, choose a console game preset or create your own custom presence.</p>
+<p>Search the game catalog, save your last console preset, and create a manual game and platform preset when the catalog is unavailable. Choose the permissions and presence mode that work for you.</p>
+<p>Vortex is an unofficial client. Discord connectivity and third-party catalog availability are not guaranteed.</p>

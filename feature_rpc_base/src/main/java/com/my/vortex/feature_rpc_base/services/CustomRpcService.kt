@@ -27,6 +27,7 @@ import com.my.vortex.feature_rpc_base.setLargeIcon
 import com.my.vortex.resources.R
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
@@ -36,6 +37,7 @@ import javax.inject.Inject
 class CustomRpcService : Service() {
     private var rpcData: RpcConfig? = null
     private var wakeLock: WakeLock? = null
+    private var updateJob: Job? = null
 
     @Inject
     lateinit var vortexRPC: com.my.vortex.data.rpc.VortexRPC
@@ -52,11 +54,17 @@ class CustomRpcService : Service() {
     @SuppressLint("WakelockTimeout")
     @Suppress("DEPRECATION")
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        if (intent?.action.equals(Constants.ACTION_STOP_SERVICE)) stopSelf()
-        else {
+        if (intent?.action == Constants.ACTION_STOP_SERVICE) {
+            stopSelf()
+            return START_NOT_STICKY
+        } else {
             val string = intent?.getStringExtra("RPC")
-            string?.let {
-                rpcData = Json.decodeFromString(it)
+            if (string != null) {
+                rpcData = runCatching { Json.decodeFromString<RpcConfig>(string) }.getOrNull()
+            }
+            if (rpcData == null) {
+                stopSelf(startId)
+                return START_NOT_STICKY
             }
 
             val stopIntent = Intent(this, CustomRpcService::class.java)
@@ -78,20 +86,13 @@ class CustomRpcService : Service() {
                 startForeground(Constants.NOTIFICATION_ID, notification, FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK)
             }
 
-            val powerManager = getSystemService(POWER_SERVICE) as PowerManager
-            wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, WAKELOCK)
-            wakeLock?.acquire()
-            scope.launch {
-                notificationManager.notify(
-                    Constants.NOTIFICATION_ID,
-                    notificationBuilder
-                        .setLargeIcon(
-                            rpcImage = rpcData?.largeImg?.toRpcImage(),
-                            context = this@CustomRpcService
-                        )
-                        .build()
-                )
-
+            if (wakeLock?.isHeld != true) {
+                val powerManager = getSystemService(POWER_SERVICE) as PowerManager
+                wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, WAKELOCK)
+                wakeLock?.acquire()
+            }
+            updateJob?.cancel()
+            updateJob = scope.launch {
                 vortexRPC.apply {
                     rpcData?.let {
                         setName(it.name.ifEmpty { "" })
@@ -113,14 +114,23 @@ class CustomRpcService : Service() {
                         build()
                     }
                 }
+                notificationManager.notify(
+                    Constants.NOTIFICATION_ID,
+                    notificationBuilder
+                        .setLargeIcon(
+                            rpcImage = rpcData?.largeImg?.toRpcImage(),
+                            context = this@CustomRpcService
+                        )
+                        .build()
+                )
             }
         }
-        return super.onStartCommand(intent, flags, startId)
+        return START_REDELIVER_INTENT
     }
 
     override fun onDestroy() {
         scope.cancel()
-        vortexRPC.closeRPC()
+        vortexRPC.shutdownRPC()
         wakeLock?.let {
             if (it.isHeld) it.release()
         }

@@ -47,7 +47,6 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -59,7 +58,6 @@ import coil.compose.AsyncImage
 import com.my.vortex.domain.model.user.User
 import com.my.vortex.resources.R
 import com.my.vortex.ui.components.Subtitle
-import com.my.vortex.ui.components.chips
 
 @Composable
 fun SettingsDrawer(
@@ -99,8 +97,7 @@ fun SettingsDrawer(
             item { SettingsItemCard(stringResource(R.string.logs), Icons.Outlined.BugReport, onClick = navigateToLogsScreen) }
             item { RequestQsTile(showVortexQuickieRequestItem, onRequestAddTile) }
             item { Subtitle(text = stringResource(R.string.drawer_subtitle_help)) }
-            item { SettingsItemCard(stringResource(R.string.drawer_faq), Icons.AutoMirrored.Rounded.HelpOutline) { uriHandler.openUri("https://kizzy.vercel.app/#FAQ") } }
-            item { SettingsItemCard("Discord", ImageVector.vectorResource(R.drawable.ic_discord)) { uriHandler.openUri(chips.first().url) } }
+            item { SettingsItemCard(stringResource(R.string.drawer_faq), Icons.AutoMirrored.Rounded.HelpOutline) { uriHandler.openUri("https://github.com/slzr0/Vortex#troubleshooting") } }
             item { SettingsItemCard(stringResource(R.string.about), Icons.Outlined.Info, onClick = navigateToAbout) }
             item {
                 Text("${stringResource(R.string.app_name)} · ${BuildConfig.VERSION_NAME}",

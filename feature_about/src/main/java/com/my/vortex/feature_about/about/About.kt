@@ -42,10 +42,10 @@ import com.my.vortex.resources.R
 import com.my.vortex.ui.components.BackButton
 import com.my.vortex.ui.components.SettingItem
 
-const val github_Repository = "https://github.com/dead8309/Kizzy"
+const val github_Repository = "https://github.com/slzr0/Vortex"
 const val github_Release = "$github_Repository/releases"
 const val github_Issues = "$github_Repository/issues/new"
-const val github_privacy_policy = "$github_Repository/blob/master/TERMS_OF_SERVICE.md"
+const val github_privacy_policy = "$github_Repository/blob/main/TERMS_OF_SERVICE.md"
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

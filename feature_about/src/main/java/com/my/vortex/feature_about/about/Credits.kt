@@ -58,6 +58,7 @@ import kotlin.math.floor
 
 data class Credit(val title: String = "", val license: String = "", val url: String = "")
 
+const val GPL_V2 = "GNU General Public License v2.0"
 const val GPL_V3 = "GNU General Public License v3.0"
 const val APACHE_V2 = "Apache License, Version 2.0"
 const val MIT = "MIT License"
@@ -66,6 +67,7 @@ const val readYou = "https://github.com/Ashinch/ReadYou"
 const val seal = "https://github.com/JunkFood02/Seal"
 const val materialColor = "https://github.com/material-foundation/material-color-utilities"
 const val nintendoRepo = "https://github.com/ninstar/Rich-Presence-U"
+const val logra = "https://github.com/wingio/Logra"
 const val XboxRpc = "https://github.com/MrCoolAndroid/Xbox-Rich-Presence-Discord"
 const val monet = "https://github.com/Kyant0/Monet"
 
@@ -74,6 +76,8 @@ val creditsList = listOf(
     Credit("Seal", GPL_V3, seal),
     Credit("material-color-utilities", APACHE_V2, materialColor),
     Credit("Rich-Presence-U", GPL_V3, nintendoRepo),
+    Credit("Rich Presence U Database", "Open Database License 1.0", "https://github.com/ninstar/Rich-Presence-U-DB"),
+    Credit("Logra", GPL_V2, logra),
     Credit("Xbox-Rich-Presence-Discord", MIT, XboxRpc),
     Credit("Monet", APACHE_V2, monet)
 )

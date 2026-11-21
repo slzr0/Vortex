@@ -501,7 +501,7 @@ class ExperimentalRpc : Service() {
         mediaSessionManager.removeOnActiveSessionsChangedListener(::activeSessionsListener)
         currentMediaController?.unregisterCallback(mediaControllerCallback)
         scope.cancel()
-        vortexRPC.closeRPC()
+        vortexRPC.shutdownRPC()
         super.onDestroy()
     }
 

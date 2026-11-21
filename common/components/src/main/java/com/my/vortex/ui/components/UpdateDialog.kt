@@ -85,7 +85,7 @@ fun UpdateDialog(
         confirmButton = {
             TextButton(
                 onClick = {
-                    openUrl("https://github.com/dead8309/Kizzy/releases/latest")
+                    openUrl("https://github.com/slzr0/Vortex/releases/latest")
                 }
             ) {
                 Text(

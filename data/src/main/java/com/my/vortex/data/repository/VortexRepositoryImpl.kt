@@ -28,19 +28,29 @@ import com.my.vortex.domain.repository.VortexRepository
 import com.my.vortex.preference.Prefs
 import io.ktor.client.call.body
 import io.ktor.client.statement.HttpResponse
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.withTimeoutOrNull
 import java.io.File
+import java.io.IOException
 import javax.inject.Inject
 
-class VortexRepositoryImpl @Inject constructor(
+internal class VortexRepositoryImpl @Inject constructor(
     private val api: ApiService,
     private val imgurApi: ImgurApiService,
+    private val bundledGameCatalog: BundledGameCatalog? = null,
 ) : VortexRepository {
 
     override suspend fun getImage(url: String): String? {
-        return if (Prefs[Prefs.USE_IMGUR, false]) {
+        suspend fun fromDiscord(): String? = withTimeoutOrNull(5_000) {
             imgurApi.getImage(url, Prefs[Prefs.TOKEN]).getOrNull()?.toExternalAsset()
-        } else {
+        }
+        suspend fun fromServer(): String? = withTimeoutOrNull(5_000) {
             api.getImage(url).getOrNull()?.toAttachmentAsset()
+        }
+        return if (Prefs[Prefs.USE_IMGUR, false]) {
+            fromDiscord() ?: fromServer()
+        } else {
+            fromServer() ?: fromDiscord()
         }
     }
 
@@ -54,8 +64,19 @@ class VortexRepositoryImpl @Inject constructor(
     }
 
     override suspend fun getGames(): List<Game> {
-        return api.getGames().getOrNull()?.body<List<GamesResponse>>()?.map { it.toGame() }
-            ?: emptyList()
+        val bundled = bundledGameCatalog?.load().orEmpty()
+        val remote = withTimeoutOrNull(4_000) {
+            try {
+                val response = api.getGames().getOrThrow()
+                if (response.status.value !in 200..299) emptyList()
+                else response.body<List<GamesResponse>>().map { it.toGame() }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                emptyList()
+            }
+        }.orEmpty()
+        return (remote + bundled).distinctBy { it.platform.lowercase() to it.game_title.trim().lowercase() }
     }
 
     override suspend fun getUser(userid: String): User {
@@ -67,7 +88,11 @@ class VortexRepositoryImpl @Inject constructor(
     }
 
     override suspend fun checkForUpdate(): Release {
-        return api.checkForUpdate().getOrNull()?.releaseBody() ?: Release()
+        val response = api.checkForUpdate().getOrThrow()
+        if (response.status.value != 200) {
+            throw IOException("No Vortex release available (HTTP ${response.status.value})")
+        }
+        return response.releaseBody()
     }
 }
 
