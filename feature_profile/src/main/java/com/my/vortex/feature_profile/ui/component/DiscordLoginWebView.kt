@@ -27,7 +27,7 @@ const val JS_SNIPPET =
 
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
-internal fun DiscordLoginWebView(
+fun DiscordLoginWebView(
     onLoginCompleted: (String) -> Unit,
 ) {
     val url = "https://discord.com/login"
