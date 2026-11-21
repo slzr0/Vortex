@@ -6,13 +6,17 @@ Choose a game or create a custom activity from a streamlined two-mode workspace.
 ## Presence modes
 
 - **Console:** search the game catalog, select a preset, or create a manual game and platform preset when the catalog is unavailable. Your last started preset is saved for quick access.
-- **Custom:** configure your own presence, images, timestamps and buttons.
+- **Custom:** configure your own presence, images, timestamps and buttons. The editor preview loads direct HTTP(S) artwork links after a short delay; Discord asset keys remain placeholders in this preview.
 
 Only one presence service should run at a time. A running service indicates the Android service is active; it does not guarantee a Discord connection.
 
 ## Getting started
 
-First enable app notifications when requested, then sign in to Discord. If notifications are already enabled, setup proceeds directly to sign-in. Games and Custom do not require usage access or notification-listener access. Console includes a bundled game catalog, supplements it with the remote catalog when available, and also supports manual presets. Artwork and Discord presence still require a network connection.
+After a short Vortex launch screen, enable app notifications when requested, then sign in to Discord. If notifications are already enabled, setup proceeds directly to sign-in. Games and Custom do not require usage access or notification-listener access. Console includes a bundled game catalog, supplements it with the remote catalog when available, and also supports manual presets. Artwork and Discord presence still require a network connection.
+
+## Design references
+
+Vortex uses its own Compose components rather than bundling a glass library. The optional Glass appearance in Settings has three color intensities and uses tinted layers rather than real-time background blur. [Now in Android](https://github.com/android/nowinandroid) is a reference for Compose architecture. [Haze](https://github.com/chrisbanes/haze), [PrismalAGSL](https://github.com/styropyr0/PrismalAGSL), and [Mochi Compose](https://github.com/feice11/mochi-compose) were reviewed for glass effects and controls, but are not included. Mochi Compose requires Kotlin 2.3, while this project currently uses Kotlin 1.9. For presence workflows, [Music Presence](https://github.com/ungive/discord-music-presence), [Shiori](https://github.com/lennmoe/shiori), [Discord Presence Manager](https://github.com/DinoCDX/discord-presence-manager), and [Nowly](https://github.com/nowly-presence/nowly) were reviewed for status controls, previews, and configuration. These projects are not bundled as dependencies; Vortex retains Games and Custom modes.
 
 ## Troubleshooting
 

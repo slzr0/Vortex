@@ -15,6 +15,8 @@ package com.my.vortex.feature_profile.ui.component
 import android.content.Context
 import android.telephony.TelephonyManager
 import android.app.Activity
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
@@ -36,7 +38,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.my.vortex.resources.R
-import com.my.vortex.ui.theme.DISCORD_GREY
 import java.util.Locale
 
 private val NON_ACCESSIBLE_COUNTRIES = listOf("TR", "RU")
@@ -83,6 +84,7 @@ internal fun DiscordLoginButton(
 
     if (enabled) {
         ElevatedButton(
+            modifier = Modifier.fillMaxWidth().height(56.dp),
             onClick = {
                 if (showVpnDialog) {
                     showVpnDialog = true
@@ -91,7 +93,7 @@ internal fun DiscordLoginButton(
                 }
             },
             colors = ButtonDefaults.elevatedButtonColors(
-                containerColor = DISCORD_GREY,
+                containerColor = Color(0xFF5865F2),
                 contentColor = Color.White.copy(alpha = 0.8f)
             ),
             shape = RoundedCornerShape(12.dp)

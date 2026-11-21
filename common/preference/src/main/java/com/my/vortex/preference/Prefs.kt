@@ -149,6 +149,8 @@ object Prefs {
     const val SAVED_IMAGES = "saved_images"
     const val SAVED_ARTWORK = "saved_artwork"
 
+    const val GLASS_STYLE = "vortex_glass_style"
+    const val GLASS_INTENSITY = "vortex_glass_intensity"
     const val DARK_THEME = "dark_theme_value"
     const val HIGH_CONTRAST = "high_contrast"
     const val DYNAMIC_COLOR = "dynamic_color"

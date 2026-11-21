@@ -30,6 +30,8 @@ import com.my.vortex.preference.palettesMap
 val LocalDarkTheme = compositionLocalOf { DarkThemePreference() }
 val LocalSeedColor = compositionLocalOf { DEFAULT_SEED_COLOR }
 val LocalDynamicColorSwitch = compositionLocalOf { false }
+val LocalGlassStyle = compositionLocalOf { true }
+val LocalGlassIntensity = compositionLocalOf { 1 }
 val LocalWindowWidthState = staticCompositionLocalOf { WindowWidthSizeClass.Compact }
 val LocalPaletteStyleIndex = compositionLocalOf { 0 }
 
@@ -45,6 +47,8 @@ fun SettingsProvider(windowWidthSizeClass: WindowWidthSizeClass,content: @Compos
         ),
         LocalWindowWidthState provides windowWidthSizeClass,
         LocalDynamicColorSwitch provides appSettingsState.isDynamicColorEnabled,
+        LocalGlassStyle provides appSettingsState.glassStyle,
+        LocalGlassIntensity provides appSettingsState.glassIntensity,
         content = content
     )
 }

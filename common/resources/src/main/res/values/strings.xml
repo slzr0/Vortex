@@ -1,4 +1,21 @@
 <resources>
+    <string name="launch_tagline">Your presence, in orbit.</string>
+    <string name="setup_progress_permissions">01 · Permissions</string>
+    <string name="setup_progress_account">02 · Discord account</string>
+    <string name="console_service_on_short">SERVICE ON</string>
+    <string name="console_service_off_short">SERVICE OFF</string>
+    <string name="setup_permission_label">A LITTLE PREPARATION</string>
+    <string name="setup_account_label">YOUR NEXT STEP</string>
+    <string name="setup_signin_note">Your activity stays yours to edit, start, and stop.</string>
+    <string name="console_options_short">Options</string>
+    <string name="console_background_short">Background</string>
+    <string name="home_eyebrow">YOUR ACTIVITY / 01</string>
+    <string name="custom_preview_draft">DRAFT</string>
+    <string name="custom_preview_label">EDITOR PREVIEW</string>
+    <string name="custom_preview_empty">Your activity name</string>
+    <string name="custom_preview_hint">Preview only · Direct image links load here; Discord may display this differently</string>
+    <string name="custom_eyebrow">YOUR STUDIO / 02</string>
+    <string name="settings_eyebrow">YOUR SPACE / 03</string>
     <string name="nav_games">Games</string>
     <string name="games_activity_title">Games activity</string>
     <string name="setup_step_one">STEP 01 / 02 · PERMISSIONS</string>
@@ -18,6 +35,13 @@
     <string name="login_privacy_description">Vortex uses an unofficial in-app Discord sign-in and stores a user token in app-private storage without encryption. This method may violate Discord terms or stop working.</string>
     <string name="login_verifying">Verifying your session with Discord…</string>
     <string name="login_failed">Could not verify this session. Check your connection and try signing in again.</string>
+    <string name="settings_glass_title">Glass appearance</string>
+    <string name="settings_glass_description">Layered, translucent surfaces without live blur. Turn off for a simpler look.</string>
+    <string name="settings_glass_live">Changes apply instantly.</string>
+    <string name="settings_glass_strength">COLOR INTENSITY</string>
+    <string name="settings_glass_soft">Soft</string>
+    <string name="settings_glass_balanced">Balanced</string>
+    <string name="settings_glass_vivid">Vivid</string>
     <string name="settings_title_new">Your space.</string>
     <string name="settings_intro_new">Make Vortex feel right and keep your activity in your control.</string>
     <string name="settings_personalize">PERSONALIZE</string>
@@ -81,6 +105,7 @@
     <string name="console_start">Start presence</string>
     <string name="console_update">Update presence</string>
     <string name="console_stop">Stop</string>
+    <string name="console_browse_title">Find your next activity</string>
     <string name="console_search">Search games or platforms</string>
     <string name="console_manual">Create a manual preset</string>
     <string name="console_manual_description">Set a game and platform even when the catalog is unavailable.</string>

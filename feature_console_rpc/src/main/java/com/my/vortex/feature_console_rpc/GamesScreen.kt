@@ -20,6 +20,7 @@ import android.provider.Settings
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -32,6 +33,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.SportsEsports
 import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material.icons.outlined.StarBorder
 import androidx.compose.material3.AlertDialog
@@ -52,6 +54,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
@@ -62,8 +65,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -78,6 +81,12 @@ import com.my.vortex.feature_rpc_base.AppUtils
 import com.my.vortex.feature_rpc_base.services.CustomRpcService
 import com.my.vortex.preference.Prefs
 import com.my.vortex.resources.R
+import com.my.vortex.ui.components.glassScaffoldColor
+import com.my.vortex.ui.components.glassSurfaceColor
+import com.my.vortex.ui.components.vortexGlass
+import com.my.vortex.ui.components.VortexHero
+import com.my.vortex.ui.components.VortexMint
+import com.my.vortex.ui.components.VortexStatusPill
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -102,6 +111,8 @@ fun GamesScreen(
     var running by remember { mutableStateOf(serviceEnabled) }
     var query by remember { mutableStateOf("") }
     var showManual by remember { mutableStateOf(false) }
+    var showOptions by rememberSaveable { mutableStateOf(false) }
+    var showBackground by rememberSaveable { mutableStateOf(false) }
     var showFavorites by rememberSaveable { mutableStateOf(false) }
     var selectedPlatform by rememberSaveable { mutableStateOf<String?>(null) }
     var status by remember { mutableStateOf(Prefs[Prefs.CONSOLE_STATUS, "dnd"].takeIf { it in CONSOLE_STATUSES } ?: "dnd") }
@@ -179,9 +190,11 @@ fun GamesScreen(
     val visibleGames = remember(availableGames, selectedPlatform) { filterByPlatform(availableGames, selectedPlatform) }
 
     Scaffold(
+        containerColor = glassScaffoldColor(),
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.games_activity_title), style = MaterialTheme.typography.headlineSmall) }
+                title = { Text(stringResource(R.string.games_activity_title), style = MaterialTheme.typography.headlineSmall) },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = glassScaffoldColor())
             )
         }
     ) { padding ->
@@ -191,16 +204,8 @@ fun GamesScreen(
             contentPadding = androidx.compose.foundation.layout.PaddingValues(16.dp)
         ) {
             item {
-                Surface(
-                    shape = RoundedCornerShape(24.dp),
-                    color = Color(0xFF171D3D),
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Column(Modifier.background(Brush.linearGradient(listOf(Color(0xFF28235D), Color(0xFF10495C))))
-                        .padding(22.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                        Text("V O R T E X  /  P L A Y", color = Color(0xFF9DEAFF), style = MaterialTheme.typography.labelLarge)
-                        Text(stringResource(R.string.console_hero_title), color = Color.White, style = MaterialTheme.typography.headlineSmall)
-                        Text(stringResource(R.string.console_hero_description), color = Color(0xFFD8E6F5), style = MaterialTheme.typography.bodyMedium)
+                VortexHero(stringResource(R.string.home_eyebrow), stringResource(R.string.console_hero_title),
+                    stringResource(R.string.console_hero_description)) {
                         Text(
                             selected?.let { "${it.game_title} · ${it.platform}" }
                                 ?: stringResource(R.string.console_no_selection),
@@ -208,13 +213,12 @@ fun GamesScreen(
                         )
                         selected?.let { game ->
                             TextButton(onClick = { toggleFavorite(game) }) {
-                                Text(stringResource(if (favorites.any { it.sameConsoleGame(game) }) R.string.console_remove_favorite else R.string.console_add_favorite), color = Color(0xFF9DEAFF))
+                                Text(stringResource(if (favorites.any { it.sameConsoleGame(game) }) R.string.console_remove_favorite else R.string.console_add_favorite), color = VortexMint)
                             }
                         }
-                        Text(
-                            stringResource(if (running) R.string.console_service_running else R.string.console_service_stopped),
-                            style = MaterialTheme.typography.labelMedium, color = Color(0xFFD8E6F5)
-                        )
+                        VortexStatusPill(running, stringResource(if (running) R.string.console_service_on_short else R.string.console_service_off_short))
+                        if (running) Text(stringResource(R.string.console_service_running),
+                            style = MaterialTheme.typography.labelMedium, color = Color(0xFFD8E6F5))
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             Button(onClick = { startPresence() }, enabled = selected != null) {
                                 Text(stringResource(if (running) R.string.console_update else R.string.console_start))
@@ -228,11 +232,21 @@ fun GamesScreen(
                                 }) { Text(stringResource(R.string.console_stop), color = Color.White) }
                             }
                         }
+                }
+            }
+
+            item {
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    OutlinedButton(onClick = { showOptions = !showOptions }, modifier = Modifier.weight(1f)) {
+                        Text(stringResource(R.string.console_options_short), maxLines = 1)
+                    }
+                    OutlinedButton(onClick = { showBackground = !showBackground }, modifier = Modifier.weight(1f)) {
+                        Text(stringResource(R.string.console_background_short), maxLines = 1)
                     }
                 }
             }
-            item {
-                Surface(shape = RoundedCornerShape(20.dp), color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)) {
+            if (showOptions) item {
+                Surface(modifier = Modifier.vortexGlass(RoundedCornerShape(20.dp)), shape = RoundedCornerShape(20.dp), color = glassSurfaceColor(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))) {
                     Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         Text(stringResource(R.string.console_presence_options), style = MaterialTheme.typography.titleMedium)
                         Text(stringResource(R.string.console_status_hint), style = MaterialTheme.typography.bodySmall)
@@ -262,8 +276,8 @@ fun GamesScreen(
                     }
                 }
             }
-            item {
-                Surface(shape = RoundedCornerShape(20.dp), color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)) {
+            if (showBackground) item {
+                Surface(modifier = Modifier.vortexGlass(RoundedCornerShape(20.dp)), shape = RoundedCornerShape(20.dp), color = glassSurfaceColor(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))) {
                     Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         Text(stringResource(R.string.console_background_title), style = MaterialTheme.typography.titleMedium)
                         Text(stringResource(if (batteryExempt) R.string.console_battery_exempt else R.string.console_battery_optimized),
@@ -283,6 +297,9 @@ fun GamesScreen(
                         }
                     }
                 }
+            }
+            item {
+                Text(stringResource(R.string.console_browse_title), style = MaterialTheme.typography.titleLarge)
             }
             item {
                 OutlinedTextField(
@@ -388,16 +405,20 @@ fun GamesScreen(
 private fun ConsoleGameCard(game: Game, selected: Boolean, favorite: Boolean, onFavorite: () -> Unit, onClick: () -> Unit) {
     Card(
         onClick = onClick,
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth().vortexGlass(RoundedCornerShape(20.dp)),
         shape = RoundedCornerShape(20.dp),
         colors = CardDefaults.cardColors(
-            containerColor = if (selected) MaterialTheme.colorScheme.secondaryContainer else MaterialTheme.colorScheme.surfaceVariant
+            containerColor = if (selected) MaterialTheme.colorScheme.secondaryContainer else glassSurfaceColor(MaterialTheme.colorScheme.surfaceVariant)
         )
     ) {
         Row(Modifier.fillMaxWidth().padding(12.dp), verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-            AsyncImage(model = game.large_image, contentDescription = null,
-                modifier = Modifier.size(64.dp).clip(RoundedCornerShape(12.dp)))
+            Box(Modifier.size(64.dp).clip(RoundedCornerShape(16.dp))
+                .background(MaterialTheme.colorScheme.primaryContainer), contentAlignment = Alignment.Center) {
+                Icon(Icons.Outlined.SportsEsports, contentDescription = null, tint = MaterialTheme.colorScheme.onPrimaryContainer)
+                if (!game.large_image.isNullOrBlank()) AsyncImage(model = game.large_image, contentDescription = null,
+                    modifier = Modifier.matchParentSize(), contentScale = ContentScale.Crop)
+            }
             Column(Modifier.weight(1f)) {
                 Text(game.game_title, style = MaterialTheme.typography.titleMedium, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 Text(game.platform, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
