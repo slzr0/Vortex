@@ -91,8 +91,7 @@ class MainActivity : ComponentActivity() {
             })
             StartupStage.COMPLETE -> CompleteScreen(onSignOut = {
                 store.clearSession()
-                CookieManager.getInstance().removeAllCookies(null)
-                CookieManager.getInstance().flush()
+                CookieManager.getInstance().removeAllCookies { CookieManager.getInstance().flush() }
                 WebStorage.getInstance().deleteAllData()
                 signedIn = false
             })
