@@ -104,7 +104,7 @@ internal fun ComponentActivity.Vortex(
         mutableStateOf(Prefs[Prefs.TOKEN, ""].isNotEmpty() && Prefs[Prefs.USER_ID, ""].isNotEmpty())
     }
     var accountGeneration by remember { mutableIntStateOf(0) }
-    val logout = {
+    val logout: () -> Unit = {
         Prefs.remove(Prefs.TOKEN)
         Prefs.remove(Prefs.USER_DATA)
         Prefs.remove(Prefs.USER_ID)
