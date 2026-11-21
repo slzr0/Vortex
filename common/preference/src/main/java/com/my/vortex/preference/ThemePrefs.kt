@@ -23,12 +23,14 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import com.my.vortex.resources.R
 
-const val DEFAULT_SEED_COLOR =  0xFFAF92F1.toInt()
+const val DEFAULT_SEED_COLOR =  0xFF438D79.toInt()
 data class AppSettings(
     val darkTheme: DarkThemePreference = DarkThemePreference(),
     val isDynamicColorEnabled: Boolean = false,
     val seedColor: Int = DEFAULT_SEED_COLOR,
-    val paletteStyleIndex: Int = 0
+    val paletteStyleIndex: Int = 0,
+    val glassStyle: Boolean = true,
+    val glassIntensity: Int = 1
 )
 val palettesMap = mapOf(
     0 to PaletteStyle.TonalSpot,
@@ -45,10 +47,23 @@ private val mutableAppSettingsStateFlow = MutableStateFlow(
         ),
         isDynamicColorEnabled = Prefs[Prefs.DYNAMIC_COLOR, false],
         seedColor = Prefs[Prefs.THEME_COLOR, DEFAULT_SEED_COLOR],
-        paletteStyleIndex = Prefs[Prefs.PALETTE_STYLE, 0]
+        paletteStyleIndex = Prefs[Prefs.PALETTE_STYLE, 0],
+        glassStyle = Prefs[Prefs.GLASS_STYLE, true],
+        glassIntensity = Prefs[Prefs.GLASS_INTENSITY, 1].coerceIn(0, 2)
     )
 )
 val AppSettingsStateFlow = mutableAppSettingsStateFlow.asStateFlow()
+fun setGlassStyle(enabled: Boolean) {
+    mutableAppSettingsStateFlow.update { it.copy(glassStyle = enabled) }
+    Prefs[Prefs.GLASS_STYLE] = enabled
+}
+
+fun setGlassIntensity(intensity: Int) {
+    val safeIntensity = intensity.coerceIn(0, 2)
+    mutableAppSettingsStateFlow.update { it.copy(glassIntensity = safeIntensity) }
+    Prefs[Prefs.GLASS_INTENSITY] = safeIntensity
+}
+
 fun modifyDarkThemePreference(
     darkThemeValue: Int = AppSettingsStateFlow.value.darkTheme.darkThemeValue,
     isHighContrastModeEnabled: Boolean = AppSettingsStateFlow.value.darkTheme.isHighContrastModeEnabled

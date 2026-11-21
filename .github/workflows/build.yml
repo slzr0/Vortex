@@ -32,7 +32,7 @@ jobs:
         run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
 
       - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v6.4.1
 
       - name: Make Gradle wrapper executable
         run: chmod +x gradlew
@@ -41,7 +41,7 @@ jobs:
         run: ./gradlew assembleDebug
 
       - name: Upload debug APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: vortex-debug-apk
           path: app/build/outputs/apk/debug/*.apk

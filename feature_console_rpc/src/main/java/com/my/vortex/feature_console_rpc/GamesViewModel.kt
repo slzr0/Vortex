@@ -25,6 +25,8 @@ import com.my.vortex.resources.R
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -39,7 +41,7 @@ class GamesViewModel @Inject constructor(
 
     private val _state: MutableState<GamesState> = mutableStateOf(GamesState.Loading)
     val state: State<GamesState> = _state
-    private val games = mutableListOf<Game>()
+    private var games: List<Game> = emptyList()
     val isSearchBarVisible = mutableStateOf(false)
 
     private var searchJob: Job? = null
@@ -58,10 +60,9 @@ class GamesViewModel @Inject constructor(
         loadJob = getGamesUseCase().onEach { result ->
             when (result) {
                 is Resource.Success -> {
-                    games.clear()
-                    games.addAll(result.data.orEmpty())
+                    games = result.data.orEmpty().toList()
                     catalogLoaded = true
-                    searchForGame(query)
+                    searchForGame(query, 0)
                 }
 
                 is Resource.Error -> {
@@ -88,15 +89,17 @@ class GamesViewModel @Inject constructor(
 
     private fun onSearch(query: String) {
         this.query = query
-        searchJob?.cancel()
-        searchJob = viewModelScope.launch {
-            delay(500)
-            searchForGame(query)
-        }
+        searchForGame(query, 300)
     }
 
-    private fun searchForGame(query: String) {
+    private fun searchForGame(query: String, debounceMillis: Long) {
+        searchJob?.cancel()
         if (!catalogLoaded) return
-        _state.value = GamesState.Success(filterConsoleGames(games, query))
+        val snapshot = games
+        searchJob = viewModelScope.launch {
+            if (debounceMillis > 0) delay(debounceMillis)
+            val filtered = withContext(Dispatchers.Default) { filterConsoleGames(snapshot, query) }
+            _state.value = GamesState.Success(filtered)
+        }
     }
 }

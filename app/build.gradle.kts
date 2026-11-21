@@ -46,6 +46,7 @@ dependencies {
     implementation (projects.common.preference)
     implementation (projects.common.navigation)
     implementation (projects.common.resources)
+    implementation (projects.common.components)
     implementation (libs.material.icons.extended)
 
     implementation (libs.activity.compose)

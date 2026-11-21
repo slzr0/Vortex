@@ -3,6 +3,10 @@ package com.my.vortex
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
@@ -10,7 +14,9 @@ import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.core.os.LocaleListCompat
 import androidx.core.view.WindowCompat
 import com.my.vortex.preference.getLanguageConfig
+import com.my.vortex.ui.components.glassBackground
 import com.my.vortex.ui.theme.LocalDarkTheme
+import com.my.vortex.ui.theme.LocalGlassStyle
 import com.my.vortex.ui.theme.LocalDynamicColorSwitch
 import com.my.vortex.ui.theme.SettingsProvider
 import com.my.vortex.ui.theme.VortexTheme
@@ -32,7 +38,10 @@ class MainActivity : AppCompatActivity() {
                     darkTheme = LocalDarkTheme.current.isDarkTheme(),
                     isHighContrastModeEnabled = LocalDarkTheme.current.isHighContrastModeEnabled,
                     isDynamicColorEnabled = LocalDynamicColorSwitch.current,
-                ) { Vortex() }
+                ) {
+                    val background = if (LocalGlassStyle.current) Modifier.background(glassBackground()) else Modifier
+                    Box(Modifier.fillMaxSize().then(background)) { Vortex() }
+                }
             }
         }
     }

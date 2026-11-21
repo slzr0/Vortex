@@ -4,7 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
 import android.widget.Toast
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -14,9 +13,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.ArrowForward
+import androidx.compose.material.icons.outlined.AutoAwesome
 import androidx.compose.material.icons.outlined.BatteryFull
 import androidx.compose.material.icons.outlined.BugReport
 import androidx.compose.material.icons.outlined.DeleteOutline
@@ -29,6 +31,7 @@ import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -42,14 +45,21 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.my.vortex.preference.Prefs
+import com.my.vortex.preference.setGlassStyle
+import com.my.vortex.preference.setGlassIntensity
+import com.my.vortex.ui.theme.LocalGlassStyle
+import com.my.vortex.ui.theme.LocalGlassIntensity
 import com.my.vortex.resources.R
+import com.my.vortex.ui.components.VortexHero
+import com.my.vortex.ui.components.VortexMint
+import com.my.vortex.ui.components.glassScaffoldColor
+import com.my.vortex.ui.components.glassSurfaceColor
+import com.my.vortex.ui.components.vortexGlass
 
 @Composable
 internal fun SettingsHub(
@@ -64,6 +74,8 @@ internal fun SettingsHub(
     var showLogout by remember { mutableStateOf(false) }
     var showClear by remember { mutableStateOf(false) }
     val accountName = remember { runCatching { Prefs.getUser() }.getOrNull()?.let { it.globalName ?: it.username } }
+    val glassStyle = LocalGlassStyle.current
+    val glassIntensity = LocalGlassIntensity.current
     var restoreCustom by remember { mutableStateOf(Prefs[Prefs.APPLY_FIELDS_FROM_LAST_RUN_RPC, false]) }
     fun openSystemSettings(intent: Intent) {
         val fallback = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:${context.packageName}"))
@@ -71,27 +83,53 @@ internal fun SettingsHub(
             Toast.makeText(context, R.string.setup_settings_unavailable, Toast.LENGTH_SHORT).show()
         }
     }
-    Scaffold { padding ->
+    Scaffold(containerColor = glassScaffoldColor()) { padding ->
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(20.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)) {
             item {
-                Surface(shape = RoundedCornerShape(28.dp), color = Color(0xFF171D3D)) {
-                    Column(Modifier.fillMaxWidth().background(Brush.linearGradient(listOf(Color(0xFF28235D), Color(0xFF10495C))))
-                        .padding(24.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Text("V O R T E X", style = MaterialTheme.typography.labelLarge, color = Color(0xFF9DEAFF))
-                        Text(stringResource(R.string.settings_title_new), style = MaterialTheme.typography.headlineLarge, color = Color.White)
-                        Text(stringResource(R.string.settings_intro_new), style = MaterialTheme.typography.bodyMedium, color = Color(0xFFD8E6F5))
-                        if (!accountName.isNullOrBlank()) Text(stringResource(R.string.settings_connected_as, accountName),
-                            style = MaterialTheme.typography.labelMedium, color = Color(0xFF9DEAFF))
+                VortexHero(stringResource(R.string.settings_eyebrow), stringResource(R.string.settings_title_new),
+                    stringResource(R.string.settings_intro_new)) {
+                    if (!accountName.isNullOrBlank()) Text(stringResource(R.string.settings_connected_as, accountName),
+                        style = MaterialTheme.typography.labelMedium, color = VortexMint)
+                }
+            }
+
+            item { SettingsSection(stringResource(R.string.settings_personalize)) }
+            item {
+                Surface(modifier = Modifier.vortexGlass(RoundedCornerShape(24.dp)), shape = RoundedCornerShape(24.dp),
+                    color = glassSurfaceColor(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = .55f))) {
+                    Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                            Surface(shape = RoundedCornerShape(14.dp), color = MaterialTheme.colorScheme.primaryContainer) {
+                                Icon(Icons.Outlined.AutoAwesome, contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.onPrimaryContainer, modifier = Modifier.padding(10.dp).size(22.dp))
+                            }
+                            Column(Modifier.weight(1f)) {
+                                Text(stringResource(R.string.settings_glass_title), style = MaterialTheme.typography.titleMedium)
+                                Text(stringResource(R.string.settings_glass_description), style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant)
+                            }
+                            Switch(checked = glassStyle, onCheckedChange = ::setGlassStyle)
+                        }
+                        if (glassStyle) {
+                            Text(stringResource(R.string.settings_glass_strength), style = MaterialTheme.typography.labelMedium)
+                            LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                itemsIndexed(listOf(R.string.settings_glass_soft, R.string.settings_glass_balanced, R.string.settings_glass_vivid)) { index, label ->
+                                    FilterChip(selected = glassIntensity == index, onClick = { setGlassIntensity(index) },
+                                        label = { Text(stringResource(label), maxLines = 1) })
+                                }
+                            }
+                        }
+                        Text(stringResource(R.string.settings_glass_live), style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                 }
             }
-            item { SettingsSection(stringResource(R.string.settings_personalize)) }
             item { SettingsAction(Icons.Outlined.Palette, stringResource(R.string.display), stringResource(R.string.settings_appearance_desc), onAppearance) }
             item { SettingsAction(Icons.Outlined.Language, stringResource(R.string.language), stringResource(R.string.settings_language_desc), onLanguage) }
             item { SettingsAction(Icons.Outlined.Tune, stringResource(R.string.settings_presence), stringResource(R.string.settings_presence_desc), onPresenceSettings) }
             item {
-                Surface(shape = RoundedCornerShape(20.dp), color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)) {
+                Surface(modifier = Modifier.vortexGlass(RoundedCornerShape(20.dp)), shape = RoundedCornerShape(20.dp), color = glassSurfaceColor(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))) {
                     Row(Modifier.fillMaxWidth().padding(16.dp), verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                         Column(Modifier.weight(1f)) {
@@ -146,7 +184,7 @@ private fun SettingsSection(title: String) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun SettingsAction(icon: ImageVector, title: String, description: String, onClick: () -> Unit) {
-    Surface(onClick = onClick, shape = RoundedCornerShape(20.dp), color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)) {
+    Surface(onClick = onClick, modifier = Modifier.vortexGlass(RoundedCornerShape(20.dp)), shape = RoundedCornerShape(20.dp), color = glassSurfaceColor(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))) {
         Row(Modifier.fillMaxWidth().padding(16.dp), verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(14.dp)) {
             Surface(shape = RoundedCornerShape(12.dp), color = MaterialTheme.colorScheme.primaryContainer) {
