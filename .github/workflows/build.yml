@@ -33,6 +33,8 @@ jobs:
         run: chmod +x gradlew
       - name: Build debug APK
         run: ./gradlew assembleDebug
+      - name: Test Discord session script
+        run: node scripts/test-discord-session.js
       - name: Run unit tests
         run: ./gradlew testDebugUnitTest
       - name: Upload debug APK

@@ -22,6 +22,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
 import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
@@ -82,6 +84,7 @@ class MainActivity : ComponentActivity() {
         var signedIn by remember { mutableStateOf(store.hasSession()) }
         var asked by rememberSaveable { mutableStateOf(false) }
         var manageAccess by rememberSaveable { mutableStateOf(false) }
+        var movingToSignIn by rememberSaveable { mutableStateOf(false) }
         val launcher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) {
             asked = true
             enabled = notificationsEnabled()
@@ -101,16 +104,27 @@ class MainActivity : ComponentActivity() {
         LaunchedEffect(Unit) {
             if (!launched) { delay(if (ValueAnimator.areAnimatorsEnabled()) 1200 else 200); launched = true }
         }
+        LaunchedEffect(movingToSignIn, enabled) {
+            if (movingToSignIn) {
+                if (enabled && ValueAnimator.areAnimatorsEnabled()) delay(1050)
+                movingToSignIn = false
+            }
+        }
         val screen = when {
             !launched -> "loading"
+            movingToSignIn && enabled -> "accessComplete"
             manageAccess -> "permissions"
             else -> startupStage(enabled, acknowledged, signedIn).name
         }
         AnimatedContent(targetState = screen, transitionSpec = {
-            fadeIn(tween(320)) togetherWith fadeOut(tween(200))
+            if (ValueAnimator.areAnimatorsEnabled()) {
+                (fadeIn(tween(360)) + slideInHorizontally(tween(420)) { it / 12 }) togetherWith
+                    (fadeOut(tween(220)) + slideOutHorizontally(tween(300)) { -it / 16 })
+            } else fadeIn(tween(0)) togetherWith fadeOut(tween(0))
         }, label = "setup transition") { target ->
             when (target) {
                 "loading" -> LoadingScreen()
+                "accessComplete" -> AccessCompleteScreen()
                 "permissions", StartupStage.PERMISSIONS.name -> PermissionScreen(
                     enabled = enabled, asked = asked, usageEnabled = usageEnabled, batteryEnabled = batteryEnabled,
                     onAllow = {
@@ -120,7 +134,12 @@ class MainActivity : ComponentActivity() {
                     onBatterySettings = ::batterySettings,
                     onContinue = {
                         enabled = notificationsEnabled()
-                        if (enabled) { store.acknowledged = true; acknowledged = true; manageAccess = false }
+                        if (enabled) {
+                            if (!manageAccess && !signedIn && ValueAnimator.areAnimatorsEnabled()) movingToSignIn = true
+                            store.acknowledged = true
+                            acknowledged = true
+                            manageAccess = false
+                        }
                     },
                     onBack = if (manageAccess && enabled) ({ manageAccess = false }) else null
                 )

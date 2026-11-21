@@ -241,14 +241,40 @@ internal fun PermissionScreen(enabled: Boolean, asked: Boolean, usageEnabled: Bo
 }
 
 @Composable
+internal fun AccessCompleteScreen() {
+    val reveal = remember { Animatable(if (ValueAnimator.areAnimatorsEnabled()) 0f else 1f) }
+    LaunchedEffect(Unit) {
+        if (ValueAnimator.areAnimatorsEnabled()) reveal.animateTo(1f, tween(650, easing = FastOutSlowInEasing))
+    }
+    Box(Modifier.fillMaxSize().background(Brush.verticalGradient(listOf(Color(0xFF1C3A3B), Background, Background)))
+        .statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.Center) {
+        Column(Modifier.padding(28.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(18.dp)) {
+            Box(Modifier.scale(.72f + .28f * reveal.value).alpha(reveal.value).size(156.dp)
+                .background(Accent.copy(alpha = .10f), CircleShape).border(1.dp, Accent.copy(alpha = .35f), CircleShape),
+                contentAlignment = Alignment.Center) {
+                Mark(Modifier.size(120.dp), rotation = (1f - reveal.value) * -35f)
+                Box(Modifier.align(Alignment.BottomEnd).size(42.dp).background(Accent, CircleShape), contentAlignment = Alignment.Center) {
+                    Icon(Icons.Outlined.Check, contentDescription = null, tint = Background)
+                }
+            }
+            Text("ACCESS READY", color = Accent, fontSize = 11.sp, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
+            Text("Nice, you’re set.", color = Foreground, fontSize = 29.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+            Text("Now let’s connect your Discord.", color = Subtle, fontSize = 15.sp, textAlign = TextAlign.Center)
+        }
+    }
+}
+
+@Composable
 internal fun SignInScreen(onToken: (String) -> Boolean) {
     var showLogin by remember { mutableStateOf(false) }
     var verifying by remember { mutableStateOf(false) }
     var clearing by remember { mutableStateOf(false) }
-    var error by remember { mutableStateOf(false) }
+    var error by remember { mutableStateOf<String?>(null) }
     var webError by remember { mutableStateOf(false) }
     var webProgress by remember { mutableIntStateOf(0) }
     var attempt by remember { mutableIntStateOf(0) }
+    var checkRequest by remember { mutableIntStateOf(0) }
+    var checkMessage by remember { mutableStateOf<String?>(null) }
     val scope = rememberCoroutineScope()
     Page(2, "YOUR ACCOUNT", "Connect to\nDiscord.", "One last step to make this space yours.") {
         Panel {
@@ -262,15 +288,15 @@ internal fun SignInScreen(onToken: (String) -> Boolean) {
                 Text("LOCAL ENCRYPTED STORAGE", color = Accent, fontSize = 10.sp, fontWeight = FontWeight.Bold, letterSpacing = .6.sp)
             }
         }
-        if (error) {
-            Text("Couldn’t verify or save your session. Check your connection, then try again.", color = Color(0xFFFFB6AD), fontSize = 13.sp, lineHeight = 20.sp)
+        error?.let { message ->
+            Text(message, color = Color(0xFFFFB6AD), fontSize = 13.sp, lineHeight = 20.sp)
             if (!clearing) SecondaryAction("Clear Discord web session", {
                 clearing = true
                 WebStorage.getInstance().deleteAllData()
                 CookieManager.getInstance().removeAllCookies {
                     CookieManager.getInstance().flush()
                     clearing = false
-                    error = false
+                    error = null
                 }
             })
         }
@@ -281,7 +307,9 @@ internal fun SignInScreen(onToken: (String) -> Boolean) {
                 CircularProgressIndicator(Modifier.size(20.dp), color = Accent, strokeWidth = 2.dp)
                 Text("Checking your session with Discord…", color = Subtle, fontSize = 14.sp)
             }
-        } else Action("Sign in with Discord", { error = false; webError = false; webProgress = 0; attempt++; showLogin = true }, Discord)
+        } else Action("Sign in with Discord", {
+            error = null; webError = false; webProgress = 0; checkMessage = null; attempt++; showLogin = true
+        }, Discord)
         Text("Sign out any time to remove your local session.", color = Subtle, fontSize = 12.sp, lineHeight = 19.sp)
     }
     if (showLogin) {
@@ -293,9 +321,9 @@ internal fun SignInScreen(onToken: (String) -> Boolean) {
                         IconButton(onClick = { showLogin = false }) { Icon(Icons.Outlined.ArrowBack, contentDescription = "Close sign in", tint = Foreground) }
                         Column(Modifier.weight(1f)) {
                             Text("Discord sign in", color = Foreground, fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
-                            Text("Discord login", color = Subtle, fontSize = 12.sp)
+                            Text("Complete sign-in on Discord", color = Subtle, fontSize = 12.sp)
                         }
-                        Icon(Icons.Outlined.Lock, contentDescription = "Discord sign-in", tint = Accent, modifier = Modifier.size(17.dp))
+                        Icon(Icons.Outlined.Lock, contentDescription = null, tint = Accent, modifier = Modifier.size(17.dp))
                         Spacer(Modifier.width(12.dp))
                     }
                     if (webProgress in 1..99 && !webError) LinearProgressIndicator(progress = { webProgress / 100f }, modifier = Modifier.fillMaxWidth(), color = Accent, trackColor = Border)
@@ -307,19 +335,35 @@ internal fun SignInScreen(onToken: (String) -> Boolean) {
                                     showLogin = false
                                     scope.launch {
                                         try {
-                                            if (!verifyDiscordToken(token) || !onToken(token)) error = true
+                                            error = when (verifyDiscordToken(token)) {
+                                                SessionVerification.VALID -> if (onToken(token)) null else "Couldn’t save your session securely. Try again."
+                                                SessionVerification.INVALID -> "Discord couldn’t verify this session. Clear the web session and sign in again."
+                                                SessionVerification.RATE_LIMITED -> "Discord asked us to slow down. Wait a little, then try again."
+                                                SessionVerification.UNAVAILABLE -> "Couldn’t reach or verify with Discord. Check your connection and try again."
+                                            }
                                         } catch (e: CancellationException) { throw e }
-                                        catch (_: Exception) { error = true }
+                                        catch (_: Exception) { error = "Couldn’t verify your session. Please try again." }
                                         finally { verifying = false }
                                     }
                                 }
-                            }, onProgress = { webProgress = it }, onError = { webError = true })
+                            }, onProgress = { webProgress = it }, onError = { webError = true },
+                                checkRequest = checkRequest, onCheckEmpty = {
+                                    checkMessage = "No session detected yet. Finish Discord sign-in, including any verification, then try again."
+                                })
                         }
                         if (webError) {
                             Column(Modifier.fillMaxSize().background(Background).padding(24.dp), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
                                 Text("Couldn’t load Discord", color = Foreground, fontSize = 20.sp, fontWeight = FontWeight.SemiBold)
                                 Text("Check your internet connection and try again.", Modifier.padding(top = 10.dp, bottom = 20.dp), color = Subtle, textAlign = TextAlign.Center)
-                                Action("Try again", { webError = false; webProgress = 0; attempt++ })
+                                Action("Try again", { webError = false; webProgress = 0; checkMessage = null; attempt++ })
+                            }
+                        }
+                    }
+                    if (!webError) {
+                        Column(Modifier.fillMaxWidth().background(Card).padding(horizontal = 16.dp, vertical = 6.dp)) {
+                            checkMessage?.let { Text(it, color = Subtle, fontSize = 12.sp, lineHeight = 18.sp, modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)) }
+                            TextButton(onClick = { checkMessage = "Checking for your session…"; checkRequest++ }, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                                Text("I’ve signed in — check session", color = Accent, fontWeight = FontWeight.SemiBold)
                             }
                         }
                     }
