@@ -16,11 +16,14 @@ import android.content.ComponentName
 import android.os.Build
 import android.widget.Toast
 import androidx.compose.foundation.border
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Surface
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.TextButton
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -61,6 +64,8 @@ import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -79,8 +84,8 @@ import com.my.vortex.feature_home.feature.HomeFeature
 import com.my.vortex.feature_home.feature.ToolTipContent
 import com.my.vortex.feature_rpc_base.services.VortexTileService
 import com.my.vortex.feature_settings.SettingsDrawer
+import com.my.vortex.navigation.Routes
 import com.my.vortex.resources.R
-import com.my.vortex.ui.components.ChipSection
 import com.my.vortex.ui.components.UpdateDialog
 import kotlinx.coroutines.launch
 
@@ -256,14 +261,34 @@ fun Home(
                 item {
                     Surface(
                         modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
-                        shape = RoundedCornerShape(24.dp),
-                        color = MaterialTheme.colorScheme.primaryContainer
+                        shape = RoundedCornerShape(28.dp),
+                        color = Color(0xFF201C4B)
                     ) {
-                        Column(Modifier.padding(22.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Column(
+                            Modifier.background(Brush.linearGradient(listOf(Color(0xFF25205B), Color(0xFF124B61))))
+                                .padding(22.dp),
+                            verticalArrangement = Arrangement.spacedBy(10.dp)
+                        ) {
+                            Text("V O R T E X", style = MaterialTheme.typography.labelMedium, color = Color(0xFF9BEAFF))
                             Text(stringResource(R.string.presence_overview), style = MaterialTheme.typography.headlineSmall,
-                                color = MaterialTheme.colorScheme.onPrimaryContainer)
+                                color = Color.White)
                             Text(stringResource(R.string.presence_overview_desc), style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.onPrimaryContainer)
+                                color = Color(0xFFDDE8FF))
+                            Text(
+                                homeItems.firstOrNull { it.isChecked }?.let { "${it.title} · ${stringResource(R.string.android_on)}" }
+                                    ?: stringResource(R.string.home_no_active_mode),
+                                style = MaterialTheme.typography.labelLarge, color = Color(0xFFA8EFFF)
+                            )
+                            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                FilledTonalButton(onClick = {
+                                    homeItems.firstOrNull { it.route == Routes.CONSOLE_RPC }?.let { it.onClick(Routes.CONSOLE_RPC) }
+                                }) { Text(stringResource(R.string.home_open_console)) }
+                                if (user == null) {
+                                    TextButton(onClick = navigateToProfile) {
+                                        Text(stringResource(R.string.home_connect), color = Color.White)
+                                    }
+                                }
+                            }
                         }
                     }
                     if (user != null) {
@@ -271,7 +296,6 @@ fun Home(
                             Text(stringResource(R.string.logout))
                         }
                     }
-                    ChipSection()
                     Column(Modifier.padding(horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                         Text(stringResource(R.string.presence_modes), style = MaterialTheme.typography.titleLarge)
                         Text(stringResource(R.string.presence_mode_hint), style = MaterialTheme.typography.bodyMedium,
@@ -321,6 +345,12 @@ fun Home(
                     }
                 }
 
+                is HomeScreenState.Error -> {
+                    if (showUpdateDialog) {
+                        Toast.makeText(ctx, state.error ?: ctx.getString(R.string.unknown_error), Toast.LENGTH_LONG).show()
+                        showUpdateDialog = false
+                    }
+                }
                 else -> {}
             }
         }

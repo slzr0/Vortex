@@ -1,58 +1,58 @@
 # Vortex
 
-Vortex is an Android Discord Rich Presence client based on the open-source
-[Kizzy project](https://github.com/dead8309/Kizzy). It uses Kotlin, Jetpack
-Compose and Material 3.
+Vortex is an Android Discord Rich Presence client built with Kotlin, Jetpack Compose and Material 3.
+Control what you share from a single dashboard, with app, media, console and custom presence modes.
 
-## Project structure
+## Presence modes
 
-- `app/` — application entry point, setup flow and navigation.
-- `feature_home/`, `feature_apps_rpc/`, `feature_media_rpc/`,
-  `feature_custom_rpc/` — presence dashboard and configuration screens.
-- `feature_console_rpc/`, `feature_experimental_rpc/`, `feature_profile/`,
-  `feature_settings/`, `feature_about/`, `feature_logs/`, `feature_startup/`,
-  `feature_crash_handler/` — additional features and settings.
-- `feature_rpc_base/` — presence services, notifications, shortcuts and tile.
-- `common/` — reusable components, navigation, resources and preferences.
-- `theme/`, `color/` — Material theme and palette generation.
-- `domain/`, `data/`, `gateway/` — models, repositories, Discord gateway and
-  presence implementation.
-- `build-logic/`, `gradle/` — convention plugins and dependency versions.
+- **Console:** search the game catalog, select a preset, or create a manual game and platform preset when the catalog is unavailable. Your last started preset is saved for quick access.
+- **Apps:** share the app you are using, with usage access enabled.
+- **Media:** share playback activity, with notification access enabled.
+- **Custom:** configure your own presence, images, timestamps and buttons.
+- **Experimental:** switch between supported app and media activity modes.
+
+Only one presence service should run at a time. A running service indicates the Android service is active; it does not guarantee a Discord connection.
+
+## Getting started
+
+Open your profile to sign in, grant the permissions required by the modes you want to use, then choose a mode from the dashboard. Console includes a bundled game catalog, supplements it with the remote catalog when available, and also supports manual presets. Artwork and Discord presence still require a network connection.
+
+## Troubleshooting
+
+- Sign in from the profile screen before starting Console RPC.
+- If a title is missing, try another spelling or create a manual preset. Bundled catalogs may not list every game or region.
+- The gateway retries transient disconnections and restores the latest activity. Keep the foreground notification enabled and allow unrestricted battery usage for better reliability; the wake lock can increase battery use. Android, network outages, force-stop, reboots and Discord restrictions can still interrupt presence, so continuous 24/7 operation is not guaranteed.
+- If artwork is missing, verify internet access and image services; text presence can still work without artwork.
+- If presence does not appear, check the app logs and your Discord connection. Discord may change or restrict this unofficial integration.
+- Notification and usage permissions are required for media and app detection respectively.
 
 ## Build
 
-Open the project in Android Studio with Android SDK 36 and JDK 17,
-then build the `app` configuration, or run:
+Use Android Studio, Android SDK 36 and JDK 17, or run:
 
 ```sh
 bash gradlew :app:assembleDebug
 ```
 
-The project resolves dependencies from Google and Maven repositories. Runtime
-permissions, a Discord account and supported Android services are required for
-some features. Discord gateway use is at your own risk.
+A GitHub Actions workflow builds the debug APK on pushes to `main` and can also be run manually.
 
-## Compatibility and attribution
+## Privacy and compatibility
 
-The existing Android application ID, preference keys, shortcut actions and
-notification channel are retained for compatibility with existing installations.
-Source namespaces and primary components have been renamed. Small legacy
-component adapters preserve notification access, pinned shortcuts and existing
-quick-settings tiles where Android retains those component grants. Upstream documentation, API endpoints and update
-links also still refer to the original project; they have not been redirected to
-an independent Vortex service. In particular, the update checker queries the
-upstream release feed, not a Vortex release feed.
+The sign-in screen uses an in-app WebView and retrieves a Discord user token, which the existing RPC implementation stores in app-private MMKV preferences without encryption. Signing out clears the locally saved token and profile fields; it does not revoke the Discord session. This unofficial method may stop working and may violate Discord's terms. See [Privacy and Terms](TERMS_OF_SERVICE.md).
 
-This project is derived from [Kizzy](https://github.com/dead8309/Kizzy); see
-`License` and the original source for license and attribution information.
+Existing application identifiers, preference keys and legacy components remain for upgrade compatibility. Third-party services are still used for supplemental catalog entries, artwork, profile information and image handling. Vortex release checks target this repository; no release may be available yet.
 
-## Discord login
+This is a derivative open-source project. Original copyright and attribution notices are retained in source files; see [License](License).
 
-The profile screen opens Discord's login page in an in-app WebView. After login,
-Kizzy's original JavaScript-based flow retrieves the Discord user token and stores
-it in the existing MMKV preferences used by RPC. Logout removes the saved token
-and profile fields locally; it does not revoke the Discord session. This method
-is dependent on Discord's web client and may stop working if it changes. Using a
-Discord user token for automated RPC may violate Discord's terms and can put the
-account at risk. The token is not encrypted by this application's preference
-storage.
+## Credits
+
+- [Read You](https://github.com/Ashinch/ReadYou) and [Seal](https://github.com/JunkFood02/Seal) — UI components.
+- [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) — color utilities.
+- [Rich-Presence-U](https://github.com/ninstar/Rich-Presence-U) and [Rich Presence U Database](https://github.com/ninstar/Rich-Presence-U-DB) — Nintendo and Wii U game data, under the [Open Database License 1.0](data/src/main/assets/licenses/nintendo-odbl.txt). Original CSV files and source revision are included in [catalog attribution](data/src/main/assets/catalog/ATTRIBUTION.txt).
+- [Logra](https://github.com/wingio/Logra) — logs UI.
+- [Xbox-Rich-Presence-Discord](https://github.com/MrCoolAndroid/Xbox-Rich-Presence-Discord) — Xbox game data, under the [MIT License](data/src/main/assets/licenses/xbox-mit.txt); original JSON and source revision are included in the catalog assets.
+- [Monet](https://github.com/Kyant0/Monet) — Material 3 palettes.
+
+## Console tools
+
+Save catalog or manual presets as favorites, filter games by platform, and choose your Discord status and whether elapsed time is shown. Console options take effect when you start or update the presence. The background-readiness card links to Android battery and notification settings; manufacturers can impose additional restrictions, and those settings cannot guarantee continuous presence.

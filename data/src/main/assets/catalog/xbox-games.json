@@ -1,0 +1,3461 @@
+{
+  "Games List": [
+    {
+      "Games": [
+        {
+          "titlename": "Coral Island",
+          "titleimage": "Coral Island",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202310/3018/578c25e83d7fe754a625ae6910d84e4ce12d420f9771beb1.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202310/3019/f16271f72440972a1276834dfc20524a569c19911d1f2a28.png",
+          "type": 1
+        },
+        {
+          "titlename": "DRAGON BALL: Sparking! ZERO",
+          "titleimage": "DRAGON BALL: Sparking! ZERO",
+          "titleicon": "https://media.vandal.net/m/13/136622/dragon-ball-sparking-zero-2024101110434740_1.jpg",
+          "titlebackground": "https://assets-prd.ignimgs.com/2024/10/06/dragonballsparkingzero-blogroll-1728236013031.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Test Drive Unlimited",
+          "titleimage": "Test Drive Unlimited",
+          "titleicon": "https://assets-prd.ignimgs.com/2023/12/23/tdu1-1703350705146.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/35fcfa9e4c022b77e94c0c09a10690c8.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Test Drive Unlimited 2",
+          "titleimage": "Test Drive Unlimited 2",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/9ed3fca2a9d9d1ddc50efedc993d14ae.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/9767eb6137bb1e88380c96bbf5ad99bb.png",
+          "type": 1
+        },
+        {
+          "titlename": "Aliens vs Predator",
+          "titleimage": "Aliens vs Predator",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/20/aliens-vs-predator-2010-button-1642656901312.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/11f2a87167e3ff5263d9b7a807f59524.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Blazblue: Calamity Trigger",
+          "titleimage": "Blazblue: Calamity Trigger",
+          "titleicon": "https://cdn2.steamgriddb.com/thumb/b0302bb8590ad20a617b8d7ceb4caf9f.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/2cfd4560539f887a5e420412b370b361.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Age Of Booty",
+          "titleimage": "Age Of Booty",
+          "titleicon": "https://cdn2.steamgriddb.com/thumb/ebe6eaa8d941d230e93496709db638b9.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/5fb37d5bbdbbae16dea2f3104d7f9439.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Street Fighter X Tekken",
+          "titleimage": "Street Fighter X Tekken",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/07/street-fighter-x-tekken-button-1641591107711.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/3d8e28caf901313a554cebc7d32e67e5.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "PRAGMATA Sketchbook - DEMO",
+          "titleimage": "PRAGMATA_SKETCHBOOK_DEMO",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/fbb80248b9c6f3f3dbe69b5ee2ccb187.png",
+          "titlebackground": "https://images.hdqwalls.com/wallpapers/pragmata-2025-ip.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "PRAGMATA",
+          "titleimage": "PRAGMATA",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/fbb80248b9c6f3f3dbe69b5ee2ccb187.png",
+          "titlebackground": "https://images.hdqwalls.com/wallpapers/pragmata-2025-ip.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "2XKO",
+          "titleimage": "2XKO",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/beafee2a621381a37675af7da2d2c065.png",
+          "titlebackground": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d4d80bb9662a7dbd66b09f0739b444e76fbdcbb8-1920x1080.jpg?accountingTag=2XKO",
+          "type": 1
+        },
+        {
+          "titlename": "HALF-MINUTE HERO -Super Mega Neo Climax-",
+          "titleimage": "HALF-MINUTE HERO -Super Mega Neo Climax-",
+          "titleicon": "https://cdn2.steamgriddb.com/thumb/8948de2725f465ef6b3760f3550804b3.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/6d19c113404cee55b4036fce1a37c058.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Marvel Ultimate Alliance 2",
+          "titleimage": "Marvel Ultimate Alliance 2",
+          "titleicon": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/marvel-ultimate-alliance-2/7/72/Marvel_Ultimate_Alliance_2_-_BUTTON.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/9a2e8514e94644ccfdd458ab892635e0.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Marvel Ultimate Alliance",
+          "titleimage": "Marvel Ultimate Alliance",
+          "titleicon": "https://assets2.ignimgs.com/2016/07/25/marvel-ultimate-alliance-1-buttonjpg-a2d4d0.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/b90010f47ac493fc027e5727059032d4.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Marvel Rivals",
+          "titleimage": "Marvel_Rivals",
+          "titleicon": "https://assets-prd.ignimgs.com/2024/03/27/marvelrivals-1711557092104.jpg",
+          "titlebackground": "https://cdn.wccftech.com/wp-content/uploads/2024/12/Marvel-Rivals-HD-scaled.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "U. MARVEL VS. CAPCOM 3",
+          "titleimage": "UMvC3_360",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/d6a8c39c569b462f6b7168ef5a470ce9.png",
+          "titlebackground": "https://cdn.prod.website-files.com/657866d52e4cd6019b7f7b00/657866d52e4cd6019b7f81c7_UMVC3%20Featured%20Image.png",
+          "type": 1
+        },
+        {
+          "titlename": "ULTIMATE MARVEL VS. CAPCOM 3",
+          "titleimage": "UMvC3_XB1",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/d6a8c39c569b462f6b7168ef5a470ce9.png",
+          "titlebackground": "https://cdn.prod.website-files.com/657866d52e4cd6019b7f7b00/657866d52e4cd6019b7f81c7_UMVC3%20Featured%20Image.png",
+          "type": 1
+        },
+        {
+          "titlename": "MARVEL VS. CAPCOM 3",
+          "titleimage": "MvC3_vanilla",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/07/09/marvelvcapcom3-1657386132259.jpg",
+          "titlebackground": "https://cdn.prod.website-files.com/657866d52e4cd6019b7f7b00/657866d52e4cd6019b7f81c7_UMVC3%20Featured%20Image.png",
+          "type": 1
+        },
+        {
+          "titlename": "MARVEL VS. CAPCOM: INFINITE",
+          "titleimage": "MvCI",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/a62cc19e74a56d39bc11a79c42fb0b77.png",
+          "titlebackground": "https://images.launchbox-app.com/0d2bc831-009b-4d76-aca1-3ef07952b7dc.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "SOULCALIBUR II HD ONLINE",
+          "titleimage": "SCII_HD_OL",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/402e4532ecca189289e1290d7e2848fa.png",
+          "titlebackground": "https://assetsio.gnwcdn.com/138512649809.jpg?width=1600&height=900&fit=crop&quality=100&format=png",
+          "type": 1
+        },
+        {
+          "titlename": "SOULCALIBUR V",
+          "titleimage": "SCV",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/bf2ebef98954dfa2dce40f67adfbb86a.png",
+          "titlebackground": "https://assets-prd.ignimgs.com/2023/06/12/soul-calibur-5-1686538708745.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Crackdown",
+          "titleimage": "Crackdown",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/02/26/crackdown-sq3-1645908376125.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/c8858a99f91ba5a272d1322d818bd44f.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Fear the Spotlight",
+          "titleimage": "Fear_the_Spotlight",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/d2389f8143052071ad0be3167e9ab534.png",
+          "titlebackground": "https://imageio.forbes.com/specials-images/imageserve/6718044ec2585f9f03bc5fca/0x0.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Crow Country",
+          "titleimage": "Crow_Country",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/be3fee4b6e8d8032bc7b4268a4bc0900.png",
+          "titlebackground": "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/05/crow-country-logo-banner.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Project Gotham Racing 4",
+          "titleimage": "Project Gotham Racing 4",
+          "titleicon": "https://cdn2.steamgriddb.com/thumb/7c57d0b5b9fab29ba9f3e317cc71033f.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/0dbb3fb9a5cd1d5f8a9075b5bb8070aa.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Black Myth: Wukong",
+          "titleimage": "blackmyth",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202405/2117/bd406f42e9352fdb398efcf21a4ffe575b2306ac40089d21.png",
+          "titlebackground": "https://images8.alphacoders.com/112/1129254.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Transformers Devastation",
+          "titleimage": "Transformers Devastation",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/119f6e15c52017fe153a4350ba3413ce.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/a3e8b5e0becdbfb1b1c706b452b6c388.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Eternal Sonata",
+          "titleimage": "Eternal Sonata",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/07/eternalsonata-1646675939005.jpg",
+          "titlebackground": "https://miro.medium.com/v2/resize:fit:1400/1*2s40RS-TVO1Xv08C2vxEAQ.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "Tom Clancy's Ghost Recon Future Soldier",
+          "titleimage": "Tom CLancy's Ghost Recon Future Soldier",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/04/tom-clancys-ghost-recon-future-soldier-button-1641281459594.jpg",
+          "titlebackground": "https://images4.alphacoders.com/285/285296.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "RezHD",
+          "titleimage": "RezHD",
+          "titleicon": "https://cdn2.steamgriddb.com/thumb/453166dfc023f0fbaca96f103a21ed26.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/thumb/fdd05cf341fa84952d10d287fae0402d.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Harms Way",
+          "titleimage": "Harms Way",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/21/harmsway-1647904582252.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.13006.71654092830813350.c1d546b2-c99d-4fef-a724-a7434504086e.ac1cf554-1f1c-478d-8514-65cb1e72197c?q=90&w=480&h=270",
+          "type": 1
+        },
+        {
+          "titlename": "Persona 4 Arena Ultimax",
+          "titleimage": "Persona 4 Arena Ultimax",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/21/persona-4-arena-ultimax-button-1642751292503.jpg",
+          "titlebackground": "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2022/03/persona-4-arena-ultimax-system-requirements.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Comic Jumper",
+          "titleimage": "Comic Jumper",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/21/comicjumper-1647878725513.jpg?width=1024&crop=1%3A1%2Csmart&auto=webp",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.64989.66413203585280713.4b2a30eb-9814-447f-b71a-b0f96db2fbc0.5f9afb45-179a-4545-9be1-c426653bb33d?q=90&w=480&h=270",
+          "type": 1
+        },
+        {
+          "titlename": "Fire Pro Wrestling",
+          "titleimage": "Fire Pro Wrestling",
+          "titleicon": "https://assets-prd.ignimgs.com/2023/06/27/fireprox-1687895281955.jpg?width=1024",
+          "titlebackground": "https://www.trueachievements.com/customimages/011215.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Alien Isolation",
+          "titleimage": "Alien Isolation",
+          "titleicon": "https://assets-prd.ignimgs.com/2021/12/15/alien-isolation-button-fin-1639607046894.jpg?width=1024",
+          "titlebackground": "https://images8.alphacoders.com/677/677926.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Carcassonne",
+          "titleimage": "Carcassone",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/16c10d788ab45577d1b8dbfd8cd963f3.jpg",
+          "titlebackground": "https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_1.5/ncom/en_US/games/switch/c/carcassonne-switch/hero",
+          "type": 1
+        },
+        {
+          "titlename": "Midnight Club L.A",
+          "titleimage": "Midnight Club L.A",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/10/midnightclubla-sq-1641839670810.jpg?width=1024",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/a9b94e2e91ee1dae4106f72c3e48880e.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "BlazBlue Continuum Shift",
+          "titleimage": "BlazBlue Continuum Shift",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/03/blazblueextend-1646342239729.jpg?width=1024",
+          "titlebackground": "https://i.pinimg.com/originals/3c/6b/c0/3c6bc07cb80dc24ac940a56c264e428a.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Rock Of Ages",
+          "titleimage": "Rock Of Ages",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/19/rock-of-ages-1-button-1642582677635.jpg?width=1024",
+          "titlebackground": "https://static.wikia.nocookie.net/rod/images/b/b4/Roa_keyart.jpg/revision/latest/thumbnail/width/360/height/360?cb=20200609075246",
+          "type": 1
+        },
+        {
+          "titlename": "Persona 4 Arena",
+          "titleimage": "Perona 4 Arena",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/21/persona-4-arena-button-1642751368674.jpg",
+          "titlebackground": "https://images3.alphacoders.com/269/thumb-1920-269997.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "SIGNALIS",
+          "titleimage": "SIGNALIS",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/25f2010ea3dc4c8287b687e1bc8f1911.png",
+          "titlebackground": "https://images8.alphacoders.com/128/1285341.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Silent Hill Homecoming",
+          "titleimage": "Silent_Hill_Homecoming",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/591e4177925d047ddd7fcc018f825a56.jpg",
+          "titlebackground": "https://games.kikizo.com/media2008/silent-hill-homecoming-interview/01.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Silent Hill: Downpour",
+          "titleimage": "Silent_Hill_Downpour",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/16c2f163b036939d4178a21ade6283c4.png",
+          "titlebackground": "https://mollielpatterson.com/wp-content/uploads/2017/12/Silent.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Silent Hill: HD Collection",
+          "titleimage": "Silent_Hill_HD_Collection",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/bf881d4611a2941ecbf549a41e5a8905.png",
+          "titlebackground": "https://img.gg.deals/e1/cb/139be1136c8fae349319b8efb552f2c1969b_1232xr706_Q100.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "SILENT HILL 2",
+          "titleimage": "SH2_REMAKE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/14f6d3941aa04b428ad8e437b0187592.png",
+          "titlebackground": "https://images3.alphacoders.com/128/thumb-1920-1282373.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "SILENT HILL f",
+          "titleimage": "SH_f",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/c449a5f3a920a90522f2c50c660d4832.png",
+          "titlebackground": "https://wallpapercave.com/wp/wp15277567.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "SILENT HILL: Townfall",
+          "titleimage": "SH_Townfall",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/c9baf4ec34c31d5f4c1b37a3abb0adec.png",
+          "titlebackground": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/af7dfb2d-8cc1-45ab-9bab-6b0d0c655e58/dm7zx96-1043e7f2-6ed1-4afc-b534-c4d5b89c825f.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9hZjdkZmIyZC04Y2MxLTQ1YWItOWJhYi02YjBkMGM2NTVlNTgvZG03eng5Ni0xMDQzZTdmMi02ZWQxLTRhZmMtYjUzNC1jNGQ1Yjg5YzgyNWYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.KiL3ingyAdRo3Rd2NxKD41Dkk5VlisRVDAuUmzeYfio",
+          "type": 1
+        },
+        {
+          "titlename": "RESIDENT EVIL 3 for Xbox",
+          "titleimage": "RE3_Remake_Xbox",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ee6821af402028a34f11a0d2abb57d20.png",
+          "titlebackground": "https://www.videogameschronicle.com/files/2020/03/xytj0c6i2g441-e1585580287865.png",
+          "type": 1
+        },
+        {
+          "titlename": "RESIDENT EVIL 3 for Windows",
+          "titleimage": "RE3_Remake_Windows",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ee6821af402028a34f11a0d2abb57d20.png",
+          "titlebackground": "https://www.videogameschronicle.com/files/2020/03/xytj0c6i2g441-e1585580287865.png",
+          "type": 1
+        },
+        {
+          "titlename": "RESIDENT EVIL 2",
+          "titleimage": "RE2_Remake",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/757d29aeeb3c93990200ecea3c26e7d9.png",
+          "titlebackground": "https://cdn.wccftech.com/wp-content/uploads/2018/08/Resident-Evil-2-Remake-Claire-e1547904332208-scaled.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "RESIDENT EVIL 7 biohazard",
+          "titleimage": "RE7_biohazard",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/9bf62b61d02032c74997b1b26bf72fe7.png",
+          "titlebackground": "https://static0.polygonimages.com/wordpress/wp-content/uploads/chorus/uploads/chorus_asset/file/13064901/RE7_dinner_keyart.0.0.1485129641.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Resident Evil 7 Teaser: Beginning Hour",
+          "titleimage": "RE7_biohazard_Teaser",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/8e68b79faaa2f8ce6757fbcc8b7c3448.png",
+          "titlebackground": "https://static0.polygonimages.com/wordpress/wp-content/uploads/chorus/uploads/chorus_asset/file/13064901/RE7_dinner_keyart.0.0.1485129641.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Resident Evil 4",
+          "titleimage": "RE4_REMAKE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/66a5f020e93349d62a24aa3afb087e08.jpg",
+          "titlebackground": "https://gamespace.com/wp-content/uploads/2023/03/Resident-Evil-4-Remake-PC-Review.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "resident evil 4 (2005)",
+          "titleimage": "RE4_OG",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/662fc815b447f0f5901f9bba990ce021.png",
+          "titlebackground": "https://images3.alphacoders.com/594/thumb-1920-594233.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "RESIDENT EVIL CODE: Veronica X",
+          "titleimage": "RECVX",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/99b93b9b7d5c321a93ff060edc306376.jpg",
+          "titlebackground": "https://wallpapercave.com/wp/wp9254653.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Resident Evil Veronica",
+          "titleimage": "RECV_REMAKE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/d5b9c9b9800010a79f9ef3b4daccce3d.jpg",
+          "titlebackground": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4824610/5f574a15cb682397b7a03ff06a09969e65201c9d/ss_5f574a15cb682397b7a03ff06a09969e65201c9d.1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Resident Evil",
+          "titleimage": "RE1_REMAKE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/6eeac247856cdf274f0bcb330259c156.jpg",
+          "titlebackground": "https://wallpapercave.com/wp/wp12013483.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Resident Evil 0",
+          "titleimage": "RE_0",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ba8c34d3b274d8e699289f0fcd0fae1e.png",
+          "titlebackground": "https://images5.alphacoders.com/671/thumb-1920-671886.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Resident Evil 5",
+          "titleimage": "RE_5",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ddc39666e97dd0f4351387573a8e521c.jpg",
+          "titlebackground": "https://assetsio.gnwcdn.com/Resi-5.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Resident Evil 6",
+          "titleimage": "RE_6",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/6cffca412f787e9655972f7681dbb77d.png",
+          "titlebackground": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/236080/ss_6a11488f7da548dcd8c79126cbf7a564a354b4e7.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Resident Evil Revelations",
+          "titleimage": "RE_REV_1",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/58eb1ca11f63894ff41eb2a5f5a00773.jpg",
+          "titlebackground": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/222480/ss_fd5cce21ff888076c2fae31ffa5b2b35ab166dc9.1920x1080.jpg?t=1769125357",
+          "type": 1
+        },
+        {
+          "titlename": "Resident Evil Revelations 2",
+          "titleimage": "RE_REV_2",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/bdc3b2167c4bab75e0f1bf58faab9e22.png",
+          "titlebackground": "https://assets2.ignimgs.com/2015/03/19/rer20319151600jpg-990f80.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Resident Evil Village",
+          "titleimage": "RE_8",
+          "titleicon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl5IWo9q8udFWVkPxhSAvZQkoLOuUfd1I5_Oet1HOgKU43fodrcvmWkog&s=10",
+          "titlebackground": "https://cdn.mos.cms.futurecdn.net/zVBKKaVz8rdCGRM7b46voA.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Resident Evil Requiem",
+          "titleimage": "RE_9",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ee44846d67dbdbddd9836eefbf62fa3c.jpg",
+          "titlebackground": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/02/Hero-80052860810acf336f01.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Resident Evil Operation Raccoon City",
+          "titleimage": "RE_ORC",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/153482a4aaa43651b5fee97435ae3445.jpg",
+          "titlebackground": "https://www.gamewallpapers.com/wallpapers_slechte_compressie/01wallpapers/wallpaper_resident_evil_operation_raccoon_city_01_1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "RESIDENT EVIL RESISTANCE",
+          "titleimage": "RER",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/9de502612561c4755182a3741902d6d0.jpg",
+          "titlebackground": "https://sm.ign.com/t/ign_nordic/review/r/resident-e/resident-evil-resistance-review_p56t.1200.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Raskulls",
+          "titleimage": "Raskulls",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/04/22/raskulls-1650586617976.jpg",
+          "titlebackground": "https://ip.trueachievements.com/remote/www.trueachievements.com/customimages/106408.jpg?width=900",
+          "type": 1
+        },
+        {
+          "titlename": "Street Fighter III Third Strike: Online Edition",
+          "titleimage": "Street_Fighter_III",
+          "titleicon": "https://assets1.ignimgs.com/2019/01/18/stret-fighter-iii-third-strike-online---button-1547852624330.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/314954362f31609663dc4765ab4c7030.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Assassin's Creed",
+          "titleimage": "Assassins_Creed",
+          "titleicon": "https://cdn2.steamgriddb.com/icon/ef56dd28c084d86aeb28f3b391e94548/32/256x256.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/e65da2392672bfaa382312263caceb9d.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Assassin's Creed Brotherhood",
+          "titleimage": "Assassins_Creed_Brotherhood",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/be1b8fbe91e027def4ace7e748e424b3.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/7a25ce3a3049c1ee6641f34a98ed44e0.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Assassin's Creed II",
+          "titleimage": "Assassins_Creed_II",
+          "titleicon": "https://cdn2.steamgriddb.com/icon/b67fb3360ae5597d85a005153451dd4e/32/256x256.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/97275a23ca44226c9964043c8462be96.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Assassin's Creed Revelations",
+          "titleimage": "Assassins_Creed_Revelations",
+          "titleicon": "https://cdn2.steamgriddb.com/icon/1ea97de85eb634d580161c603422437f/32/256x256.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/ba1b3eba322eab5d895aa3023fe78b9c.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Assassin's Creed Rogue",
+          "titleimage": "Assassins_Creed_Rogue",
+          "titleicon": "https://cdn2.steamgriddb.com/icon/77ec6f21c85b637cc42bb997841e11a6/32/256x256.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/393e4529c6e160b9ddc1aab3845fc35f.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Assassin's Creed III",
+          "titleimage": "Assassins_Creed_III",
+          "titleicon": "https://cdn2.steamgriddb.com/icon_thumb/53b79303779db833f34a053df5a6c111.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/e8a642ed6a9ad20fb159472950db3d65.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY",
+          "titleimage": "FFI_PR",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/e418b3b2cebc3b8d4c6d77b46307f119.jpg",
+          "titlebackground": "https://www.heypoorplayer.com/wp-content/uploads/2023/05/FF-Pixel-Remaster-1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY II",
+          "titleimage": "FFII_PR",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/aeca612a1e60f846ef0687f70dc4c649.jpg",
+          "titlebackground": "https://www.heypoorplayer.com/wp-content/uploads/2023/05/FF-Pixel-Remaster-1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY III",
+          "titleimage": "FFIII_PR",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/062340fdb2a78022583f2bd33878feda.jpg",
+          "titlebackground": "https://www.heypoorplayer.com/wp-content/uploads/2023/05/FF-Pixel-Remaster-1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY IV",
+          "titleimage": "FFIV_PR",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/d4b7d849a4e65242c5a013e09e3d0c7a.jpg",
+          "titlebackground": "https://www.heypoorplayer.com/wp-content/uploads/2023/05/FF-Pixel-Remaster-1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY V",
+          "titleimage": "FFV_PR",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/1ee6a82268bda84cc7eaf6987b8a1aa8.jpg",
+          "titlebackground": "https://www.heypoorplayer.com/wp-content/uploads/2023/05/FF-Pixel-Remaster-1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY VI",
+          "titleimage": "FFVI_PR",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/f3cb531afd268da121eb57998980d481.jpg",
+          "titlebackground": "https://www.heypoorplayer.com/wp-content/uploads/2023/05/FF-Pixel-Remaster-1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY VII",
+          "titleimage": "FFVII_OG",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/4fe87b0ed8a9ef17f212cf8b2e7dabaf.png",
+          "titlebackground": "https://static.wikia.nocookie.net/finalfantasy/images/a/ad/Wall_VII_01.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "CRISIS CORE –FINAL FANTASY VII– REUNION",
+          "titleimage": "FFVII_CC",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/178461eca63aabaad08a24b967842f76.png",
+          "titlebackground": "https://sm.ign.com/t/ign_nordic/review/c/crisis-cor/crisis-core-final-fantasy-7-reunion-review_s594.1200.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY VII REMAKE INTERGRADE",
+          "titleimage": "FFVII_RI",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/7f5c80efe18d0ecb35816704101bc68b.png",
+          "titlebackground": "https://www.cubed3.com/wp-content/uploads/2025/02/final-fantasy-vii-remake-intergrade-playstation-5-art-banner.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY VII REMAKE INTERGRADE DEMO",
+          "titleimage": "FFVII_RI_DEMO",
+          "titleicon": "https://image.api.playstation.com/vulcan/img/cfn/11307-DocfPGifza5osURPi4YT5PnCfvv5snagLGsnGAj8CYl3bVe0MNJqF488Ndhvi7qpt0HrajEwfS9TrlwBYq1-sBq7tA.png",
+          "titlebackground": "https://www.cubed3.com/wp-content/uploads/2025/02/final-fantasy-vii-remake-intergrade-playstation-5-art-banner.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY VII REBIRTH",
+          "titleimage": "FFVII_REBIRTH",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/653a64a4d02b19bd88a0489912455d9e.jpg",
+          "titlebackground": "https://techraptor.net/sites/default/files/2023-09/final-fantasy-vii-rebirth-key-art-cropped.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY VII REVELATION",
+          "titleimage": "FFVII_REVELATION",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/b36f15b6a95add0eabe7d206aa858c21.jpg",
+          "titlebackground": "https://cdn1.epicgames.com/offer/a2c630e6aab44a2d90e56d7e3237af1c/EGS_FINALFANTASYVIIREVELATION_SquareEnix_S1_2560x1440-dfbab10deabb472b8a621cf7f8efb3f9",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY VIII Remastered",
+          "titleimage": "FFVIII-R",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/104dbc678b910022d2f9cbe561471cf1.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/img/rnd/202010/2621/rJPiW7x0JXCYsNtVsgJ9VU7m.png",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY IX",
+          "titleimage": "FFIX",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ec4cec7dc0571573ef3f4112ccd54d57.png",
+          "titlebackground": "https://kotaku.com/app/uploads/2020/10/mfifupzyacj3ifknso65.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY X/X-2 HD Remaster",
+          "titleimage": "FFX_X2_R",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/7615a65da5d7a67776ba24bc52868c09.jpg",
+          "titlebackground": "https://oyster.ignimgs.com/wordpress/stg.ign.com/2014/03/ffxhd_030614_1600.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY XII THE ZODIAC AGE",
+          "titleimage": "FFXII-TZA",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/4c5445d553c8b9c007154823dd767838.png",
+          "titlebackground": "https://miro.medium.com/v2/1*MzpWsiQauhijda5Q0SPUJQ.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY XIII",
+          "titleimage": "Final_Fantasy_XIII",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/3af4e5761f1bc171394e5d8f3e37aa79.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/b60c5ab647a27045b462934977ccad9a.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY XIII-2",
+          "titleimage": "Final_Fantasy_XIII-2",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/c332bc901b276b504c52a91bfb1885bb.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/b60c5ab647a27045b462934977ccad9a.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "LIGHTNING RETURNS: FINAL FANTASY XIII",
+          "titleimage": "Final_Fantasy_XIII-3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/0564be7276ca0e5d67f114555cb55549.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/b60c5ab647a27045b462934977ccad9a.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY XIV Online",
+          "titleimage": "Final_Fantasy_XIV_OL",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/2241f103cc10654a6081b8301c9bd987.jpg",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202404/0916/2aa119c77785d53ce318962cc9f132907546927bdd8fa224.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY XV",
+          "titleimage": "FFXV",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/f0edaabb062f55db094ada59ed0059a0.png",
+          "titlebackground": "https://cdn.wccftech.com/wp-content/uploads/2016/12/final-fantasy-xv-update-plan-detailed-tabta.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY XV ROYAL EDITION",
+          "titleimage": "FFXV_RE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/dde4ea5b0383ceddb0e7a154dc68013b.jpg",
+          "titlebackground": "https://cdn.wccftech.com/wp-content/uploads/2018/03/Final-Fantasy-XV-Luminous-Engine-Tool.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY XV POCKET EDITION HD",
+          "titleimage": "FFXV_PE_HD",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/cae37cbd6969463c0b686ef36fb94b57.png",
+          "titlebackground": "https://images.launchbox-app.com/9ffb1548-7406-4d4b-a8a1-ac96258435a7.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY XV WINDOWS EDITION",
+          "titleimage": "FFXV_WE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/611d80fd98a2d7c36d076d9015bfad6f.png",
+          "titlebackground": "https://wallpapercave.com/wp/wp9228640.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY XVI",
+          "titleimage": "FFXVI",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/2ef1dd514a607127533d69f2559043c4.png",
+          "titlebackground": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*lmWJK9xoLpDusL7CjobnDQ.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY XVI DEMO",
+          "titleimage": "FFXVI_DEMO",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202306/1010/dc71bed49d941561e9d8b1a53a800db122d696b6bc6e178f.png",
+          "titlebackground": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*lmWJK9xoLpDusL7CjobnDQ.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY RESONANCE",
+          "titleimage": "FF_RESONANCE",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202604/2403/8e22140956f5980e5a33a0f6fa22ced64c3597cfdf20bc0e.png",
+          "titlebackground": "https://i0.wp.com/playday.one/wp-content/uploads/2026/06/ffresonance-key-no-logo-scaled.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "FINAL FANTASY RESONANCE DEMO",
+          "titleimage": "FF_RESONANCE_DEMO",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202604/2403/d6ab523de867166ab90184745acbbceaec711b04601d04c5.png",
+          "titlebackground": "https://i0.wp.com/playday.one/wp-content/uploads/2026/06/ffresonance-key-no-logo-scaled.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "STRANGER OF PARADISE FINAL FANTASY ORIGIN",
+          "titleimage": "SoP_FF_O",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202303/1609/989cf79d37b39ba924c0f3f5968816ae6e8077afe72e3e1b.png",
+          "titlebackground": "https://images.wallpapersden.com/image/download/stranger-of-paradise-final-fantasy-origin-2022-gaming_bWpraGqUmZqaraWkpJRobWllrWdma2U.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "STRANGER OF PARADISE FINAL FANTASY ORIGIN DEMO VERSION",
+          "titleimage": "SoP_FF_O_Demo",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202203/0202/wsQ1bDHAFqsFUQRg482jbl0r.png",
+          "titlebackground": "https://images.wallpapersden.com/image/download/stranger-of-paradise-final-fantasy-origin-2022-gaming_bWpraGqUmZqaraWkpJRobWllrWdma2U.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "NieR:Automata BECOME AS GODS Edition",
+          "titleimage": "NieR_Automata",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/6451b254caec5ca57933886e61c30a3d.png",
+          "titlebackground": "https://images5.alphacoders.com/920/thumb-1920-920085.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "NIER",
+          "titleimage": "NIER",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/5646a63e23f4667a11de6134120c5060.png",
+          "titlebackground": "https://withaterriblefate.com/wp-content/uploads/2015/06/nier.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "NieR Replicant ver.1.22474487139...",
+          "titleimage": "NieRReplicant",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/e98116e8bdf418f44cf7492e3a765768.png",
+          "titlebackground": "https://bgeek.eu/wp-content/uploads/2021/04/Nier-Reincarnation-Replicant-scaled-1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "No More Heroes 3",
+          "titleimage": "NMH3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/fa4c76a1b029c0b48082787bdc2bcff8.png",
+          "titlebackground": "https://images7.alphacoders.com/127/1278320.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Just Dance Free Experience",
+          "titleimage": "JDFE",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202509/1518/b261aecaf55267fbba4c3fff32865284c7bd3ce1809219b2.png",
+          "titlebackground": "https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70070000028929/93dc6060a9dd96800995c66d7cc2bcb01949065ee12e7b49092544eda967f938",
+          "type": 1
+        },
+        {
+          "titlename": "Just Dance",
+          "titleimage": "JDFE",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202509/1518/b261aecaf55267fbba4c3fff32865284c7bd3ce1809219b2.png",
+          "titlebackground": "https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70070000028929/93dc6060a9dd96800995c66d7cc2bcb01949065ee12e7b49092544eda967f938",
+          "type": 1
+        },
+        {
+          "titlename": "DJMAX RESPECT V",
+          "titleimage": "DJMAX_RESPECT_V",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/3abad52adffb24bc7df8a5d79d076184.png",
+          "titlebackground": "https://images.launchbox-app.com/c3cacd50-abdd-4197-88fd-3885459d9b4d.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "UNBEATABLE",
+          "titleimage": "UNBEATABLE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/40fc375557d24cdc994771fdcea4774c.png",
+          "titlebackground": "https://d1lss44hh2trtw.cloudfront.net/assets/article/2025/12/08/unbeatable-review_feature.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Castlevania: SOTN",
+          "titleimage": "Castlevania_SOTN",
+          "titleicon": "https://cdn2.steamgriddb.com/icon_thumb/c23497bd62a8f8a0981fdc9cbd3c30d9.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/logo_thumb/e946209592563be0f01c844ab2170f0c.png",
+          "type": 1
+        },
+        {
+          "titlename": "Sonic Generations",
+          "titleimage": "sonic_generations",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/icon/7d822b455dfe04415f0798e0d2105a13/32/256x256.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/d005ce7aeef46bd18515f783fb8e87fa.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "SONIC X SHADOW GENERATIONS",
+          "titleimage": "SONIC_X_SHADOW_GENERATIONS",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/5cf3903f2f82b49fc603774ce43d6f57.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/6eede4414a0260679581728a4d982714.png",
+          "type": 1
+        },
+        {
+          "titlename": "Bayonetta",
+          "titleimage": "Bayonetta_XB1",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/baf6f3d5fa8ec43ae06f7498b41e02d7.jpg",
+          "titlebackground": "https://www.platinumgames.com/official-blog/wp-content/uploads/sites/2/2021/10/Bayonetta_double_wallpaper_1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "BAYONETTA",
+          "titleimage": "Bayonetta_360",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/bba08d79e25596c72ca3de90e3d576a6.jpg",
+          "titlebackground": "https://www.platinumgames.com/official-blog/wp-content/uploads/sites/2/2021/10/Bayonetta_double_wallpaper_1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Vanquish",
+          "titleimage": "Vanquish_XB1",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/66bc488f92ab3ae5b3293136d48572e4.jpg",
+          "titlebackground": "https://images6.alphacoders.com/522/522940.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "VANQUISH",
+          "titleimage": "Vanquish_360",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/497a852eb89c112d5279463e92e391ac.png",
+          "titlebackground": "https://images6.alphacoders.com/522/522940.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "ぷよぷよテトリス2",
+          "titleimage": "Puyo_Puyo_Tetris_2_JP",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202010/1302/ZGFxG5ChTMDDBckd6UdRLzvm.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202010/1618/XcKOOX81M3QTIN7CBV7QldDg.png",
+          "type": 1
+        },
+        {
+          "titlename": "Puyo Puyo Tetris 2",
+          "titleimage": "Puyo_Puyo_Tetris_2",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202010/0718/AUtNlbgma7fjJwmet5jwwv6R.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202010/1618/XcKOOX81M3QTIN7CBV7QldDg.png",
+          "type": 1
+        },
+        {
+          "titlename": "ぷよぷよテトリス",
+          "titleimage": "Puyo_Puyo_Tetris_1_JP",
+          "titleicon": "https://image.api.playstation.com/cdn/JP0177/CUSA01005_00/DsB0VEi0mMS2H1mHJskPnALUGzq9RAeb.png",
+          "titlebackground": "https://images4.alphacoders.com/989/989500.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Puyo Puyo Champions",
+          "titleimage": "Puyo_Puyo_Champions",
+          "titleicon": "https://assets1.ignimgs.com/2019/05/08/puyo-puyo-champions---button-fin-1557346889660.jpg",
+          "titlebackground": "https://xxboxnews.blob.core.windows.net/prod/sites/2/PuyoPuyo_KeyArt-small.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "Yakuza 0",
+          "titleimage": "Yakuza_0",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/35f0a44eaa1c53f8dac1ed54a587eee6.png",
+          "titlebackground": "https://wallpaper.forfun.com/fetch/80/80c7dabccc6413d83c2825428309af22.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "Yakuza 0 Director's Cut",
+          "titleimage": "Yakuza_0_Directors_Cut",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/a6bc4816f2e37ee701b1f3e175c09932.jpg",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202509/2215/b3c6aadba045ef71abc755062a2cbcc138be0e4766a5bbe8.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Yakuza Kiwami",
+          "titleimage": "Yakuza_Kiwami",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202508/0800/b180750941d664ac7410bf79b65f4acecbae2ebe02f95807.png",
+          "titlebackground": "https://xboxwire.thesourcemediaassets.com/sites/2/2020/04/Yakuza-Kiwami.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Yakuza Kiwami 2",
+          "titleimage": "Yakuza_Kiwami_2",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202511/1905/bf0f377e2aa4f4f349b29e98a0dd87ba1d95fb7fa698c9f3.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202601/0805/e1ae0fa19ea74d5ee2a202ca70216c1d4d8a986ddf1ad214.png",
+          "type": 1
+        },
+        {
+          "titlename": "Yakuza Kiwami 3 & Dark Ties",
+          "titleimage": "Yakuza_Kiwami_3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/fc0da20d3de95e0cdfbc0c89a06c4427.png",
+          "titlebackground": "https://www.gematsu.com/wp-content/uploads/2025/09/Game-Page-Featured_Yakuza-Kiwami-3-and-Dark-Ties.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Yakuza Kiwami 3 & Dark Ties Demo",
+          "titleimage": "Yakuza_Kiwami_3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/fc0da20d3de95e0cdfbc0c89a06c4427.png",
+          "titlebackground": "https://www.gematsu.com/wp-content/uploads/2025/09/Game-Page-Featured_Yakuza-Kiwami-3-and-Dark-Ties.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Yakuza 3 Remastered",
+          "titleimage": "Yakuza_3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/cc5099363260ba2873896b9577ffe9b1.png",
+          "titlebackground": "https://images5.alphacoders.com/124/thumb-1920-1248605.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Yakuza 4 Remastered",
+          "titleimage": "Yakuza_4",
+          "titleicon": "https://assets1.ignimgs.com/2019/01/17/yakuza-4---button-fin-1547745887034.jpg",
+          "titlebackground": "https://www.telegraph.co.uk/multimedia/archive/01871/Yakuza4_1871559b.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Yakuza 5 Remastered",
+          "titleimage": "Yakuza_5",
+          "titleicon": "https://image.api.playstation.com/vulcan/img/cfn/11307cOudGhg-K4ksDCUANED2jRY2nW6m-uh-dzEtCtpKHO8-kht8msCZC_WfCSphXhQWcUHb-h0mSOXNxMAhfHf0-gyhd8g.png",
+          "titlebackground": "https://wallpaper.forfun.com/fetch/ce/ce59a9dfb0f9f56df0d6d9c5bbf82dd2.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "Yakuza 6: The Song of Life",
+          "titleimage": "Yakuza_6",
+          "titleicon": "https://image.api.playstation.com/cdn/UP0177/CUSA09032_00/7D2jL7YYY0Rp7V9L7UCWH9LEPrWwJARcMxERbrcZxhjGuzqlXsqrkY6N0ybvJxYW.png",
+          "titlebackground": "https://xboxwire.thesourcemediaassets.com/sites/2/2021/03/Yakuza-6-The-Song-of-Life.jpgg",
+          "type": 1
+        },
+        {
+          "titlename": "Yakuza: Like a Dragon",
+          "titleimage": "Yakuza_7",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/33f75e4fc010c114d63756a5763f7221.png",
+          "titlebackground": "https://images4.alphacoders.com/134/thumb-1920-1349219.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "Like a Dragon Gaiden: The Man Who Erased His Name",
+          "titleimage": "Yakuza_7_point_5",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/2552c8ffa6c8e68359ed8e53973df6d8.jpg",
+          "titlebackground": "https://images.wallpapersden.com/image/download/new-like-a-dragon-gaiden-gaming_bmZtZmeUmZqaraWkpJRobWllrWdma2U.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Like a Dragon: Infinite Wealth",
+          "titleimage": "Yakuza_8",
+          "titleicon": "https://assets-prd.ignimgs.com/2024/01/04/likedragon-1704407363968.jpg",
+          "titlebackground": "https://images7.alphacoders.com/140/thumb-1920-1405406.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Like a Dragon: Pirate Yakuza in Hawaii",
+          "titleimage": "Yakuza_8_point_5",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/f56d62b3158538d4001788f9d01e240b.png",
+          "titlebackground": "https://cdn.sega.co.uk/mhc-sega/public/content/media/images/raster/ladpyih_hero.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Like a Dragon: Pirate Yakuza in Hawaii Demo",
+          "titleimage": "Yakuza_8_point_5",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/f56d62b3158538d4001788f9d01e240b.png",
+          "titlebackground": "https://cdn.sega.co.uk/mhc-sega/public/content/media/images/raster/ladpyih_hero.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Like a Dragon: Ishin!",
+          "titleimage": "LaD_Ishin",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/1c0aaa1f6a636c0cc81ff26b821acbc7.jpg",
+          "titlebackground": "https://pbs.twimg.com/media/Fcp2tvfX0AEfLrV.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Like a Dragon: Ishin! Combat Demo",
+          "titleimage": "LaD_Ishin_CD",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/1c0aaa1f6a636c0cc81ff26b821acbc7.jpg",
+          "titlebackground": "https://pbs.twimg.com/media/Fcp2tvfX0AEfLrV.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Judgment",
+          "titleimage": "Judgment",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ee5c8fdd90f1d960bcb2fa94d83fe461.png",
+          "titlebackground": "https://images.wallpapersden.com/image/download/judgment-4k-gaming_bWtpZmeUmZqaraWkpJRobWllrWdma2U.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Lost Judgment",
+          "titleimage": "Lost_Judgment",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/2385c6e3460963b4656737f8cd4b43cd.png",
+          "titlebackground": "https://wallpaper.forfun.com/fetch/64/64cace6790f0c3ed68ef63bbe981d9f1.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "Minecraft",
+          "titleimage": "minecraft_bedrock",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/9713fc04477ccf52eb7e03f626985ec2.png",
+          "titlebackground": "https://i.blogs.es/0eb073/minecraft-generacionxbox-1/1366_2000.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "DayZ",
+          "titleimage": "dayz",
+          "titleicon": "https://media.vandal.net/m/20846/dayz-201953013153533_11.jpg",
+          "titlebackground": "https://i.pinimg.com/originals/27/f7/e4/27f7e41c04c7418e1f40789e5dad22a3.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "eFootball PES 2021 Season Update",
+          "titleimage": "efootball2021",
+          "titleicon": "https://image.api.playstation.com/vulcan/img/rnd/202011/0201/DCT1LwEUb8fXfS2PZfkzXV59.png",
+          "titlebackground": "https://areajugones.sport.es/wp-content/uploads/2020/08/efootball-pes-2021-cover.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Halo: Reach",
+          "titleimage": "halo_reach",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/0f70a9878da6d47c03f63c3f87966da0.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/644b522e92999426ab230d94a4bb4512.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FAR CRY6",
+          "titleimage": "far_cry6",
+          "titleicon": "https://cdn2.steamgriddb.com/icon/712775bacd00b61567ca8eeb605853c8/32/256x256.png",
+          "titlebackground": "https://compass-ssl.xbox.com/assets/d5/2b/d52b9b34-fd1c-42af-95ec-e42438a9bdba.jpg?n=Far-Cry-6_GLP-Page-Hero-1084_1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Far Cry 4",
+          "titleimage": "far_cry_4",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ecc1590d3048696e95539450bd231df1.jpg",
+          "titlebackground": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5ct6etxGg4mhwtSD5o8N94/9d64139154bb23ec5d8700638c4e9b9e/far-cry-4-heroBanner.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Far Cry 3",
+          "titleimage": "far_cry_3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/3754eedc3c390ad0f0fc9a5d9f1495d8.jpg",
+          "titlebackground": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/MnLnHV7TKYLvynbypV9Fu/03950e51dca0f7f6ad1ff738ddf48159/farcry3_cover_desktop_137015.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Severed Steel",
+          "titleimage": "Severed_Steel",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/6ee2932dcc38491002435edbde875246.jpg",
+          "titlebackground": "https://images.gog-statics.com/3a118f17c94b812bccc04752009f836944ed60903a486af25966eeb55a4e91b9.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Modern Warfare",
+          "titleimage": "cod_modern_warfare",
+          "titleicon": "https://sm.ign.com/t/ign_latam/cover/c/call-of-du/call-of-duty-modern-warfare_6sub.1024.jpg",
+          "titlebackground": "https://wallpaperaccess.com/full/2286525.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Fortnite",
+          "titleimage": "fortnite",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/73541b5f932206b698207da5ff37dd9d.png",
+          "titlebackground": "https://cdn2.unrealengine.com/fortnite-chapter-6-season-1-hunters-battle-pass-1920x1080-5e441efeb2f2.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Black Ops Cold War",
+          "titleimage": "cod_bo_coldwar_XB1",
+          "titleicon": "https://sm.ign.com/t/ign_es/game/c/call-of-du/call-of-duty-black-ops-cold-war_tsew.1024.jpg",
+          "titlebackground": "https://images.alphacoders.com/109/thumb-350-1097309.png",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Black Ops Cold War - Xbox Series X|S",
+          "titleimage": "cod_bo_coldwar_XS",
+          "titleicon": "https://sm.ign.com/t/ign_es/game/c/call-of-du/call-of-duty-black-ops-cold-war_tsew.1024.jpg",
+          "titlebackground": "https://images.alphacoders.com/109/thumb-350-1097309.png",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Black Ops 6",
+          "titleimage": "cod_bo_6",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/e1bd4152444518ef93749ccebaf9af79.png",
+          "titlebackground": "https://images.alphacoders.com/138/1380711.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Black Ops 7",
+          "titleimage": "cod_bo_7",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202508/2119/8c163e488e9e46b842889e773a8d6807b52f9d0e00b05652.png",
+          "titlebackground": "https://wallpapercave.com/wp/wp15957045.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Battlefield Hardline",
+          "titleimage": "battlefield_hardline",
+          "titleicon": "https://image.api.playstation.com/cdn/UP0006/CUSA00625_00/2I1fQbmQZ0ZYbOVHKcHzxDjrI192JuEQ.png",
+          "titlebackground": "https://highdefwallpaper.com/wp-content/uploads/2021/05/Battlefield-Hardline-657d.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Halo: The Master Chief Collection",
+          "titleimage": "halo_master_chief_collection",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/29b378b88c3798599f78f774efa6c521.jpg",
+          "titlebackground": "https://compass-ssl.xbox.com/assets/1d/1f/1d1f85dd-754f-453d-8e44-9294d8dfd3d3.jpg?n=Halo-MCC_GLP-Page-Hero-0_1083x609.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Back 4 Blood",
+          "titleimage": "back_4_blood",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202011/1900/sSZEg1DFAUrfWsA7ltLwpCdu.png",
+          "titlebackground": "https://www.somosxbox.com/wp-content/uploads/2021/06/apps.19877.63183727176145146.d84d29ef-df3a-4a5d-96b4-f1a7d9797aec-1-1-1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Minecraft: Story Mode - Season Two",
+          "titleimage": "mcsm2",
+          "titleicon": "https://assets1.ignimgs.com/2017/08/03/minecraft-story-mode-season-2---button-1501797034951.jpg?width=1024",
+          "titlebackground": "https://wallpapercave.com/wp/wp5073723.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "UpdateCheck",
+          "titleimage": "0.5.7"
+        },
+        {
+          "titlename": "BroadcastObj",
+          "titleimage": "False",
+          "titleicon": "API (xbl.io) is having some update changes so the app may work or not work at all, if you have any error it might be because of this."
+        },
+        {
+          "titlename": "Grand Theft Auto V",
+          "titleimage": "gta_v_SXS",
+          "titleicon": "https://image.api.playstation.com/cdn/UP1004/CUSA00419_00/bTNSe7ok8eFVGeQByA5qSzBQoKAAY32R.png",
+          "titlebackground": "https://as01.epimg.net/meristation/imagenes/2021/07/13/noticias/1626200223_339907_1626200490_sumario_normal.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Grand Theft Auto Online",
+          "titleimage": "gta_v_online",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/73f62377a5ca54fe993400cd922f7d61.jpg",
+          "titlebackground": "https://as01.epimg.net/meristation/imagenes/2021/07/13/noticias/1626200223_339907_1626200490_sumario_normal.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Grand Theft Auto V (Xbox One)",
+          "titleimage": "gta_v_xb1",
+          "titleicon": "https://image.api.playstation.com/cdn/UP1004/CUSA00419_00/bTNSe7ok8eFVGeQByA5qSzBQoKAAY32R.png",
+          "titlebackground": "https://as01.epimg.net/meristation/imagenes/2021/07/13/noticias/1626200223_339907_1626200490_sumario_normal.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Grand Theft Auto VI",
+          "titleimage": "gta_vi",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/3319bd862662e4c69e43ad5cacefb9a6.png",
+          "titlebackground": "https://www.rockstargames.com/VI/_next/static/media/Jason_and_Lucia_Robbery_With_Logo_landscape.0sjdgaq91u2yn.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "GTA V",
+          "titleimage": "gta_v_360",
+          "titleicon": "https://image.api.playstation.com/cdn/UP1004/CUSA00419_00/bTNSe7ok8eFVGeQByA5qSzBQoKAAY32R.png",
+          "titlebackground": "https://as01.epimg.net/meristation/imagenes/2021/07/13/noticias/1626200223_339907_1626200490_sumario_normal.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "GTA IV",
+          "titleimage": "GTAIV",
+          "titleicon": "https://www.fayerwayer.com/resizer/4gdSuTwZXtyIze2E34gKL8g45x8=/1024x1024/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/OXERM3AVUBDQDLUGS7HLPGD3QM.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.59582.69304479265522151.5b8601c1-35b0-4bad-bcff-f51fb0ce43d8.89632bf2-fec7-4765-9d84-5d29d76afcb8",
+          "type": 1
+        },
+        {
+          "titlename": "Grand Theft Auto IV",
+          "titleimage": "GTA_IV",
+          "titleicon": "https://www.fayerwayer.com/resizer/4gdSuTwZXtyIze2E34gKL8g45x8=/1024x1024/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/OXERM3AVUBDQDLUGS7HLPGD3QM.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.59582.69304479265522151.5b8601c1-35b0-4bad-bcff-f51fb0ce43d8.89632bf2-fec7-4765-9d84-5d29d76afcb8",
+          "type": 1
+        },
+        {
+          "titlename": "Grand Theft Auto: Vice City – The Definitive Edition",
+          "titleimage": "GTA_VC_DE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/cca762db962546b8d218490caa867e93.png",
+          "titlebackground": "---",
+          "type": 1
+        },
+        {
+          "titlename": "Grand Theft Auto: San Andreas – The Definitive Edition",
+          "titleimage": "GTA_SA_DE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/7c91a1a18f90c3c0c1f5d080f8a95a78.png",
+          "titlebackground": "https://wallpapercave.com/wp/wp10151632.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Grand Theft Auto III – The Definitive Edition",
+          "titleimage": "GTA_III_DE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/cd5bbf03eebfe45f78ec41324738ef05.png",
+          "titlebackground": "https://wallpapercave.com/wp/wp10151632.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Forza Horizon 5",
+          "titleimage": "forza_horizon_5",
+          "titleicon": "https://cdn2.steamgriddb.com/icon/981ee11c08e460dc540242ee105b5ced/32/512x512.png",
+          "titlebackground": "https://guiltybit.com/wp-content/uploads/2021/11/analisis-de-Forza-Horizon-5.webp",
+          "type": 1
+        },
+        {
+          "titlename": "Halo Infinite",
+          "titleimage": "halo_infinite",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ad3613baccebc39f8d17615c108b34f2.png",
+          "titlebackground": "https://www.windowscentral.com/sites/wpcentral.com/files/styles/large/public/field/image/2020/07/halo-infinite-chief-hero-1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Borderlands",
+          "titleimage": "borderlands",
+          "titleicon": "https://media.vandal.net/m/71969/borderlands-edicion-juego-del-ano-201943163663_9.jpg",
+          "titlebackground": "https://cdn.2kgames.com/borderlands/media/virtual+backgrounds/Fingerguns.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Borderlands: The Pre-Sequel",
+          "titleimage": "borderlands_presequel",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/46bf7091ade9f83f47d621afcae33914.jpg",
+          "titlebackground": "https://wallpapercave.com/wp/wp4198446.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Borderlands 2",
+          "titleimage": "borderlands2",
+          "titleicon": "https://s01.riotpixels.net/data/60/5c/605c09ad-01eb-4324-a2c9-82013d1f90c9.jpg/cover.borderlands-2.1024x1024.2014-04-24.24.jpg",
+          "titlebackground": "https://wallpapercave.com/wp/wp3195607.png",
+          "type": 1
+        },
+        {
+          "titlename": "Borderlands 3",
+          "titleimage": "borderlands3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/1ecce3079169f13f52ca1e8e698c2ef5.jpg",
+          "titlebackground": "https://i.pinimg.com/736x/d9/b3/9e/d9b39e0819cabfbbe894b81b01425d56.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Borderlands 4",
+          "titleimage": "borderlands4",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/f1f07a94e13f1ddf9f98aecab0b7949a.jpg",
+          "titlebackground": "https://wallpapercave.com/wp/wp15745189.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Tales from the Borderlands",
+          "titleimage": "TftB",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ca5711c3b44536e2de534bf86d742fba.jpg",
+          "titlebackground": "https://i.imgur.com/m8YJWx7.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "New Tales from the Borderlands",
+          "titleimage": "NTftB",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/390a7ce4f46c428ad14544fc2a4196fc.png",
+          "titlebackground": "https://images6.alphacoders.com/126/thumb-1920-1266504.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Tiny Tina's Wonderlands",
+          "titleimage": "Tiny_Tinas_Wonderlands",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/c37cea4a7c8928a9a72f7288e56ced9a.png",
+          "titlebackground": "https://images4.alphacoders.com/121/thumb-1920-1216745.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "COD: Advanced Warfare",
+          "titleimage": "cod_aw",
+          "titleicon": "https://wepcgamer.com/wp-content/uploads/2021/10/Call-of-Duty-Ghosts-PC-Version-Full-Game-Setup-Free-Download.jpeg-1-1024x1024.webp",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.19540.67165690531218804.13d83797-84d4-446f-b916-765bfa2132cf.d7675312-da0c-4046-86ce-d93aaa4bd92c?q=90&w=480&h=270",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: WaW",
+          "titleimage": "cod_waw",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/28/codwaw-1648511549298.jpg",
+          "titlebackground": "https://cdn.akamai.steamstatic.com/steam/apps/10090/capsule_616x353.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: World at War",
+          "titleimage": "cod_waw_xb1",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/28/codwaw-1648511549298.jpg",
+          "titlebackground": "https://cdn.akamai.steamstatic.com/steam/apps/10090/capsule_616x353.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Black Ops 4",
+          "titleimage": "cod_BO4",
+          "titleicon": "https://assets1.ignimgs.com/2018/10/10/call-of-duty-black-ops-4---button-fin-1539211957163.jpg",
+          "titlebackground": "https://bnetproduct-a.akamaihd.net//2/f0237bcc69a719e4da6c10580f9088e9-CODBO4-Bnet_Game-Cart_Feature_3A_Standard-960x540-20190930.jpg?imwidth=&imdensity=2",
+          "type": 1
+        },
+        {
+          "titlename": "Superliminal",
+          "titleimage": "superliminal",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ba4c9d41e1d28a6d43143de56c2074f7.png",
+          "titlebackground": "https://www.nintendo.com/content/dam/noa/en_US/games/switch/s/superliminal-switch/screenshot-gallery/superliminal-switch-screenshot01.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "YouTube",
+          "titleimage": "youtube_logo",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Youtube%20Icon.png?compress=false",
+          "titlebackground": "https://images.hdqwalls.com/download/red-inside-grey-design-8k-w2-1920x1080.jpg",
+          "type": 2
+        },
+        {
+          "titlename": "Max",
+          "titleimage": "HBO_Max",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/09/22/service-hbo-max-1663819764492.jpg",
+          "titlebackground": "https://variety.com/wp-content/uploads/2021/06/HBO-MAX-logo.jpg",
+          "type": 2
+        },
+        {
+          "titlename": "Blu-ray Player",
+          "titleimage": "Blu_ray_Player",
+          "titleicon": "https://movies-b26f.kxcdn.com/wp-content/uploads/2023/03/blur-ray-disc-logo-large-bbb-5893a7b43df78caebcea02a0-1024x1024.jpg",
+          "titlebackground": "https://media.wired.com/photos/5c1064d06b57cd18ab64c632/master/pass/blu-ray-183322915.jpg",
+          "type": 3
+        },
+        {
+          "titlename": "Spectrum TV",
+          "titleimage": "Spectrum_TV",
+          "titleicon": "https://pbs.twimg.com/media/FSghKvmXIAEjDMN.jpg",
+          "titlebackground": "https://www.cnet.com/a/img/resize/c9e52e43c722f24f093161397898ee450fbdb30b/hub/2023/09/14/714759c0-5138-4f35-ab03-4de1fded4dc7/spectrum-cnetbb-logo-c.jpg?auto=webp&fit=crop&height=126",
+          "type": 2
+        },
+        {
+          "titlename": "Apple Music | Xbox",
+          "titleimage": "Apple_Music_Xbox",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/1e626d57ebcaa72d38390d09c1c1d1f2.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/d1d068475363651de875bb11c84fca3a.png",
+          "type": 3
+        },
+        {
+          "titlename": "Apple Music",
+          "titleimage": "Apple_Music",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/1e626d57ebcaa72d38390d09c1c1d1f2.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/d1d068475363651de875bb11c84fca3a.png",
+          "type": 3
+        },
+        {
+          "titlename": "Apple TV | Xbox",
+          "titleimage": "Apple_TV_Xbox",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/38b1e6cbbdb6524a5f2da3199f194347.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/4c0cf2514d40a8198e3f23be70bf4303.png",
+          "type": 2
+        },
+        {
+          "titlename": "Apple TV",
+          "titleimage": "Apple_TV",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/38b1e6cbbdb6524a5f2da3199f194347.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/4c0cf2514d40a8198e3f23be70bf4303.png",
+          "type": 2
+        },
+        {
+          "titlename": "Crunchyroll",
+          "titleimage": "Crunchyroll_Xbox",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/09/22/service-crunchyroll-1663819467267.jpg",
+          "titlebackground": "https://img1.ak.crunchyroll.com/i/spire3/b22476b0a1c4b17aeff8e80ad123878e1588710651_main.png",
+          "type": 2
+        },
+        {
+          "titlename": "Twitch",
+          "titleimage": "Twitch_for_Xbox",
+          "titleicon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/bc/bd/0b/bcbd0b7f-393a-e861-1540-c69794ad981a/TwitchAppIcon-0-1x_U007emarketing-0-7-0-0-85-220-0.png/1024x1024.jpg",
+          "titlebackground": "https://duet-cdn.vox-cdn.com/thumbor/0x0:2040x1360/1440x960/filters:focal(1020x680:1021x681):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/22238847/acastro_210115_1777_twitch_0003.jpg",
+          "type": 2
+        },
+        {
+          "titlename": "Hulu",
+          "titleimage": "Hulu_for_Xbox",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/09/22/service-hulu-1663828348772.jpg",
+          "titlebackground": "https://helplama.com/wp-content/uploads/2022/09/hulu_stats.jpg",
+          "type": 2
+        },
+        {
+          "titlename": "Spotify Xbox - Music and Podcasts",
+          "titleimage": "Spotify_for_Xbox",
+          "titleicon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/1f/85/04/1f85048c-e420-06fb-ec42-a1048fd3506b/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/1024x1024.jpg",
+          "titlebackground": "https://storage.googleapis.com/pr-newsroom-wp/1/2023/12/Generic-FTR-headers_V10-1920x733.jpg",
+          "type": 3
+        },
+        {
+          "titlename": "VLC UWP",
+          "titleimage": "VLC_UWP",
+          "titleicon": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxiJK_HEPrjdesdyeQIKBd8CoiFrgY4r.ZkWqv.BA5Ada9hOspX.JXdTZc317jZzDuPJwizLoQfyhPuJ4J9LdU9k-&format=source",
+          "titlebackground": "https://www.prajwaldesai.com/wp-content/uploads/2017/06/vlc_img.png",
+          "type": 3
+        },
+        {
+          "titlename": "Microsoft Edge",
+          "titleimage": "Microsoft_Edge",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/a3103498620c4e279cdbed83fb95b728.png",
+          "titlebackground": "https://www.lifewire.com/thmb/NSE8G8rmX6Yxf3sxckcXhW7puVw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/001-what-is-microsoft-edge-4151828-b50ba4a178d54bb287c62419dd80c6d7.jpg",
+          "type": 3
+        },
+        {
+          "titlename": "VALORANT",
+          "titleimage": "VALORANT",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/772d0b9b41697908538a83496f2925e7.png",
+          "titlebackground": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/628997cc82239d474008acdc5e0223f4e578853c-1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Genshin Impact",
+          "titleimage": "Genshin_Impact",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/42de707e3e52a0b8345bbc985af0060b.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202408/2010/1a458abb1c2b417a17546fc2561b5a6fdb4ca61a8fba1695.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Zenless Zone Zero",
+          "titleimage": "Zenless_Zone_Zero",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/9a312e8ee540ea13780981af9ee65646.png",
+          "titlebackground": "https://static1.anpoimages.com/wordpress/wp-content/uploads/2024/07/zzz-key-visual-hero.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "COD: Black Ops II",
+          "titleimage": "cod_bo2",
+          "titleicon": "http://s01.riotpixels.net/data/fd/25/fd25444d-d9a1-43b7-9a20-04644ee26432.jpg/cover.call-of-duty-black-ops-2.1024x1024.2014-04-24.133.jpg",
+          "titlebackground": "https://wallpaperaccess.com/full/5436438.png",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Black Ops",
+          "titleimage": "cod_bo",
+          "titleicon": "https://assets-prd.ignimgs.com/2021/12/30/call-of-duty-black-ops-1-button-1640898530662.jpg",
+          "titlebackground": "https://wallpaperaccess.com/full/5436438.png",
+          "type": 1
+        },
+        {
+          "titlename": "Battlefield 4",
+          "titleimage": "battlefield_4",
+          "titleicon": "https://image.api.playstation.com/cdn/UP0006/CUSA00110_00/VaulrBDwbGorU7Ykfjg5sNrJ5X9resKm.png",
+          "titlebackground": "https://wallpaperaccess.com/full/2522176.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Battlefield V",
+          "titleimage": "battlefield_V",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/8efda667f3acb87f8d123b7776554c07.jpg",
+          "titlebackground": "https://images8.alphacoders.com/922/thumb-1920-922129.png",
+          "type": 1
+        },
+        {
+          "titlename": "Battlefield 6",
+          "titleimage": "battlefield_6",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/d84b48a9b46983c717306735294a3e4d.png",
+          "titlebackground": "https://static.wikia.nocookie.net/battlefield/images/7/7f/Battlefield-6-season-4-keyart.jpg/revision/latest/scale-to-width-down/1200?cb=20260714224814",
+          "type": 1
+        },
+        {
+          "titlename": "Battlefield REDSEC",
+          "titleimage": "Battlefield_REDSEC",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202510/2716/5599acd4df8baec242c78b32db34c9cedd4e9580a55da089.png",
+          "titlebackground": "https://static.wikia.nocookie.net/battlefield/images/7/7f/Battlefield-6-season-4-keyart.jpg/revision/latest/scale-to-width-down/1200?cb=20260714224814",
+          "type": 1
+        },
+        {
+          "titlename": "Portal: Still Alive",
+          "titleimage": "Portal_Still_Alive",
+          "titleicon": "https://static.pepper.pl/threads/raw/ob93V/664436_1/re/1024x1024/qt/60/664436_1.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.57272.68905864232445372.81cdd228-6f30-4af2-b5e7-c2ed07a21d3d.a0172bcb-3048-496a-a547-45b8cb6d7d46?mode=scale&q=90&h=1080&w=1920",
+          "type": 1
+        },
+        {
+          "titlename": "Portal 2",
+          "titleimage": "portal_2",
+          "titleicon": "http://s01.riotpixels.net/data/b5/cf/b5cfe10d-7290-4bcb-a89d-e5d0e07b89f4.jpg/cover.portal-2.1024x1024.2014-04-24.1116.jpg",
+          "titlebackground": "https://i.blogs.es/2a441c/4173317-portal-2-hd/450_1000.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "Xbox 360 Dashboard",
+          "titleimage": "360_dashboard",
+          "titleicon": "https://i.ibb.co/T8d9YQC/IMG-20210506-154930.png",
+          "titlebackground": "https://wallpapercave.com/wp/wp2721308.jpg",
+          "type": 3
+        },
+        {
+          "titlename": "Microsoft Store",
+          "titleimage": "Microsoft_Store",
+          "titleicon": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/bce61c2d-f08e-4cff-ab33-6360bdffd6e8/dekbb3k-48b3ab56-b50e-4752-99ee-5e5f849d605f.png",
+          "titlebackground": "https://images.idgesg.net/images/article/2020/06/microsoft-store-100850225-large.jpg",
+          "type": 3
+        },
+        {
+          "titlename": "PDP Control Hub",
+          "titleimage": "PDP_Control_Hub",
+          "titleicon": "https://m.media-amazon.com/images/I/61Eg5ytuoBL._AC_UF1000,1000_QL80_.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.21661.14536315885801770.076b8775-9c74-4ce6-a4db-0a04d323096c.4361a4a1-ec55-4b07-98f8-c9640954808d",
+          "type": 3
+        },
+        {
+          "titlename": "COD: Black Ops III",
+          "titleimage": "cod_bo3",
+          "titleicon": "https://www.fayerwayer.com/resizer/c8Gerb7mPyaUHbRuaoQGp8MmBas=/1024x1024/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/UEIX54ZOIRFL3KXN7LCM5TDRN4.jpg",
+          "titlebackground": "https://sm.ign.com/ign_es/screenshot/default/call-of-duty_f76q.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Halo 5: Guardians",
+          "titleimage": "halo_5",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/b3db884cef9edfad43681cc20d3d884d.png",
+          "titlebackground": "https://www.10wallpaper.com/wallpaper/1366x768/1509/Halo_5_Guardian_Game_HD_Widescreen_Wallpaper_1366x768.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "PUBG: BATTLEGROUNDS",
+          "titleimage": "pubg",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ce373f7039cec2f340c3cc79424f1fca.png",
+          "titlebackground": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/03/Wire_Hero_Image_9th-Anniversary_Main-Key-Visual-a7bd25b008dd493715fa.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Mass Effect",
+          "titleimage": "Mass_Effect_1",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/d5c237592a187a55a62436db1e1b1e61.png",
+          "titlebackground": "https://static1.srcdn.com/wordpress/wp-content/uploads/2021/08/Mass-Effect-1-Companion-Crewmate-Age-Liara-Wrex-Old.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Mass Effect 2",
+          "titleimage": "Mass_Effect_2",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/08c795b843a9fdcadb684139ad586622.jpg",
+          "titlebackground": "https://cdn.mos.cms.futurecdn.net/5WnJSkxWLscNNVrYDdvFxA-1200-80.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Mass Effect 3",
+          "titleimage": "Mass_Effect_3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/0d6d2c18339affad5ff919de35734236.png",
+          "titlebackground": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/mass-effect-3/4/48/Citadel3.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Mass Effect: Andromeda",
+          "titleimage": "Mass_Effect_Andromeda",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/5b2d40deb3f6e982cd1f5d53790ea7ec.jpg",
+          "titlebackground": "https://cdn.mos.cms.futurecdn.net/3UCqmEsqu9BM2SL93BkueW.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Mass Effect Legendary Edition",
+          "titleimage": "Mass_Effect_Legendary_Edition",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/2ace71f2144ce59faec739e08603d4d3.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.32577.14254372351363255.ac3906d1-13b6-4af0-a00a-e10c8a92007b.f74e6e13-69bd-49f0-a873-2f8346a30ead",
+          "type": 1
+        },
+        {
+          "titlename": "LIMBO",
+          "titleimage": "LIMBO",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/91ae50d539e53a0c72eccd6ec1a55b66.jpg",
+          "titlebackground": "https://wizarddojo.com/wp-content/uploads/2015/12/limbo.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "INSIDE",
+          "titleimage": "INSIDE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/51eac99551f4fa89da93f217a521f007.jpg",
+          "titlebackground": "https://images4.alphacoders.com/957/957647.png",
+          "type": 1
+        },
+        {
+          "titlename": "Firewatch",
+          "titleimage": "Firewatch",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/f3e34b1ad8a9a285039d400e6dfc86cc.jpg",
+          "titlebackground": "https://assets1.ignimgs.com/2016/02/05/firewatch0122161600jpg-0d7b87.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Dying Light",
+          "titleimage": "dying_light",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/fc7fc726ca255b6d2e10b76071e51972.png",
+          "titlebackground": "https://cdn.discordapp.com/attachments/930599143041286166/953061421212655646/zyro-image_3.png",
+          "type": 1
+        },
+        {
+          "titlename": "Minecraft: Xbox 360 Edition",
+          "titleimage": "minecraft",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/fa0ab781087a90e49e44b3814fb701ea.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/7d93813a953503ae519b6bc3ef71e28e.png",
+          "type": 1
+        },
+        {
+          "titlename": "Marvel's Guardians of the Galaxy",
+          "titleimage": "marvel_guardians_galaxy",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202106/0215/Pw9cWnyqkix3EoCOGqrN1cgN.png",
+          "titlebackground": "https://images-na.ssl-images-amazon.com/images/I/815aqpZqkOS.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Assassin's Creed Valhalla",
+          "titleimage": "ac_valhalla",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202008/1318/8XGEPtD1xoasK0FYkYNcCn1z.png",
+          "titlebackground": "https://images4.alphacoders.com/107/thumb-1920-1077274.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Dante's Inferno",
+          "titleimage": "dt_inferno",
+          "titleicon": "https://ovallcorners.files.wordpress.com/2011/04/18-dantes-inferno.jpg",
+          "titlebackground": "https://sm.ign.com/t/ign_it/screenshot/default/maxresdefault_ru9u.h720.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Call Of Duty: Modern Warfare 2",
+          "titleimage": "cod_mw2",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/0cee28d807acc0fa495ac258fcb2109e.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/img/rnd/202010/1520/9cpUjddAWgBvJTY4MvmqyyE1.png",
+          "type": 1
+        },
+        {
+          "titlename": "World War Z",
+          "titleimage": "wwz",
+          "titleicon": "https://image.api.playstation.com/cdn/EP2609/CUSA13930_00/J9XHymEJeB00qNdIsGHO4PgizJJ7Gabi8VsmlJSYaUT3srBYDyH88Hulr7NkX4Vt.png?w=1024&thumb=false",
+          "titlebackground": "https://image.api.playstation.com/vulcan/img/rnd/202009/2808/9BLGIeD8OgI8cCbOEDbYjdnw.jpg?w=1024&thumb=true",
+          "type": 1
+        },
+        {
+          "titlename": "Hellblade: Senua's Sacrifice",
+          "titleimage": "hellblade",
+          "titleicon": "https://media.vandal.net/m/25566/hellblade-senuas-sacrifice-201787132929_6.jpg",
+          "titlebackground": "https://cl.buscafs.com/www.levelup.com/public/uploads/images/705285/705285_1140x516.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FIFA 22 [XB1]",
+          "titleimage": "fifa22",
+          "titleicon": "https://image.api.playstation.com/vulcan/img/rnd/202111/0822/YiFF5Xkljek03HhUJa4gic1Y.png",
+          "titlebackground": "https://generacionxbox.com/wp-content/uploads/2021/07/fifa-22.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "Fall Guys",
+          "titleimage": "Fall_Guys",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/1d6c749ed54c336af7ffc21659122d6a.png",
+          "titlebackground": "https://sm.ign.com/ign_es/gallery/f/fall-guys-/fall-guys-season-1-free-for-all-update_qyh9.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Fall Guys: Ultimate Knockout",
+          "titleimage": "Fall_Guys_Ultimate_Knockout",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/1d6c749ed54c336af7ffc21659122d6a.png",
+          "titlebackground": "https://sm.ign.com/ign_es/gallery/f/fall-guys-/fall-guys-season-1-free-for-all-update_qyh9.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Stumble Guys",
+          "titleimage": "Stumble_Guys",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/eae7e6b10447faa61ded3859297594d5.png",
+          "titlebackground": "https://live-assets.web.stumbleguys.com/cms/website_309b26b7bc.webp",
+          "type": 1
+        },
+        {
+          "titlename": "Battlefield: Bad Company",
+          "titleimage": "btf_badcompany",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/a1323f274f0b46c069ea4ddd4fa56a76.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/cb1353eab083bf555a21713f4b1f1ec2.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Battlefield Bad Company 2",
+          "titleimage": "btf_badcompany_2",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/535930dfb6b351001869d2cf9ee07833.jpg",
+          "titlebackground": "https://cdn.myportfolio.com/7fda6eec3ddc616d5a8da0e23728fb49/36930112461d4e89dc0d2d6a_rw_1920.jpg?h=09b0bb24852f6494e6fa12d00cd0dd1d",
+          "type": 1
+        },
+        {
+          "titlename": "Skyrim",
+          "titleimage": "skyrim",
+          "titleicon": "https://freesvg.org/img/skyrim.png",
+          "titlebackground": "https://c.wallhere.com/photos/f9/be/1366x768_px_The_Elder_Scrolls_V_Skyrim_video_games-715618.jpg!d",
+          "type": 1
+        },
+        {
+          "titlename": "Conker: Live and Reloaded",
+          "titleimage": "Conker_Live_and_Reloaded",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/596f6e834f2569ec81adc2fb6798f453.png",
+          "titlebackground": "https://retroages.com/wp-content/uploads/2021/06/conker-live-reloaded.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Forza Horizon",
+          "titleimage": "forza_horizon",
+          "titleicon": "https://static.wikia.nocookie.net/forzamotorsport/images/3/3d/FH1_Boxart.jpg/revision/latest/top-crop/width/1024/height/1024",
+          "titlebackground": "https://www.somosxbox.com/wp-content/uploads/2016/09/Forza-Horizon-1.jpg?mrf-size=m",
+          "type": 1
+        },
+        {
+          "titlename": "Forza Motorsport 3",
+          "titleimage": "forza_motorsport3",
+          "titleicon": "https://vectorseek.com/wp-content/uploads/2023/07/Forza-Motorsport-3-Logo-Vector.jpg",
+          "titlebackground": "https://img4.goodfon.com/original/2560x1440/e/59/audi-r8-forza-motorsport-3-game.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Forza Motorsport 4",
+          "titleimage": "forza_motorsport4",
+          "titleicon": "https://cdn2.steamgriddb.com/icon_thumb/bc060de03aa94c7edf5e6b4f1755c1f0.png",
+          "titlebackground": "https://r4.wallpaperflare.com/wallpaper/160/827/592/forza-motorsport-4-wallpaper-b950b8dde12a0debf667381f6001863d.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Far Cry 5",
+          "titleimage": "far_cry5",
+          "titleicon": "https://image.api.playstation.com/cdn/UP0001/CUSA05904_00/IKYAgcRh0k3IOklJSDoNBTk5t5MSm7KE.png",
+          "titlebackground": "https://media.vandal.net/m/48288/far-cry-5-2017526152635_5.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Netflix",
+          "titleimage": "netflix",
+          "titleicon": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png",
+          "titlebackground": "",
+          "type": 2
+        },
+        {
+          "titlename": "Assassin's Creed Origins",
+          "titleimage": "ac_origins",
+          "titleicon": "https://image.api.playstation.com/cdn/EP0001/CUSA05625_00/6OhEbwPSI4Vy8AtS8PgP1jVxQLVvTmX7.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/img/rnd/202010/0220/mEgt1tDiuDgwqMPCLIzM1gBD.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Watch Dogs: Legion",
+          "titleimage": "wd_legion",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202007/0217/OX5mEmwgRPeSQrhGFU3n4moZ.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/img/rnd/202010/3002/5yRvEJERrFUHQKoyISq3ezo1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Vanguard",
+          "titleimage": "cod_vanguard_XB1",
+          "titleicon": "https://media.vandal.net/m/105263/call-of-duty-vanguard-202111821165339_1.jpg",
+          "titlebackground": "https://compass-ssl.xbox.com/assets/94/7a/947a2b8d-fcfc-4359-b0c8-a1c5fc278512.jpg?n=504723_GLP-Page-Hero-Cinemagraph-Poster-Image_1084_1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Vanguard - Xbox Series X|S",
+          "titleimage": "cod_vanguard_XS",
+          "titleicon": "https://media.vandal.net/m/105263/call-of-duty-vanguard-202111821165339_1.jpg",
+          "titlebackground": "https://compass-ssl.xbox.com/assets/94/7a/947a2b8d-fcfc-4359-b0c8-a1c5fc278512.jpg?n=504723_GLP-Page-Hero-Cinemagraph-Poster-Image_1084_1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Cyberpunk 2077",
+          "titleimage": "cp_2077",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202111/3013/cKZ4tKNFj9C00giTzYtH8PF1.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202111/3013/UjQ1pWQiHwymgQQ6q4pWQkMC.png",
+          "type": 1
+        },
+        {
+          "titlename": "Gears of War",
+          "titleimage": "Gears1.png",
+          "titleicon": "http://lmk.tdgalea.co.uk/share/Photography/Gaming/Box Art/Gears of War/Gears1.png",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.38206.68631123789499032.6299bbb9-6778-40d5-965f-080b552baa15.7e8e4683-52a1-4fdb-abde-5b6e28bd351e",
+          "type": 1
+        },
+        {
+          "titlename": "Gears of War 2",
+          "titleimage": "Gears2.png",
+          "titleicon": "http://lmk.tdgalea.co.uk/share/Photography/Gaming/Box Art/Gears of War/Gears2.png",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.11099.65595136073047161.857e51a5-2b52-4c0e-8ac2-92b6b4609fc2.e234d629-44c0-4325-8518-74f1126aba08",
+          "type": 1
+        },
+        {
+          "titlename": "Gears of War 3",
+          "titleimage": "Gears3.png",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/91deaef164356d6d62478eceb9afaa6b.png",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.41576.68607194681373551.b4c09a44-be36-42d6-96c5-4a33b566becd.bbbcda5d-ebd5-4c6b-9d13-67171a49d833",
+          "type": 1
+        },
+        {
+          "titlename": "Gears of War: Judgment",
+          "titleimage": "Judgment.png",
+          "titleicon": "http://lmk.tdgalea.co.uk/share/Photography/Gaming/Box Art/Gears of War/Judgment.png",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.60850.70323071690757883.aa344172-c923-4b38-a055-9ce9a093bc86.a56f147e-bb8e-4559-a7ee-ec829cab2d79",
+          "type": 1
+        },
+        {
+          "titlename": "Gears of War: Ultimate Edition",
+          "titleimage": "Ultimate Edition.png",
+          "titleicon": "http://lmk.tdgalea.co.uk/share/Photography/Gaming/Box Art/Gears of War/Ultimate Edition.png",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.16637.68785176255228170.152a1029-d0c3-4d27-a42d-ecccb32aa4ca.6db2ccf4-2944-45ae-8aa0-c19b00bb1e8b",
+          "type": 1
+        },
+        {
+          "titlename": "Gears of War 4",
+          "titleimage": "Gears4.png",
+          "titleicon": "http://lmk.tdgalea.co.uk/share/Photography/Gaming/Box Art/Gears of War/Gears4.png",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.34315.13510798887356280.41621d11-dd2e-423d-a6ee-651fe809a9ba.12dd5576-8901-44cf-b6e0-fe76aaf50abc",
+          "type": 1
+        },
+        {
+          "titlename": "Gears 5",
+          "titleimage": "Gears5.png",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/dbbfa43eef839542428b19391b87eb74.png",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.21372.65494054591008504.3eb95796-405c-4def-901b-3b53a1c9e001.7ce477d1-54a6-4286-b3e1-f3145baf4ba2",
+          "type": 1
+        },
+        {
+          "titlename": "Gears of War: Reloaded",
+          "titleimage": "GOWR",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/327ad38c367ff613e62653f9ccce322e.jpg",
+          "titlebackground": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2523720/d307e590f414184fcd0948a34fad01a08965ac39/page_bg_raw.jpg?t=1757024702",
+          "type": 1
+        },
+        {
+          "titlename": "Gears of War: E-Day",
+          "titleimage": "GOW_EDAY",
+          "titleicon": "https://assets-prd.ignimgs.com/2026/06/07/eday-1780856237669.jpg",
+          "titlebackground": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d3139093-f1c4-4621-b7bc-30aeeff7178a/dhka52w-29963294-4453-4ce6-bf74-41ae79e7b3ee.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9kMzEzOTA5My1mMWM0LTQ2MjEtYjdiYy0zMGFlZWZmNzE3OGEvZGhrYTUydy0yOTk2MzI5NC00NDUzLTRjZTYtYmY3NC00MWFlNzllN2IzZWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.WYpnGp8srIpfPIspkdqm7i5vrFABgl2bWShDC7MMMEo",
+          "type": 1
+        },
+        {
+          "titlename": "Gears of War: E-Day Multiplayer Beta",
+          "titleimage": "GOW_EDAY_MPBETA",
+          "titleicon": "https://assets-prd.ignimgs.com/2026/06/07/eday-1780856237669.jpg",
+          "titlebackground": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d3139093-f1c4-4621-b7bc-30aeeff7178a/dhka52w-29963294-4453-4ce6-bf74-41ae79e7b3ee.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9kMzEzOTA5My1mMWM0LTQ2MjEtYjdiYy0zMGFlZWZmNzE3OGEvZGhrYTUydy0yOTk2MzI5NC00NDUzLTRjZTYtYmY3NC00MWFlNzllN2IzZWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.WYpnGp8srIpfPIspkdqm7i5vrFABgl2bWShDC7MMMEo",
+          "type": 1
+        },
+        {
+          "titlename": "OMORI",
+          "titleimage": "omori",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202206/1601/1agbi2hbB4vbYexXSqWm94jx.png",
+          "titlebackground": "https://cdn.discordapp.com/attachments/1007089844624838780/1016434143942410391/background.png",
+          "type": 1
+        },
+        {
+          "titlename": "Warframe",
+          "titleimage": "warframe",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/b49abed4deacc76ce59f5ce9173acece.jpg",
+          "titlebackground": "https://i.pinimg.com/originals/8f/45/b0/8f45b0cae6740c4f8e1581de34fa613b.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Modern Warfare",
+          "titleimage": "cod_mw_360",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/28/cod4-1648511386228.jpg",
+          "titlebackground": "https://pg-uploads.wpcdn.pl/2007/12/Modern-Warfare.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty 4",
+          "titleimage": "cod4_360",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/28/cod4-1648511386228.jpg",
+          "titlebackground": "https://pg-uploads.wpcdn.pl/2007/12/Modern-Warfare.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Modern Warfare 2",
+          "titleimage": "cod_mw2_360",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/0cee28d807acc0fa495ac258fcb2109e.png",
+          "titlebackground": "https://www.kawerna.pl/wp-content/uploads/2020/04/remastered-cod2.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Modern Warfare 3",
+          "titleimage": "cod_mw3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/5e6d342c2d5e35f55898cd03ba902c25.jpg",
+          "titlebackground": "https://www.kawerna.pl/wp-content/uploads/2020/04/remastered-cod2.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DanceDanceRevolution",
+          "titleimage": "DDR_2010",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/1f53ae4e0c9d5632959175b27e50cf56.jpg",
+          "titlebackground": "https://m.media-amazon.com/images/I/71Gm35VbN7L.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DDR Universe",
+          "titleimage": "DDR_Universe_1",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/8b6624e3f25e84cd1fe8c3a5b4e13459.png",
+          "titlebackground": "https://tcrf.net/images/e/ed/DDRuniverse-title.png",
+          "type": 1
+        },
+        {
+          "titlename": "DDR Universe 2",
+          "titleimage": "DDR_Universe_2",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ee18b02f6636099fe2476e6771236e64.png",
+          "titlebackground": "https://i.ytimg.com/vi/SVlZHbOLh0w/maxresdefault.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DDR Universe 3",
+          "titleimage": "DDR_Universe_3",
+          "titleicon": "https://www.giantbomb.com/a/uploads/square_small/8/87790/2280571-box_ddru3.png",
+          "titlebackground": "https://img.gamertagnation.com/gameimages/backgrounds/494.png",
+          "type": 1
+        },
+        {
+          "titlename": "DanceMasters/Evolution",
+          "titleimage": "Dance_Masters_Evolution",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/16/dancemasters-1647405437944.jpg",
+          "titlebackground": "https://assets2.ignimgs.com/2010/08/27/dance-masters-20100827103429402-3297666.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Alan Wake",
+          "titleimage": "alanwake",
+          "titleicon": "https://www.fayerwayer.com/resizer/Yt2iJrPyX_DDbKee1DLMx6xd4gI=/1024x1024/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/CK52GYCGURFHPP6FL2MURVNQNU.jpg",
+          "titlebackground": "https://cutewallpaper.org/21/alan-wake-wallpaper/Alan-Wake-wallpaper-6-WallpapersBQ.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Kinect Adventures!",
+          "titleimage": "kinect_adventures",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/02/07/kinectadventures-sq1-1644265943035.jpg",
+          "titlebackground": "https://media.rawg.io/media/games/d76/d76a211072aed4e50a8d081f234f3b5a.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Kinect Sports",
+          "titleimage": "ks_season1",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/02/07/kinectsports-sq-1644266059534.jpg",
+          "titlebackground": "https://www.mobygames.com/images/promo/original/1478557560-1581798436.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Kinect Sports: Season Two",
+          "titleimage": "ks_season2",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/14/kinectsports-1647287133102.jpg",
+          "titlebackground": "https://www.mobygames.com/images/promo/original/1478557560-1581798436.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "NEED FOR SPEED MOST WANTED",
+          "titleimage": "nfs_mw2012",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/eaa34279de6b20cc33e12bb150f0f32e.jpg",
+          "titlebackground": "https://cdn.mcr.ea.com/3/images/c8364ab9-9444-4eb4-ba46-158dd67b7594/1587971735-0x0-0-0.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Terraria - Xbox 360 Edition",
+          "titleimage": "terraria_x360",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/bbbcc91f3c7288fd9233caf509fc4189.jpg",
+          "titlebackground": "https://i.redd.it/ej45mxbs1uq61.png",
+          "type": 1
+        },
+        {
+          "titlename": "Terraria",
+          "titleimage": "terraria_xb1",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/bbbcc91f3c7288fd9233caf509fc4189.jpg",
+          "titlebackground": "https://i.redd.it/ej45mxbs1uq61.png",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Ghosts",
+          "titleimage": "cod_ghosts",
+          "titleicon": "https://image.api.playstation.com/cdn/EP0002/CUSA00025_00/IUeXkREOFg6l0BCgYUe4DxCSlryK8iPT.png",
+          "titlebackground": "https://wallpaperaccess.com/full/369911.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Dead Space 3",
+          "titleimage": "dead_space_3_Xbox_360",
+          "titleicon": "https://i.gadgets360cdn.com/products/large/460509-dead-space-3-ultimate-edition-playstation-3-front-cover-1000x1000-1656405233.jpeg",
+          "titlebackground": "https://images5.alphacoders.com/371/371382.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Dead Space 2",
+          "titleimage": "dead_space_2_Xbox_360",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/db9479550af49e4214af583bf0816551.png",
+          "titlebackground": "https://i0.wp.com/waytoomany.games/wp-content/uploads/2021/01/dead-space-2-wallpaper-full-hd-1080p-184991.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Dead Space (2008)",
+          "titleimage": "dead_space_2008_Xbox_360",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/eeb96dcdd636b95cd52a322e7c9f48fa.png",
+          "titlebackground": "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/11/ds1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Dead Space",
+          "titleimage": "dead_space_Remake",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/f01c34449487c0bd1ea4a8625fffa09c.jpg",
+          "titlebackground": "https://i0.wp.com/xboxera.com/wp-content/uploads/2023/01/Screenshot-2023-01-28-010335.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "South of Midnight",
+          "titleimage": "South_of_Midnight",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/1e443cc2708fc151dbf3763a8157336b.jpg",
+          "titlebackground": "https://xboxwire.thesourcemediaassets.com/sites/2/2024/06/HERO-1de22a582ec70ff085c8.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Diablo III",
+          "titleimage": "diablo3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/9a3837e40220349d37b9825786cc92dc.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/fea33a31df7d05a276193d32621ecbe4.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Peggle 2",
+          "titleimage": "peggle2",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/18/peggle2-1647580639839.jpg",
+          "titlebackground": "https://images.wallpapersden.com/image/download/peggle-2-game-paint_ZmdsaWeUmZqaraWkpJRmbmdlrWZlbWU.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Trials Fusion",
+          "titleimage": "trials_fusion",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/13/trialsfusion-1647197679497.jpg",
+          "titlebackground": "https://images.alphacoders.com/509/509942.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "A Plague Tale: Requiem",
+          "titleimage": "plaguetale_requiem",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202106/1717/xIQOO3Mo5YMnIm81qkH3y5kJ.png",
+          "titlebackground": "https://compass-ssl.xbox.com/assets/6e/47/6e47b95a-1a05-4a47-ad14-7738d132983c.jpg?n=517749_GLP-Page-Hero-1084_1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Persona 5 Royal",
+          "titleimage": "persona5_royal",
+          "titleicon": "https://assets1.ignimgs.com/2020/02/14/persona-5-royal---button-fin-1581716582492.jpg",
+          "titlebackground": "https://assets.xboxservices.com/assets/b8/2b/b82bf999-f98f-4702-8254-23b79fbcd89f.jpg?n=Persona-5-Royal_GLP-Page-Hero-1084_1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Persona 5 Tactica",
+          "titleimage": "persona5_tactica",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/47ce171bd402ba62107de9e9007b193d.png",
+          "titlebackground": "https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000066005/82111f4c361948a56afa01658171015ef2ce31dd4bbf6963f7854f19254f6d0f",
+          "type": 1
+        },
+        {
+          "titlename": "Tom Clancy's Rainbow Six Siege",
+          "titleimage": "rainbow_sixsiege",
+          "titleicon": "https://sm.ign.com/t/ign_es/game/r/rainbow-si/rainbow-six-siege_d2b2.1024.jpg",
+          "titlebackground": "https://images7.alphacoders.com/588/588460.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Tom Clancy's Rainbow Six Siege X",
+          "titleimage": "rainbow_six_siege_X",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/751e6221ef6d33dfe30b89e52ca12fb4.png",
+          "titlebackground": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1lKKKfKHD5f84ViM2NHBOJ/f54c2f0dfd5ae10eb3d6c2e965fa732d/r6s-x-free-access.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Tom Clancy's Rainbow Six Extraction",
+          "titleimage": "rainbow_six_extraction",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202110/2613/dAX4bUiYtNYZRkK3TcOphTeO.png",
+          "titlebackground": "https://www.denofgeek.com/wp-content/uploads/2022/01/Rainbow-Six-Operators.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "ROBLOX",
+          "titleimage": "roblox",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/01/roblox-sq-1646155371025.jpg",
+          "titlebackground": "https://compass-ssl.xbox.com/assets/cd/14/cd14239c-655d-42bc-bbfd-af506f107f8c.jpg?n=Roblox_Gallery-0_1350x759_04.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "TEKKEN TAG 2",
+          "titleimage": "Tekken Tag Tournament 2",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/08/tekkentag2-1646766836349.jpg",
+          "titlebackground": "https://cdn.videogamesblogger.com/wp-content/uploads/2012/09/tekken-tag-tournament-2-wallpaper.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "TEKKEN TAG TOURNAMENT 2",
+          "titleimage": "TTT2_XB1",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/08/tekkentag2-1646766836349.jpg",
+          "titlebackground": "https://cdn.videogamesblogger.com/wp-content/uploads/2012/09/tekken-tag-tournament-2-wallpaper.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "TEKKEN 6",
+          "titleimage": "TEKKEN_6",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/0cbcc379a81888055b068e7cd194d786.png",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.34940.71725309066492610.4166ad7f-bf33-41ee-9868-6009a80bac53.267805cc-5621-41ec-8b5a-7bf1b2d9de61?mode=scale&q=90&h=1080&w=1920",
+          "type": 1
+        },
+        {
+          "titlename": "Tekken 7",
+          "titleimage": "TEKKEN_7",
+          "titleicon": "https://image.api.playstation.com/cdn/UP0700/CUSA05972_00/4yfeeKKfJdD5WzDQsoiM3xrcqPlpDLm7.png",
+          "titlebackground": "https://img.opencritic.com/game/3599/o/uBhYDyaI.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "TEKKEN 8",
+          "titleimage": "TEKKEN_8",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/0d2f3ecb750f115e8660110f09d63ce4.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/d58bcc87e254088674e43d8e19c508d1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Hydro Thunder",
+          "titleimage": "Hydro_Thunder",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/06/18/hydrothunder-1655580743040.jpg",
+          "titlebackground": "https://download-ssl.xbox.com/content/images/66acd000-77fe-1000-9115-d8025841096a/1033/screenlg3.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "NINJA GAIDEN",
+          "titleimage": "NG1",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/15647da261a82b53d8e4919d9b4b110b.png",
+          "titlebackground": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/03/ninjagaiden.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Ninja Gaiden Black",
+          "titleimage": "NG1_Black",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/1cc7ea47a20322422b32cd3194eccd2e.png",
+          "titlebackground": "https://wallpapercave.com/wp/wp2783695.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "NINJA GAIDEN Σ",
+          "titleimage": "NG1_Sigma",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/5b0f6f593bc178ecd4dca2367909ce6d.jpg",
+          "titlebackground": "https://www.nookgaming.com/wp-content/uploads/2021/06/Ninja_Gaiden_-_Featured_Image-1210x642.png",
+          "type": 1
+        },
+        {
+          "titlename": "NINJA GAIDEN II",
+          "titleimage": "NG2_VANILLA",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/9a1b7d042a1476ae65145a7e9536b350.png",
+          "titlebackground": "https://images7.alphacoders.com/684/684049.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "NINJA GAIDEN 2 Black",
+          "titleimage": "NG2_Black",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/d3b366f8e76c756ca5272549fd19ab01.png",
+          "titlebackground": "https://assets-prd.ignimgs.com/2025/01/29/ninja-gaiden-2-black-blogroll-1738176208763.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "NINJA GAIDEN Σ2",
+          "titleimage": "NG2_Sigma",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/5b1dba012d4bd95c54a07fa63445eceb.jpg",
+          "titlebackground": "https://oyster.ignimgs.com/wordpress/stg.ign.com/2013/03/NGS2_030513_1600.jpg?width=1920",
+          "type": 1
+        },
+        {
+          "titlename": "Ninja Gaiden III",
+          "titleimage": "NG3_Vanilla",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/b64bae5500d62e73b669cd3ad863ee2d.png",
+          "titlebackground": "https://images2.alphacoders.com/236/236660.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "NINA GAIDEN 3: RE",
+          "titleimage": "NG3_RE_360",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/63ff8c6cbeef23aa9927ca4c08f63f56.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.57988.13957002730398149.0cea4e4d-b211-438d-b3fc-78fd52485184.fc986eb9-ad62-426f-ad0b-81b66ca9bf53",
+          "type": 1
+        },
+        {
+          "titlename": "NINA GAIDEN 3: Razor's Edge",
+          "titleimage": "NG3_RE_XB1",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/f396731d83040949f8033cd9c40d56ea.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.57988.13957002730398149.0cea4e4d-b211-438d-b3fc-78fd52485184.fc986eb9-ad62-426f-ad0b-81b66ca9bf53",
+          "type": 1
+        },
+        {
+          "titlename": "NINJA GAIDEN 4",
+          "titleimage": "NG4",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/8b0cb989487fb88dea63d7697b4f9d28.jpg",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202501/2115/55009bd0bb54d4603335f5ff69140f6607f5a00201fa8606.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "NINJA GAIDEN: Raebound",
+          "titleimage": "NG_Ragebound",
+          "titleicon": "https://assets-prd.ignimgs.com/2024/12/13/ragebound-1734068080498.jpg",
+          "titlebackground": "https://assets-prd.ignimgs.com/2024/12/13/ninjagaidenragebound-blogroll-1734050457614.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Modern Warfare II",
+          "titleimage": "cod_mwII",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202205/2800/W5uSEsW7yefCNTHatS03v5q7.png",
+          "titlebackground": "https://assets.xboxservices.com/assets/a0/02/a0029671-98a2-4955-a9e7-ef32cd0eb544.jpg?n=CoD-MW-II_GLP-Page-Hero-Poster-1084_1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "ZOE HD",
+          "titleimage": "zoehd",
+          "titleicon": "https://cdn2.steamgriddb.com/icon/8d297a658bd8918ca2428789005950df/32/256x256.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/file/sgdb-cdn/hero_thumb/83cdcec08fbf90370fcf53bdd56604ff.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Lost Odyssey",
+          "titleimage": "lost_odyssey",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/07/lost-odyssey-button-crop-1641596251636.jpg",
+          "titlebackground": "https://i0.wp.com/www.badtaste.it/videogiochi/wp-content/uploads/sites/2/2016/12/lost-odyssey_gdfz.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Blue Dragon",
+          "titleimage": "blue_dragon",
+          "titleicon": "https://rhythmverse.co/assets/album_art/e/eternity-19191.png",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.55545.65457035095819016.56f55216-1bb9-40aa-8796-068cf3075fc1.4c2daefb-fbf6-4b90-b392-bf8ecc39a92e",
+          "type": 1
+        },
+        {
+          "titlename": "Hi-Fi RUSH",
+          "titleimage": "hifi_rush",
+          "titleicon": "https://sm.ign.com/ign_latam/cover/h/hi-fi-rush/hi-fi-rush_43et.jpg",
+          "titlebackground": "https://cdn1.epicgames.com/offer/577c5cbc303a4d168b1a104f3b46e751/EGS_HiFiRUSH_TangoGameworks_S1_2560x1440-fad2327bc3e1e0cfda81eb21134410b1",
+          "type": 1
+        },
+        {
+          "titlename": "Persona 3 Portable",
+          "titleimage": "p3portable",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/icon/f2e84d98d6dc0c7acd56b40509355666/32/256x256.png",
+          "titlebackground": "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_Persona3Portable_image1600w.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Persona 4 Golden",
+          "titleimage": "p4golden",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/icon_thumb/ecb565cd82de68494c294dc8d4b419a0.png",
+          "titlebackground": "https://cdn.akamai.steamstatic.com/steam/apps/1113000/capsule_616x353.jpg?t=1674487070",
+          "type": 1
+        },
+        {
+          "titlename": "Mortal Shell: Enhanced Edition",
+          "titleimage": "mortal_shell",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/icon/17b65afe58c49edc1bdd812c554ee3bb/32/256x256.png",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.48998.14112185653659482.b5e15e3a-13c2-47bd-9e60-7709b165611f.1a8e8ab6-788c-41d0-8d25-cedfa921075d?q=90&w=480&h=270",
+          "type": 1
+        },
+        {
+          "titlename": "Monster Hunter Rise",
+          "titleimage": "mhrise",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/icon/faa453efde4ac6a36849ba381feb9e87/32/256x256.png",
+          "titlebackground": "https://assets.xboxservices.com/assets/e0/94/e094ff7a-f3a2-45bd-9efa-ab14e94e5169.jpg?n=75295231_GLP-Page-Hero-1084_1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "MONSTER HUNTER: WORLD",
+          "titleimage": "Monster_Hunter_World",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ad0c17a89c56731630582f6a2b95c044.png",
+          "titlebackground": "https://monstervine.com/wp-content/uploads/2019/09/Monster-Hunter-World_-Iceborne_20190908102727.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Monster Hunter Wilds",
+          "titleimage": "Monster_Hunter_Wilds",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/b3b029333d503e2239efc9dfe164de78.png",
+          "titlebackground": "https://platform.polygon.com/wp-content/uploads/sites/2/2025/02/monster-hunter-wilds-beta-2.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Monster Hunter Wilds Beta test",
+          "titleimage": "Monster_Hunter_Wilds_Beta",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202410/1506/b0a0c6242eac82f717e7bfb36b225e747112f19dfc187f00.png",
+          "titlebackground": "https://platform.polygon.com/wp-content/uploads/sites/2/2025/02/monster-hunter-wilds-beta-2.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Doom Eternal",
+          "titleimage": "doom_eternal",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/ERNPc4gFqeRDG1tYQIfOKQtM.png",
+          "titlebackground": "https://images.alphacoders.com/106/1062064.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Atomic Hearth",
+          "titleimage": "atomic_hearth",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202209/2815/SSru3b0CYWviMXfW6bYgaWlX.png",
+          "titlebackground": "https://img5.goodfon.com/wallpaper/nbig/d/3a/atomic-heart-igra-personazhi.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FIFA 23",
+          "titleimage": "fifa23",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202301/0312/TwxvAAWgqCrFC3y73VPZUS7m.png",
+          "titlebackground": "https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/authenticity/common/f23-auth-featured-16x9.jpg.adapt.crop16x9.1023w.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Destiny 2",
+          "titleimage": "destiny2",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/thumb/dbd70841dd7997b1af1fa9ac1f4cf969.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.33511.68655995542193491.8ebaffb9-0b52-40b0-9395-b18addc8fafa.7fa0444b-90f1-4731-93a6-18fc03644ba1",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Infinite Warfare",
+          "titleimage": "cod_infinite_warfare",
+          "titleicon": "https://image.api.playstation.com/cdn/EP0002/CUSA05282_00/JhIXa8se54KKNhggEahiO0Oz78IITOGF.png",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.51376.70799132231561062.6e2fe24e-9457-4f92-9497-6fbb8d194c90.8446e8b5-d2df-4162-a50a-9911ad736cc1",
+          "type": 1
+        },
+        {
+          "titlename": "DEAD OR ALIVE 1 Ultimate",
+          "titleimage": "DOA1_ULTIMATE",
+          "titleicon": "https://i.imgur.com/WA3VPTS.png",
+          "titlebackground": "https://www.destructoid.com/wp-content/uploads/2020/12/515253-lei-fang.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DEAD OR ALIVE 2 Ultimate",
+          "titleimage": "DOA2_ULTIMATE",
+          "titleicon": "https://i.imgur.com/CJKFobH.png",
+          "titlebackground": "https://www.destructoid.com/wp-content/uploads/2020/12/515253-lei-fang.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Dead or Alive 3",
+          "titleimage": "DOA3",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/05/04/doa3-1651685752417.jpg",
+          "titlebackground": "https://www.1zoom.me/big/72/65401-aleni.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DEAD OR ALIVE 4",
+          "titleimage": "DOA4_360",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/11/25/doa4-1669406347926.jpg",
+          "titlebackground": "https://thehande.files.wordpress.com/2019/04/doa4-01.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Dead or Alive 5",
+          "titleimage": "doa5_Vanilla",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/9bf4282eb2d98c22bed8683ee6e591d0.jpg",
+          "titlebackground": "https://wallpapercave.com/wp/wp1971233.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DOA5 Ultimate",
+          "titleimage": "DOA5_Ultimate",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/f07d6785a6930875460c64a46ff41ced.jpg",
+          "titlebackground": "https://draculascave.co/wp-content/uploads/2013/09/title31.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DOA5 Last Round",
+          "titleimage": "DOA5_LR_360",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/8c133ffc5b43bd169de84a85e0b551ee.png",
+          "titlebackground": "https://img.opencritic.com/game/108/o/spwdcDOs.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DEAD OR ALIVE 5 Last Round: Core Fighters",
+          "titleimage": "doa5_LR_XB1",
+          "titleicon": "https://image.api.playstation.com/cdn/UP4108/CUSA01627_00/8b3eVINuTJf6y47a98THfkEtiuB1zs0u.png",
+          "titlebackground": "https://img.opencritic.com/game/108/o/spwdcDOs.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DEAD OR ALIVE 6: Core Fighters",
+          "titleimage": "doa6_CF_XB1",
+          "titleicon": "https://image.api.playstation.com/cdn/UP4108/CUSA12152_00/suTiUywgfKg7QS6lnU497q1W98KWbIae.png",
+          "titlebackground": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a285ecc7-d657-4509-b58f-912a120e841e/deuc6ux-8cec3034-68e7-4092-8f3f-60dded69e808.jpg/v1/fill/w_1920,h_1080,q_75,strp/dead_or_alive_6_wallpaper_by_panuwath2019_deuc6ux-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2EyODVlY2M3LWQ2NTctNDUwOS1iNThmLTkxMmExMjBlODQxZVwvZGV1YzZ1eC04Y2VjMzAzNC02OGU3LTQwOTItOGYzZi02MGRkZWQ2OWU4MDguanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.-6_vC-GBn2ezIPctalH-v91gh0jlIL6fwjparV8V5JE",
+          "type": 1
+        },
+        {
+          "titlename": "DEAD OR ALIVE 6",
+          "titleimage": "doa6_XB1",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/8f722a6f8129944c85904130611bd1f4.jpg",
+          "titlebackground": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a285ecc7-d657-4509-b58f-912a120e841e/deuc6ux-8cec3034-68e7-4092-8f3f-60dded69e808.jpg/v1/fill/w_1920,h_1080,q_75,strp/dead_or_alive_6_wallpaper_by_panuwath2019_deuc6ux-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2EyODVlY2M3LWQ2NTctNDUwOS1iNThmLTkxMmExMjBlODQxZVwvZGV1YzZ1eC04Y2VjMzAzNC02OGU3LTQwOTItOGYzZi02MGRkZWQ2OWU4MDguanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.-6_vC-GBn2ezIPctalH-v91gh0jlIL6fwjparV8V5JE",
+          "type": 1
+        },
+        {
+          "titlename": "DEAD OR ALIVE 6 Last Round",
+          "titleimage": "doa6_LR",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202601/2618/885e371b422fb13d08411637c450864789fb42d9243bc760.png",
+          "titlebackground": "https://teamninja-studio.com/doa6/lastround/assets/img/common/doa6LR_site-top_poster.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DEAD OR ALIVE 6 Last Round: Core Fighters",
+          "titleimage": "doa6_LR_CF",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/311d49a40545086c9c4f02782e5e84da.png",
+          "titlebackground": "https://teamninja-studio.com/doa6/lastround/assets/img/common/doa6LR_site-top_poster.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Left 4 Dead",
+          "titleimage": "L4D1",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/c97223bc53a281ac2baafc64908e824b.png",
+          "titlebackground": "https://gist.plex.tv/wp-content/uploads/2021/03/e3c2d2d0455a3ebc279e841510fdc2a8.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Left 4 Dead 2",
+          "titleimage": "L4D2",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/5ec59bc90d6605a2c1c6af6d997ea344.png",
+          "titlebackground": "https://m.media-amazon.com/images/M/MV5BNWI0YzQ2M2ItM2YyOC00MTQ4LWEyOTEtNDE5YjE5YjVjZGI3XkEyXkFqcGdeQXVyNzg3NjQyOQ@@._V1_.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "The Orange Box",
+          "titleimage": "The_Orange_Box",
+          "titleicon": "https://static-pepper.dealabs.com/threads/raw/CsIXi/2525718_1/re/1024x1024/qt/60/2525718_1.jpg",
+          "titlebackground": "https://assets.metrocop.net/wp-content/uploads/articles/the-orange-box-15-years/the-orange-box-15-years.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Saints Row",
+          "titleimage": "Saints_Row_1",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/e22e151b3e1b1e5693bac710f9ad81b8.png",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.737.69749811983601191.f4b19ba6-85ca-4a42-85b0-94b674b958c3.d239d6d2-89ee-4eef-abbd-9c55cd973dec?mode=scale&q=90&h=1080&w=1920",
+          "type": 1
+        },
+        {
+          "titlename": "Saints Row 2",
+          "titleimage": "Saints_Row_2",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/07/saints-row-2-button-1641597906385.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.4943.71279615402420172.8fc002ed-5b42-4296-aa7a-231d0c73bebc.240b5688-8fd1-4f84-a5ab-a672e7aefcd3?mode=scale&q=90&h=1080&w=1920&format=jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Saints Row: The Third",
+          "titleimage": "Saints_Row_The_Third",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/3ff73960b627328f420342541cf4fa68.png",
+          "titlebackground": "https://www.godisageek.com/wp-content/uploads/Saints-Row-the-Third-PS4.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Saints Row: The Third Remastered",
+          "titleimage": "Saints_Row_The_Third_Remastered",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202105/1110/OwxZcWTSQshQNCS8n3M1dm25.png",
+          "titlebackground": "https://www.gamebyte.com/wp-content/uploads/2021/05/saints-row-the-third-remastered.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Saints Row IV",
+          "titleimage": "Saints_Row_IV",
+          "titleicon": "https://i.ebayimg.com/images/g/EW4AAOSwj51jNWUe/s-l1600.jpg",
+          "titlebackground": "https://images5.alphacoders.com/395/thumb-1920-395720.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Saints Row IV: Re-Elected",
+          "titleimage": "Saints_Row_IV_Re-Elected",
+          "titleicon": "https://image.api.playstation.com/cdn/UP2047/CUSA01164_00/nhM6vndQ0hzEwA6FKh99Kjq9ILNaQ8tm.png",
+          "titlebackground": "https://cdn-ext.fanatical.com/production/product/1280x720/ef7a1626-58d8-4e4c-b6cf-b796e0d8da3b.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "Saints Row: Gat out of Hell",
+          "titleimage": "Saints_Row_Gat_Out_Of_Hell",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/07/saints-row-iv-gat-out-of-hell-button-1641598025730.jpg",
+          "titlebackground": "https://cdn.akamai.steamstatic.com/steam/apps/301910/ss_8a18fe0b549b5ef7763d62af69251507a4cdcdff.1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "ULTRA STREETFIGHTER IV",
+          "titleimage": "USF4",
+          "titleicon": "https://image.api.playstation.com/cdn/UP9012/CUSA01846_00/bfVn55KvgbaZp7GKHm6VkNoq6EiHqFjF.png",
+          "titlebackground": "https://img.opencritic.com/game/73/o/gA3yDfWE.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "SUPER STREETFIGHTER IV ARCADE EDITION",
+          "titleimage": "SSFIVAE",
+          "titleicon": "https://images.stopgame.ru/games/logos/12365/super_street_fighter_4_arcade_edition-square.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.43457.69348165562119927.08cc694a-5f8d-47e5-b7fb-204c8faff4af.d5963a3a-af7c-4166-8c33-8c8baf520113?mode=scale&q=90&h=1080&w=1920",
+          "type": 1
+        },
+        {
+          "titlename": "STREET FIGHTER IV",
+          "titleimage": "SFIV",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/dd32d86c8120238307307260fe0d81bd.png",
+          "titlebackground": "https://wallpaperaccess.com/full/1543142.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "STREETFIGHTER X TEKKEN",
+          "titleimage": "SFxT",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/68149192ab2ce5cd375a6e0e0c06f2dc.png",
+          "titlebackground": "https://images4.alphacoders.com/200/200016.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Street Fighter 6",
+          "titleimage": "SF6",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202211/1407/XFU0aPBvtm3W2od1ZvhByAOv.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202211/1408/l3bg7nmfPpPzam5jOVlaUFww.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "SF3: Online Edition",
+          "titleimage": "SF3",
+          "titleicon": "https://assets1.ignimgs.com/2019/01/18/stret-fighter-iii-third-strike-online---button-1547852624330.jpg",
+          "titlebackground": "https://assets2.ignimgs.com/2011/06/06/street-fighter-iii-third-strike-online-edition-20110606025223126-3465365.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Darkstalkers Ressurection",
+          "titleimage": "DSR",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ff9966923417df057cc0cbcdda667d71.png",
+          "titlebackground": "https://assetsio.gnwcdn.com/136308059129.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Catherine",
+          "titleimage": "Catherine",
+          "titleicon": "https://assets1.ignimgs.com/2019/01/10/catherine---button-1547161850707.jpg",
+          "titlebackground": "https://img.opencritic.com/game/7149/o/SxmiEMOR.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Modern Warfare Remastered",
+          "titleimage": "CoD_MWR_XB1",
+          "titleicon": "https://image.api.playstation.com/cdn/UP0002/CUSA03522_00/t7SHaSjuUXFZ3VHl6U4FuSFrDMtkOIyP.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/img/rnd/202010/1520/rEeRqRApgzNDhWnkeuT3iCiG.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Cuphead",
+          "titleimage": "Cuphead",
+          "titleicon": "https://miro.medium.com/v2/resize:fit:1400/0*H9w4geSiKvbM3GM2.png",
+          "titlebackground": "https://www.pockettactics.com/wp-content/sites/pockettactics/2022/10/cuphead-characters.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Killer Instinct",
+          "titleimage": "Killer_Instinct_2013",
+          "titleicon": "https://games-b26f.kxcdn.com/wp-content/uploads/2016/12/killer-instinct-1024x1024.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.38739.13510798887625906.1152921504712937077.b3fa1aca-55d0-443a-ac7a-bb76cb8a0917?mode=scale&q=90&h=1080&w=1920&background=%23FFFFFF",
+          "type": 1
+        },
+        {
+          "titlename": "Rare Replay",
+          "titleimage": "Rare_Replay",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/03/14/rarereplay-1647222210920.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.49988.65780799141015212.07b74564-f8a6-4ab1-b868-91169ad4faff.860a7f0d-cf32-4866-aff3-367ac843ec3c?mode=scale&q=90&h=1080&w=1920&background=%23FFFFFF",
+          "type": 1
+        },
+        {
+          "titlename": "SONIC UNLEASHED",
+          "titleimage": "Sonic_Unleashed",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/21/image-sonic-1-1642735809327.jpg",
+          "titlebackground": "https://m.media-amazon.com/images/M/MV5BOGJjZGVjMDktYTdlNC00YWUxLTllMzktYzE5N2E5OGU3OWVjXkEyXkFqcGdeQXVyNjcyNzkwMTc@._V1_.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "SONIC THE HEDGEHOG",
+          "titleimage": "SONIC_THE_HEDGEHOG_2006",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/b685a99bc37fc3461bff5d878f8a1fe2.png",
+          "titlebackground": "https://images.gamebanana.com/img/ss/concepts/65dc355cee6b5.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "SONIC FREE RIDERS",
+          "titleimage": "SONIC_FREE_RIDERS",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/9225fcf7648e0bc72c9fbc499e09938b.png",
+          "titlebackground": "https://images.timeextension.com/12b1b2e7a61a2/sonic-free-riders.large.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "SEGA Superstars Tennis",
+          "titleimage": "SONIC_Superstars_Tennis",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/59336df88e79656b6003bdbe2da2bf1e.png",
+          "titlebackground": "https://static.wikia.nocookie.net/jetsetradio/images/9/9c/Sega_Tennis_Wallpaper.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "KOF98UM",
+          "titleimage": "KoF_98_UM",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/f0f3c0a2e88baabec7eee2ac431aa682.png",
+          "titlebackground": "https://live.staticflickr.com/2800/4129529051_08d20719af_b.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "KOF2002UM",
+          "titleimage": "KoF_2002_UM",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/6d9dc06779a789a78ff9f44168213313.jpg",
+          "titlebackground": "https://images.launchbox-app.com/6a4929e2-19b2-420a-a5c2-f06668d8bcfa.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Counter-Strike: GO",
+          "titleimage": "CSGO",
+          "titleicon": "https://assets-prd.ignimgs.com/2021/12/30/counter-strike-global-offensive-button-1640896165989.jpg",
+          "titlebackground": "https://steamcdn-a.akamaihd.net/apps/csgo/blog/images/wallpaper_nologo.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Shadows of the Damned",
+          "titleimage": "Shadows_of_the_Damned",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/04/17/sotd51-1650159532451.jpg",
+          "titlebackground": "https://www.trueachievements.com/imgs/106452/shadows-of-the-damned-leaving-xbox-game-pass-ea-play.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "LOLLIPOP CHAINSAW",
+          "titleimage": "Lollipop_Chainsaw",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/04/22/lollipopchainsaw-1650671944003.jpg",
+          "titlebackground": "https://www.videogameschronicle.com/files/2022/06/lollipop-chainsaw.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Disney+",
+          "titleimage": "disneyplus",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/09/22/service-disney-plus-1663831239344.jpg",
+          "titlebackground": "https://static-assets.bamgrid.com/product/disneyplus/images/share-default.14fadd993578b9916f855cebafb71e62.png",
+          "type": 2
+        },
+        {
+          "titlename": "Prime Video",
+          "titleimage": "prime_video",
+          "titleicon": "https://play-lh.googleusercontent.com/VojafVZNddI6JvdDGWFrRmxc-prrcInL2AuBymsqGoeXjT4f9sv7KnetB-v3iLxk_Koi",
+          "titlebackground": "https://m.media-amazon.com/images/G/01/primevideo/seo/primevideo-seo-logo.png",
+          "type": 2
+        },
+        {
+          "titlename": "Amazon Instant Video",
+          "titleimage": "Amazon_Instant_Video",
+          "titleicon": "https://play-lh.googleusercontent.com/VojafVZNddI6JvdDGWFrRmxc-prrcInL2AuBymsqGoeXjT4f9sv7KnetB-v3iLxk_Koi",
+          "titlebackground": "https://m.media-amazon.com/images/G/01/primevideo/seo/primevideo-seo-logo.png",
+          "type": 2
+        },
+        {
+          "titlename": "Xbox Avatar Editor",
+          "titleimage": "XB1_Avatar_Editor",
+          "titleicon": "https://store-images.s-microsoft.com/image/apps.16141.13510798887611042.610ae026-cc3d-4b4e-9044-1b8721988d93.c281cd26-66dc-4ed3-a811-c0fe1217ed11",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.20040.13510798887611042.610ae026-cc3d-4b4e-9044-1b8721988d93.9413a2ab-0b32-4ebb-a531-4f86bd7bdd4a",
+          "type": 3
+        },
+        {
+          "titlename": "Xbox Original Avatars",
+          "titleimage": "360_Avatar_Editor",
+          "titleicon": "https://static.wikia.nocookie.net/xbox/images/e/e4/Xbox_Original_Avatars_App_Icon.png/revision/latest?cb=20220603100736",
+          "titlebackground": "https://wink.messengergeek.com/uploads/default/optimized/3X/7/6/76706790793b149c1955055b2979ad7565620568_2_1024x629.jpeg",
+          "type": 3
+        },
+        {
+          "titlename": "Ubisoft Club",
+          "titleimage": "Ubisoft_Club",
+          "titleicon": "https://cdn2.steamgriddb.com/icon/bf31cf91a25a954107b264332a7ca548/32/512x512.png",
+          "titlebackground": "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/04/ubisoft-connect-logo.jpg",
+          "type": 3
+        },
+        {
+          "titlename": "Ubisoft Connect",
+          "titleimage": "Ubisoft_Connect",
+          "titleicon": "https://cdn2.steamgriddb.com/icon/bf31cf91a25a954107b264332a7ca548/32/512x512.png",
+          "titlebackground": "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/04/ubisoft-connect-logo.jpg",
+          "type": 3
+        },
+        {
+          "titlename": "Rocket League",
+          "titleimage": "rocket_league",
+          "titleicon": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Rocket_League_coverart.jpg",
+          "titlebackground": "https://www.pngitem.com/pimgs/m/33-334819_simbolo-do-rocket-league-hd-png-download.png",
+          "type": 1
+        },
+        {
+          "titlename": "Skate 3",
+          "titleimage": "skate3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/200c1f6ed0eb22bf43a5a7de97f185ac.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.10583.68005754082254855.39795a60-73cf-4461-87d9-7f112c30c43c.a86b405a-b519-4836-9b3c-9fed5c0c8b41?q=90&w=320&h=180",
+          "type": 1
+        },
+        {
+          "titlename": "Minecraft Dungeons",
+          "titleimage": "Minecraft_Dungeons",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/a9f2861cf82efebf18f83d9ce721a576.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/file/sgdb-cdn/hero_thumb/a9d671a92095bb4bbd7ff64507e8f1e8.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Minecraft Legends",
+          "titleimage": "Minecraft_Legends",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/0576bce3ca971dfd913c582a14945d96.png",
+          "titlebackground": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000033696/be89eb9c1c6a57cf58e8d14b03d26b4c42d988e02c082fd0fe368417c43b959e",
+          "type": 1
+        },
+        {
+          "titlename": "Tetris Effect: Connected",
+          "titleimage": "Tetris_Effect_Connected",
+          "titleicon": "https://image.api.playstation.com/vulcan/img/rnd/202108/0922/btyvYPfAuS53lkGbeK8ZaWzN.png",
+          "titlebackground": "https://spoonievr.files.wordpress.com/2020/12/tetris-effect-banner-edited.png?w=1200",
+          "type": 1
+        },
+        {
+          "titlename": "Stardew Valley",
+          "titleimage": "Stardew_Valley",
+          "titleicon": "https://image.api.playstation.com/cdn/UP2456/CUSA06840_00/0WuZecPtRr7aEsQPv2nJqiPa2ZvDOpYm.png",
+          "titlebackground": "https://nerdbacon.com/wp-content/uploads/2017/11/Stardew-Valley-Banner.png",
+          "type": 1
+        },
+        {
+          "titlename": "Rust",
+          "titleimage": "Rust",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Rust%20Icon.png?compress=false",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202103/1609/wBzFi5s20C1I7o3A5iEFWNuI.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Rust Console Edition - Public Test Branch",
+          "titleimage": "Rust_Console_Edition_PTB",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Rust%20PTB%20Icon.png?compress=false",
+          "titlebackground": "https://images.squarespace-cdn.com/content/v1/602d246245658135031e4b2a/1616447818146-YFIXRZ2D4BG1RPDSY1P8/RUST_GroupShot_Building.png",
+          "type": 1
+        },
+        {
+          "titlename": "Among Us",
+          "titleimage": "Among_Us",
+          "titleicon": "https://image.api.playstation.com/vulcan/img/rnd/202107/0115/D5IIJwm65MLMPENwWzzO7rjd.png",
+          "titlebackground": "https://www.gamebyte.com/wp-content/uploads/2020/12/EpS1HMIXYAcamyj.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "Dead by Daylight: Special Edition",
+          "titleimage": "Dead_by_Daylight",
+          "titleicon": "https://upload.anarchyisland.gg/raw/DBD%20Icon.png?compress=false",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202203/1520/GxoUQHbrinQCjkNmBqwgr7Ij.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Battlefield 2042 Xbox Series X|S",
+          "titleimage": "Battlefield_2042_XSXS",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Battlefield%202042%20Icon.png?compress=false",
+          "titlebackground": "https://media.contentapi.ea.com/content/dam/battlefield/battlefield-2042/images/2021/04/k-1920x1080-featured-image.jpg.adapt.crop191x100.1200w.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Battlefield 2042 Xbox One",
+          "titleimage": "Battlefield_2042_XB1",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Battlefield%202042%20Icon.png?compress=false",
+          "titlebackground": "https://media.contentapi.ea.com/content/dam/battlefield/battlefield-2042/images/2021/04/k-1920x1080-featured-image.jpg.adapt.crop191x100.1200w.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "FragPunk",
+          "titleimage": "FragPunk",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202605/2107/c54719eec49a322d8d9caa932aead91b8aa6020efb130fed.png",
+          "titlebackground": "https://r.res.easebar.com/pic/20260708/9476a6af-7fc4-4808-a639-3bccdbc3e2a1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Delta Force",
+          "titleimage": "Delta_Force",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/43b1df85016011821950e2826b082fa9.png",
+          "titlebackground": "https://cdn2.unrealengine.com/delta-force-header-1920x1080-4a97a8b7d3b2.png",
+          "type": 1
+        },
+        {
+          "titlename": "Overwatch 2",
+          "titleimage": "Overwatch_2",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Overwatch%202%20Icon.png?compress=false",
+          "titlebackground": "https://news.xbox.com/en-us/wp-content/uploads/sites/2/2022/10/OW2-be9287b234afbe7898ac.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Sea of Thieves 2023 Edition",
+          "titleimage": "Sea_of_Thieves",
+          "titleicon": "https://upload.anarchyisland.gg/raw/SoT%20Icon.jpeg?compress=false",
+          "titlebackground": "https://upload.anarchyisland.gg/raw/SoT%20Background.png?compress=false",
+          "type": 1
+        },
+        {
+          "titlename": "Redfall",
+          "titleimage": "redfall",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Redfall%20Icon.jpg?compress=false",
+          "titlebackground": "https://twistedvoxel.com/wp-content/uploads/2022/12/Redfall.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Red Dead Redemption 2",
+          "titleimage": "red_dead_redemption_2",
+          "titleicon": "https://upload.anarchyisland.gg/raw/RDR%202%20Icon.jpeg?compress=false",
+          "titlebackground": "https://image.api.playstation.com/vulcan/img/rnd/202011/1215/WyHa1BM3ISDVqYSEUMB9VZJs.png?w=1920",
+          "type": 1
+        },
+        {
+          "titlename": "Insurgency: Sandstorm",
+          "titleimage": "insurgency_sandstorm",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Insurgency%20Sandstorm%20Icon.png?compress=false",
+          "titlebackground": "https://upload.anarchyisland.gg/raw/Insurgency%20Sandstorm%20Background.jpg?compress=false",
+          "type": 1
+        },
+        {
+          "titlename": "Atomic Heart",
+          "titleimage": "atomic_heart",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Atomic%20Heart%20Icon.png?compress=false",
+          "titlebackground": "https://assets.xboxservices.com/assets/0b/5b/0b5bcbae-c4cb-40e7-a539-f0d603b65c6a.jpg?n=Atomic-Heart_GLP-Page-Hero-1084_1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Rock Band 4",
+          "titleimage": "Rock_Band_4",
+          "titleicon": "https://image.api.playstation.com/cdn/UP8802/CUSA02084_00/FmVyycG5ukypLJz9iUYdBVtkI9H8axtx.png",
+          "titlebackground": "https://cdn.mos.cms.futurecdn.net/6d043f817df5b96f2849fa562bfdb202.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "SUPERBEAT: XONiC",
+          "titleimage": "SUPERBEAT_XONiC",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/07/09/xionic-1657391403495.jpg",
+          "titlebackground": "https://img-eshop.cdn.nintendo.net/i/d43a927ce0f1c8cd4361e48fdff6465baf4d1222e7f0dc6eacc6ea4bb04be6be.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "ŌKAMI HD",
+          "titleimage": "Okami_HD",
+          "titleicon": "https://image.api.playstation.com/cdn/UP0102/CUSA08418_00/bKaklXPelfDeAe4ODKN25A63ZqOMMlhi.png",
+          "titlebackground": "https://gamingtrend.com/wp-content/uploads/2018/01/okami-header.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Friday the 13th: The Game",
+          "titleimage": "friday_the_13th_the_game",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Friday%20the%2013th%20The%20Game%20Icon.png?compress=false",
+          "titlebackground": "https://upload.anarchyisland.gg/raw/Friday%20the%2013th%20The%20Game%20Background.jpg?compress=false",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Modern Warfare II",
+          "titleimage": "cod_modern_ii",
+          "titleicon": "https://cdn.kulturegeek.fr/wp-content/uploads/2022/05/Call-of-Duty-Modern-Warfare-2-2022-1-1024x1024.jpg",
+          "titlebackground": "https://assets.xboxservices.com/assets/a0/02/a0029671-98a2-4955-a9e7-ef32cd0eb544.jpg?n=CoD-MW-II_GLP-Page-Hero-Poster-1084_1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Modern Warfare III",
+          "titleimage": "cod_modern_iii",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/f4d00a10a3b2a52d7ea6610567f1f1b8.png",
+          "titlebackground": "https://images2.alphacoders.com/132/1327407.png",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Modern Warfare 4",
+          "titleimage": "cod_MW4",
+          "titleicon": "https://assets-prd.ignimgs.com/2026/05/28/codmw4-1779985350988.jpg",
+          "titlebackground": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4435490/daf5d7dee8c89ae737aaac6b712288b934ee84dc/page_bg_raw.jpg?t=1787327331",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty: Modern Warfare 4 - Beta",
+          "titleimage": "cod_MW4_Beta",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202608/0722/e322fa98025858ca9551a71dcedf0140e85c01a4d3764d05.png",
+          "titlebackground": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4435490/daf5d7dee8c89ae737aaac6b712288b934ee84dc/page_bg_raw.jpg?t=1787327331",
+          "type": 1
+        },
+        {
+          "titlename": "Call of Duty",
+          "titleimage": "Call_of_Duty_HQ",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/bfe91964d69828e6c0e95113b5b8f927.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/191f1c1530d35545ad01573610117353.png",
+          "type": 1
+        },
+        {
+          "titlename": "EA SPORTS FIFA 23",
+          "titleimage": "fifa_23",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202301/0312/TwxvAAWgqCrFC3y73VPZUS7m.png",
+          "titlebackground": "https://i.blogs.es/95cf07/fifa-23-ps4-ps5-xbox-pc-nintendo-switch/1366_2000.jpeg",
+          "type": 1
+        },
+        {
+          "titlename": "EA SPORTS FIFA 16",
+          "titleimage": "fifa_16",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/bb6048a1b768bedccf39254d563864f3.jpg",
+          "titlebackground": "https://image.api.playstation.com/vulcan/img/rnd/202010/1520/QHyyHMYPBi23anUICL2lCZGA.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "XDefiant Open Session",
+          "titleimage": "xdef_os",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/d153407a197a930109d7f1e2a5331a8d.png",
+          "titlebackground": "https://upload.anarchyisland.gg/raw/XDefiant%20Background.jpg?compress=false",
+          "type": 1
+        },
+        {
+          "titlename": "XDefiant",
+          "titleimage": "XDefiant_Season3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/e4747bdca65a1d649eaa39d52ed201ba.png",
+          "titlebackground": "https://insider-gaming.com/wp-content/uploads/2024/12/xdefiant-final-update-scaled.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Pure",
+          "titleimage": "Pure",
+          "titleicon": "http://store-images.s-microsoft.com/image/apps.56982.71138214337886029.cf245fbf-37ba-4659-949b-e9f708980113.0d650d85-7dd6-4f17-8b23-3a68b57ecce3",
+          "titlebackground": "http://store-images.s-microsoft.com/image/apps.37612.71138214337886029.cf245fbf-37ba-4659-949b-e9f708980113.b32a79d1-1af7-491e-9386-e418db4bbd6b",
+          "type": 1
+        },
+        {
+          "titlename": "Saints Row: The Third",
+          "titleimage": "srtt",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/3ff73960b627328f420342541cf4fa68.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/3ff73960b627328f420342541cf4fa68.png",
+          "type": 1
+        },
+        {
+          "titlename": "Battlefield 3",
+          "titleimage": "bf3",
+          "titleicon": "https://assets-prd.ignimgs.com/2021/12/21/battlefield-3-button-fin-1640126554216.jpg",
+          "titlebackground": "http://store-images.s-microsoft.com/image/apps.62184.69271430660548627.c90235de-725c-43d6-b777-19f7f75295cc.465ea345-cd29-4a19-8c1c-4d175dc20b49",
+          "type": 1
+        },
+        {
+          "titlename": "LEGO Indiana Jones",
+          "titleimage": "legoij",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/38358bac3cc2848d2dfb10d268e7e252.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/file/sgdb-cdn/hero/6459257ddab7b85bf4b57845e875e4d4.png",
+          "type": 1
+        },
+        {
+          "titlename": "LEGO Batman",
+          "titleimage": "legobatman",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/1117aae5998932ffa2f9fdda31dbcd2d.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/file/sgdb-cdn/hero/017d234dccfcf4da102cd2293c248457.png",
+          "type": 1
+        },
+        {
+          "titlename": "DAYTONA USA",
+          "titleimage": "Daytona USA",
+          "titleicon": "https://media.vgm.io/releases/44/11744/11744-1596288334.jpg",
+          "titlebackground": "https://www.sega-portal.de/blog/wp-content/uploads/2011/10/daytona-usa-logo.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "The Texas Chain Saw Massacre",
+          "titleimage": "The Texas Chain Saw Massacre",
+          "titleicon": "https://upload.anarchyisland.gg/raw/TCM%20Icon.png",
+          "titlebackground": "https://upload.anarchyisland.gg/raw/TCM%20Background.png?compress=false",
+          "type": 1
+        },
+        {
+          "titlename": "The Texas Chain Saw Massacre - PC Edition",
+          "titleimage": "The Texas Chain Saw Massacre - PC Edition",
+          "titleicon": "https://upload.anarchyisland.gg/raw/TCM%20Icon.png",
+          "titlebackground": "https://upload.anarchyisland.gg/raw/UQVd8Y.png?compress=false",
+          "type": 1
+        },
+        {
+          "titlename": "Crackdown 2",
+          "titleimage": "crackdown2",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/02/26/crackdown2-sq-1645908598382.jpg",
+          "titlebackground": "https://i.blogs.es/72c7cc/crackdown-2/840_560.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Home",
+          "titleimage": "one_dashboard",
+          "titleicon": "one_dashboard",
+          "titlebackground": "one_dashboard",
+          "type": 3
+        },
+        {
+          "titlename": "FIFA 23 [XB1]",
+          "titleimage": "fifa23",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202301/0312/TwxvAAWgqCrFC3y73VPZUS7m.png",
+          "titlebackground": "https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/authenticity/common/f23-auth-featured-16x9.jpg.adapt.crop16x9.1023w.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Red Dead Redemption",
+          "titleimage": "rdr",
+          "titleicon": "https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/38c0cbe22bf9f9a5627b511f107d0300.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/file/sgdb-cdn/hero/7f2b2f3993942d8fffe0959b532816ea.png",
+          "type": 1
+        },
+        {
+          "titlename": "Starfield",
+          "titleimage": "starfield",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Starfield%20Icon.jpg?compress=false",
+          "titlebackground": "https://upload.anarchyisland.gg/raw/Starfield%20Background.png?compress=false",
+          "type": 1
+        },
+        {
+          "titlename": "Payday 3",
+          "titleimage": "payday_3",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Payday3%20Icon.jpg?compress=false",
+          "titlebackground": "https://upload.anarchyisland.gg/raw/Payday3%20Background.jpg?compress=false",
+          "type": 1
+        },
+        {
+          "titlename": "Plants vs. Zombies Garden Warfare",
+          "titleimage": "pvz_gw1",
+          "titleicon": "https://i.ibb.co/9Y8ZQsv/icon.png",
+          "titlebackground": "https://i.ibb.co/ScDk09g/background.png",
+          "type": 1
+        },
+        {
+          "titlename": "Need for Speed Hot Pursuit Remastered",
+          "titleimage": "nfs_hpr",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202210/3122/AooxHg4WoMdhe8oPQYn3XdrG.png",
+          "titlebackground": "https://xxboxnews.blob.core.windows.net/prod/sites/2/2020/11/NFSHPR_XB1_Titled_Hero_Art_1920x1080_JPG.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Batman: Arkham Knight",
+          "titleimage": "batman_arkham_night",
+          "titleicon": "https://image.api.playstation.com/cdn/UP1018/CUSA00133_00/due3Vp0T2VSGfBtGsWjVnrL4o882iYVk.png",
+          "titlebackground": "https://cdn.mos.cms.futurecdn.net/aTTCBCKvNrQ2SYgTDwnSJS.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DOOM",
+          "titleimage": "doom",
+          "titleicon": "https://acdn.mitiendanube.com/stores/002/602/523/products/whatsapp-image-2022-10-16-at-20-08-08-11-d909d35abb06f618f116709515330366-1024-1024.jpeg",
+          "titlebackground": "https://i.pinimg.com/originals/28/a5/b0/28a5b0a9436536a8945416a5ad503b36.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DOOM: The Dark Ages",
+          "titleimage": "doom_the_dark_ages",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/e2fc8e236c46593be72c66ef8112bbc0.png",
+          "titlebackground": "https://platform.polygon.com/wp-content/uploads/sites/2/2024/11/doom-the-dark-ages-01-doomslayer.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DOOM II",
+          "titleimage": "doom_II",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/b6857486cf71710a307c74f888b37ab6.png",
+          "titlebackground": "https://www.dreadxp.com/wp-content/uploads/2020/01/Doom-2.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DOOM 3",
+          "titleimage": "doom_3",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/e917c582a4c4b196c43e80feb52c05ac.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202103/0520/7DC8oEH3aImTHSJzcFmEaYA1.png",
+          "type": 1
+        },
+        {
+          "titlename": "DOOM 3 BFG Edition",
+          "titleimage": "doom_3_BFG_Edition",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/0d185edda159e971fac84cbc8ff26cc7.png",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202009/2804/vlzF1qEjYncKVuRu2TfzlPq7.png",
+          "type": 1
+        },
+        {
+          "titlename": "DOOM + DOOM II",
+          "titleimage": "DOOM_plus_DOOM_II",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ea25dc16884c274e677a006c93b13994.jpg",
+          "titlebackground": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2280/ss_dccbd8eb6b389bf6d943485461265cf1b6aa52f7.1920x1080.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Devil May Cry HD Collection",
+          "titleimage": "DMC_HD_Collection",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/54142cb001780325387591434b57f185.png",
+          "titlebackground": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA09407_00/2/i_54c492d14885efe9f117f0b182d3a22deee064e6ffc7be1183baa979dabc7b5f/i/pic0.png",
+          "type": 1
+        },
+        {
+          "titlename": "Devil May Cry 4",
+          "titleimage": "DMC4",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/bf7de597c2f7fb917200635c3ffae2fa.png",
+          "titlebackground": "https://images.alphacoders.com/586/thumb-1920-586286.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Devil May Cry 4 Special Edition",
+          "titleimage": "DMC4_SE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/3f71986844e0d69dd7b205cae2cb3fb1.png",
+          "titlebackground": "https://cdn.wallpapersafari.com/27/59/ED4htT.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Devil May Cry 5",
+          "titleimage": "dmc5",
+          "titleicon": "https://assets1.ignimgs.com/2019/03/04/devil-may-cry-5---button-fin-1551739966394.jpg",
+          "titlebackground": "https://www.guidingtech.com/wp-content/uploads/1_devil-may-cry-5-wallpapers-4k-full-hd-lead-image_4d470f76dc99e18ad75087b1b8410ea9.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Devil May Cry 5 Special Edition",
+          "titleimage": "DMC5_SE",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/60a5157727e6afc41dc7740797faf205.png",
+          "titlebackground": "https://4kwallpapers.com/images/walls/thumbs_3t/13856.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Dark Souls",
+          "titleimage": "Dark_Souls_1",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/b7f0cb39efd013878b363866c7f9f7d3.png",
+          "titlebackground": "https://static.bandainamcoent.eu/high/dark-souls/dark-souls-1/00-page-setup/ds1_game-thumbnail.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DARK SOULS: REMASTERED",
+          "titleimage": "Dark_Souls_1_Remastered",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/1e1caab15bbcf11f9dca3b928fcd76f0.png",
+          "titlebackground": "https://wallpapercave.com/wp/wp3756449.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Dark Souls II",
+          "titleimage": "Dark_Souls_II",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/321b6c3178ed303721f43f6ed6cd27a3.png",
+          "titlebackground": "https://r4.wallpaperflare.com/wallpaper/939/759/677/dark-souls-dark-souls-ii-video-games-wallpaper-c9d0480df13a7d9b265728bfa0b1565d.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DARK SOULS II: Scholar of the First Sin",
+          "titleimage": "DARK_SOULS_II_SOTFS",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/8f8299102e705503451db8ba953873b8.png",
+          "titlebackground": "https://xboxwire.thesourcemediaassets.com/sites/2/Nij-Uf0NqwQ.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DARK SOULS III",
+          "titleimage": "DARK_SOULS_III",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/a46bb8dfc4117327157c182d283e9c58.jpg",
+          "titlebackground": "https://static.bandainamcoent.eu/high/dark-souls/dark-souls-3/00-page-setup/ds3_game-thumbnail.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "ELDEN RING",
+          "titleimage": "ELDEN_RING",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/b677845905ccd63299c86ae6bfcff423.jpg",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/YMUoJUYNX0xWk6eTKuZLr5Iw.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "ELDEN RING NIGHTREIGN",
+          "titleimage": "ELDEN_RING_NIGHTREIGN",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/55dc83cf6cdd815f97842c9d8cad4434.png",
+          "titlebackground": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/d96bb958-4e6c-4ce0-9447-fbe226fbbecf/dizmxez-50ffb0b7-6f0b-4735-9183-6b67a8379dfb.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "ARMORED CORE VI FIRES OF RUBICON",
+          "titleimage": "ARMORED_CORE_VI",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/691127ec5143749d054f9ba8b2098877.png",
+          "titlebackground": "https://static.bandainamcoent.eu/high/armored-core/armored-core-vi-fires-of-rubicon/00-page-setup/acvifor-header-mobile-new.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Sekiro: Shadows Die Twice",
+          "titleimage": "SEKIRO",
+          "titleicon": "https://image.api.playstation.com/vulcan/img/rnd/202010/2702/UyuYShCSlbt2LBZgN9TUtkMz.png?$100px$",
+          "titlebackground": "https://4kwallpapers.com/images/walls/thumbs_3t/14176.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Sekiro: Shadows Die Twice - GOTY Edition",
+          "titleimage": "SEKIRO_GOTY",
+          "titleicon": "https://image.api.playstation.com/vulcan/img/rnd/202010/2723/knxU5uU5aKvQChKX5OvWtSGC.png",
+          "titlebackground": "https://4kwallpapers.com/images/walls/thumbs_3t/14176.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "DRAGON BALL XENOVERSE",
+          "titleimage": "dbx",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/ed645df163c420c0f2ae8b51a29dab6b.png",
+          "titlebackground": "https://gaming-cdn.com/images/products/6870/orig/dragon-ball-xenoverse-xbox-one-xbox-series-x-s-xbox-one-xbox-series-x-s-juego-microsoft-store-europe-cover.jpg?v=1687966007",
+          "type": 1
+        },
+        {
+          "titlename": "Mirror's Edge Catalyst",
+          "titleimage": "mirror_edge_catalyst",
+          "titleicon": "https://image.api.playstation.com/cdn/EP0006/CUSA01499_00/BlmZA1q0foctr8IIDE6LcSXiuYnWtSGS.png",
+          "titlebackground": "https://images8.alphacoders.com/708/708538.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "eFootball 2024",
+          "titleimage": "efootball_24",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202311/0206/64c52a51a6c017c6d8600d1cc5e52d6780dedc905b1ee5ab.png",
+          "titlebackground": "https://m.media-amazon.com/images/M/MV5BZTlhNzk1NDEtMjk1YS00MTU1LTg2OWYtOGVlMmJjYTJlOTQ3XkEyXkFqcGdeQXVyNDIwOTkyNjM@._V1_.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "WATCH_DOGS",
+          "titleimage": "WATCH_DOGS",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/05/watch-dogs-1-button-1641369103832.jpg",
+          "titlebackground": "https://images7.alphacoders.com/415/415518.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "War Thunder",
+          "titleimage": "war_thunder",
+          "titleicon": "https://upload.anarchyisland.gg/raw/War%20Thunder%20Icon.jpg?compress=false",
+          "titlebackground": "https://upload.anarchyisland.gg/raw/War%20Thunder%20Background.jpg?compress=false",
+          "type": 1
+        },
+        {
+          "titlename": "Persona 3 Reload",
+          "titleimage": "p3reload",
+          "titleicon": "https://cdn2.steamgriddb.com/icon/d0017ee0d9e6a1f9f9bb7e7fb649fe18.png",
+          "titlebackground": "https://gaming-cdn.com/images/products/14279/orig/persona-3-reload-pc-game-steam-europe-cover.jpg?v=1706779618",
+          "type": 1
+        },
+        {
+          "titlename": "Persona 4 Revival",
+          "titleimage": "p4revival",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/de20105faa14fe2ba82398b2cd2220bd.png",
+          "titlebackground": "https://cdn.mos.cms.futurecdn.net/kiEs6F5tRcxXLRfhU4d9pW-750-80.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Metaphor: ReFantazio",
+          "titleimage": "Metaphor_ReFantazio",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/48c69b6699d6ab73c14cbfb3b695d427.png",
+          "titlebackground": "https://www.godisageek.com/wp-content/uploads/Metaphor-ReFantazio-6.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Shin Megami Tensei V: Vengeance",
+          "titleimage": "SMTV_V",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/e31fe8378af2be87b38a723ab3555988.png",
+          "titlebackground": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000064607/c57507f97fd6ab3371cab8bbb36bb88f4359e9ef75b93e70404db2e4825bb2a4",
+          "type": 1
+        },
+        {
+          "titlename": "Soul Hackers 2",
+          "titleimage": "Soul_Hackers_2",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/cf599ef59f3c8c23cecc4808fca15ad1.jpg",
+          "titlebackground": "https://www.heypoorplayer.com/wp-content/uploads/2022/08/Soul-Hackers-2-Banner-2-scaled.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Virtua Fighter 2",
+          "titleimage": "Virtua_Fighter_2",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/7a596bf1f5d8a668ebd3c6487b37b33a.png",
+          "titlebackground": "https://i1.wp.com/twistedbard.com/wp-content/uploads/2016/10/maxresdefault-3.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Virtua Fighter 5 Final Showdown",
+          "titleimage": "Virtua_Fighter_5_Final_Showdown",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/d1451f682ba0beddf389626379ee45ff.jpg",
+          "titlebackground": "https://segaretro.org/images/b/b3/Virtua_Fighter_5_FS_NA_360_-_Title.png",
+          "type": 1
+        },
+        {
+          "titlename": "Virtua Fighter 5 R.E.V.O. World Stage",
+          "titleimage": "Virtua_Fighter_5_REVO",
+          "titleicon": "https://gamefaqs.gamespot.com/a/box/1/4/8/1121148_front.jpg",
+          "titlebackground": "https://cdn.mos.cms.futurecdn.net/4smAVW6kZHkTc8VWke8eYm.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Virtua Fighter 5 R.E.V.O. World Stage - Demo",
+          "titleimage": "Virtua_Fighter_5_REVO_DEMO",
+          "titleicon": "https://image.api.playstation.com/vulcan/ap/rnd/202602/1903/2de1dde593d6af50c87e554d5871671d60726ec227b85e53.png",
+          "titlebackground": "https://cdn.mos.cms.futurecdn.net/4smAVW6kZHkTc8VWke8eYm.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Train Sim World 4",
+          "titleimage": "TSW4",
+          "titleicon": "https://upload.anarchyisland.gg/raw/TSW4%20Icon.jpg?compress=false",
+          "titlebackground": "https://upload.anarchyisland.gg/raw/TSW4%20Banner.jpg?compress=false",
+          "type": 1
+        },
+        {
+          "titlename": "Dead Island 2",
+          "titleimage": "deadisland2",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Dead%20Island%202%20Icon.jpg?compress=false",
+          "titlebackground": "https://upload.anarchyisland.gg/raw/Dead%20Island%202%20Background.jpg?compress=false",
+          "type": 1
+        },
+        {
+          "titlename": "Palworld (Game Preview)",
+          "titleimage": "Palworld",
+          "titleicon": "https://upload.anarchyisland.gg/raw/Palworld%20Icon.jpg?compress=false",
+          "titlebackground": "https://upload.anarchyisland.gg/raw/Palworld%20Background.png?compress=false",
+          "type": 1
+        },
+        {
+          "titlename": "Dead by Daylight",
+          "titleimage": "Dead_by_Daylight",
+          "titleicon": "https://upload.anarchyisland.gg/raw/DBD%20Icon.png?compress=false",
+          "titlebackground": "https://image.api.playstation.com/vulcan/ap/rnd/202203/1520/GxoUQHbrinQCjkNmBqwgr7Ij.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Sonic Adventure",
+          "titleimage": "Sonic_Adventure_1",
+          "titleicon": "https://cdn2.steamgriddb.com/thumb/b1e8b65a8309ebb007855ebae88284d4.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/2eb5657d37f474e4c4cf01e4882b8962.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Sonic Adventure 2",
+          "titleimage": "Sonic_Adventure_2",
+          "titleicon": "https://cdn2.steamgriddb.com/thumb/43f085b7948168187f72e7cd0b89289a.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero_thumb/5aa3405a3f865c10f420a4a7b55cbff3.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "L.A. Noire",
+          "titleimage": "la_noire",
+          "titleicon": "https://image.api.playstation.com/cdn/UP1004/CUSA09084_00/Y6dRYaJHlOw6c2dMvrNY36eakbFsR8JI.png",
+          "titlebackground": "https://www.hollywoodreporter.com/wp-content/uploads/2021/04/lanoire_phelpsSmoke_2560x1600-copy-1617658981.jpg?w=1296&h=730&crop=1",
+          "type": 1
+        },
+        {
+          "titlename": "Need for Speed Hot Pursuit",
+          "titleimage": "Need for Speed Hot Pursuit",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/7984e391f2529b3790a3801c0591897f.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/grid/7bca3344cf253fcec84086158dbacad7.png",
+          "type": 1
+        },
+        {
+          "titlename": "Need for Speed Rivals",
+          "titleimage": "Need for Speed Rivals",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/2231c93437ad10b18353e3c70e895cd4.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/grid/9afbe998374ca7326d35d84180786096.png",
+          "type": 1
+        },
+        {
+          "titlename": "NFS Most Wanted",
+          "titleimage": "NFS Most Wanted",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/2b56ecffc94803423f5dfc399101a180.png",
+          "titlebackground": "https://media.contentapi.ea.com/content/dam/gin/images/2017/01/need-for-speed-most-wanted-2005-key-art.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Need for Speed Carbon",
+          "titleimage": "Need for Speed Carbon",
+          "titleicon": "https://images.stopgame.ru/games/logos/8065/need_for_speed_carbon-square_1.jpg",
+          "titlebackground": "https://images.stopgame.ru/games/logos/8065/need_for_speed_carbon-hero_1.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "NFS ProStreet",
+          "titleimage": "NFS ProStreet",
+          "titleicon": "https://images.stopgame.ru/games/logos/8833/need_for_speed_prostreet-square.jpg",
+          "titlebackground": "https://images.stopgame.ru/games/logos/8833/need_for_speed_prostreet-hero.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "NEED FOR SPEED THE RUN",
+          "titleimage": "NEED FOR SPEED THE RUN",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/c62db977c9ae8c8bad323bc56353a3ed.png",
+          "titlebackground": "https://media.contentapi.ea.com/content/dam/eacom/en-us/migrated-images/2017/06/the-run-nfs-therun-hero-vertical.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Burnout Paradise",
+          "titleimage": "Burnout Paradise",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/09eae287126137014865d462cb820d98.jpg",
+          "titlebackground": "https://media.contentapi.ea.com/content/dam/gin/images/2017/01/burnout-paradise-keyart.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Burnout Paradise Remastered",
+          "titleimage": "Burnout Paradise Remastered",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/e67a6a7b616b3c33870615f30f097beb.png",
+          "titlebackground": "https://media.contentapi.ea.com/content/dam/ea/burnout-paradise-remastered/images/2018/02/bpr-featured-image-16-9.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Celeste",
+          "titleimage": "Celeste",
+          "titleicon": "https://image.api.playstation.com/cdn/UP2120/CUSA11302_00/qHx7zoFGNn6BUHUOk2jSfBck2Zzbjulw.png",
+          "titlebackground": "https://i.redd.it/all-most-of-the-backgrounds-in-celeste-edited-together-v0-0jzdpvth2uka1.jpg?width=792&format=pjpg&auto=webp&s=8998957827df6fbe7a6efc9229306cfd53a76b4a",
+          "type": 1
+        },
+        {
+          "titlename": "American Wasteland",
+          "titleimage": "Tony Hawk's American Wasteland",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/c15cef593fc97feff93d2a031d2a9ad4.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/03c6b06952c750899bb03d998e631860.png",
+          "type": 1
+        },
+        {
+          "titlename": "Tony Hawk's PS HD",
+          "titleimage": "Tony Hawk's Pro Skater HD",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/a61c36dfa0efd6df3a443c25d1f5927f.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/38913e1d6a7b94cb0f55994f679f5956.png",
+          "type": 1
+        },
+        {
+          "titlename": "Tony Hawk's Pro Skater 5",
+          "titleimage": "Tony Hawk's Pro Skater 5",
+          "titleicon": "https://cdn2.steamgriddb.com/icon/2b5d9ed398db1dee1d00214aa5a41ef0.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/1aad6b93bca4217b9889a246c3cb7a30.png",
+          "type": 1
+        },
+        {
+          "titlename": "TH Proving Ground",
+          "titleimage": "Tony Hawk's Proving Ground",
+          "titleicon": "https://cdn2.steamgriddb.com/icon/0d124848a0ea943f34d3a85bf3599943/24/1024x1024.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/38abae704fb4cdba00a26baa58cb4443.png",
+          "type": 1
+        },
+        {
+          "titlename": "Shaun White Skateboarding",
+          "titleimage": "Shaun White Skateboarding",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/c7b9d4c31eb9c2bed48346335c307187.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/61d06545a9b5a3c1a8993909f9ca65e5.png",
+          "type": 1
+        },
+        {
+          "titlename": "SSX",
+          "titleimage": "SSX",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/8bfdf48ecf1a8f511d6446165b15451b.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/ac9409d10ea7b978d52b9e977ef787cc.png",
+          "type": 1
+        },
+        {
+          "titlename": "South Park",
+          "titleimage": "South Park Let's Go Tower Defense Play!",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/e65e26a9a28ef7478d953cbec82be1b0.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/e6fb1ad00af2ae2b6f311b93065646b1.png",
+          "type": 1
+        },
+        {
+          "titlename": "South Park: Tenorman's Revenge",
+          "titleimage": "South Park: Tenorman's Revenge",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/a22997b93b15692ee45f7a9fb6778c8d.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/e6fb1ad00af2ae2b6f311b93065646b1.png",
+          "type": 1
+        },
+        {
+          "titlename": "Who Wants To Be A Millionaire? Special Editions",
+          "titleimage": "Who Wants To Be A Millionaire? Special Editions",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/eef1c1ad3d1c737b3c2a89ecd5d22916.png",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/172188c0dacb487075bdc0c9afd757b2.png",
+          "type": 1
+        },
+        {
+          "titlename": "Jeopardy!",
+          "titleimage": "Jeopardy!",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/a3492e47e126baedfeaf61c07f7503f7.jpg",
+          "titlebackground": "https://cdn2.steamgriddb.com/hero/3ff0d6192828e607934e37ddeab09c84.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "Skate 2",
+          "titleimage": "skate2",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/07/skate-2-button-1641599740122.jpg",
+          "titlebackground": "https://m.media-amazon.com/images/I/717RQMweaAL._AC_UF894,1000_QL80_.jpg",
+          "type": 1
+        },
+        {
+          "titlename": "skate.",
+          "titleimage": "skate1",
+          "titleicon": "https://assets-prd.ignimgs.com/2022/01/07/skate-1-button-1641599735622.jpg",
+          "titlebackground": "https://store-images.s-microsoft.com/image/apps.27751.66765638016841945.44eb6927-d62a-4346-a97d-4d1d0881b107.1d18ea8a-3fb7-4968-b240-411a3fc2fd37?q=90&w=480&h=270",
+          "type": 1
+        },
+        {
+          "titlename": "Minecraft for Nintendo Switch",
+          "titleimage": "minecraft_switch",
+          "titleicon": "https://cdn2.steamgriddb.com/grid/9713fc04477ccf52eb7e03f626985ec2.png",
+          "titlebackground": "https://i.blogs.es/0eb073/minecraft-generacionxbox-1/1366_2000.jpeg",
+          "type": 1
+        }
+      ]
+    }
+  ]
+}

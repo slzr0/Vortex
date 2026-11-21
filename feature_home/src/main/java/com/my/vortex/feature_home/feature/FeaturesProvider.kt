@@ -19,6 +19,11 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.my.vortex.domain.model.rpc.RpcConfig
+import com.my.vortex.domain.model.rpc.forConsoleRestart
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import com.my.vortex.feature_rpc_base.AppUtils
 import com.my.vortex.feature_rpc_base.services.AppDetectionService
 import com.my.vortex.feature_rpc_base.services.CustomRpcService
@@ -83,7 +88,7 @@ fun homeFeaturesProvider(
             title = stringResource(id = R.string.main_customRpc),
             icon = R.drawable.ic_rpc_placeholder,
             route = Routes.CUSTOM_RPC,
-            isChecked = AppUtils.customRpcRunning(),
+            isChecked = AppUtils.customRpcRunning() && Prefs[Prefs.ACTIVE_CUSTOM_RPC_MODE, ""] != "console",
             onClick = {
                 navigateTo(it)
             },
@@ -97,6 +102,8 @@ fun homeFeaturesProvider(
                     ctx.stopService(Intent(ctx, MediaRpcService::class.java))
                     ctx.stopService(Intent(ctx, ExperimentalRpc::class.java))
                     ctx.stopService(Intent(ctx, AppDetectionService::class.java))
+                    ctx.stopService(Intent(ctx, CustomRpcService::class.java))
+                    Prefs[Prefs.ACTIVE_CUSTOM_RPC_MODE] = "custom"
                     ctx.startService(intent)
                 } else
                     ctx.stopService(Intent(ctx, CustomRpcService::class.java))
@@ -109,26 +116,33 @@ fun homeFeaturesProvider(
             title = stringResource(id = R.string.main_consoleRpc),
             icon = R.drawable.ic_console_games,
             route = Routes.CONSOLE_RPC,
-            isChecked = AppUtils.customRpcRunning(),
+            isChecked = AppUtils.customRpcRunning() && Prefs[Prefs.ACTIVE_CUSTOM_RPC_MODE, ""] == "console",
             onClick = {
                 navigateTo(it)
             },
             onCheckedChange = {
                 if (it) {
                     val lastRpc = Prefs[Prefs.LAST_RUN_CONSOLE_RPC, ""]
+                    val restartedRpc = runCatching {
+                        Json.encodeToString(Json.decodeFromString<RpcConfig>(lastRpc).forConsoleRestart(System.currentTimeMillis()))
+                    }.getOrDefault(lastRpc)
                     val intent = Intent(ctx, CustomRpcService::class.java)
                     intent.apply {
-                        putExtra("RPC", lastRpc)
+                        putExtra("RPC", restartedRpc)
                     }
                     ctx.stopService(Intent(ctx, MediaRpcService::class.java))
                     ctx.stopService(Intent(ctx, ExperimentalRpc::class.java))
                     ctx.stopService(Intent(ctx, AppDetectionService::class.java))
+                    ctx.stopService(Intent(ctx, CustomRpcService::class.java))
+                    Prefs[Prefs.ACTIVE_CUSTOM_RPC_MODE] = "console"
                     ctx.startService(intent)
+                    Prefs[Prefs.LAST_RUN_CONSOLE_RPC] = restartedRpc
                 } else
                     ctx.stopService(Intent(ctx, CustomRpcService::class.java))
             },
             shape = RoundedCornerShape(20.dp, 44.dp, 20.dp, 44.dp),
-            showSwitch = Prefs[Prefs.LAST_RUN_CONSOLE_RPC, ""].isNotEmpty(),
+            showSwitch = Prefs[Prefs.LAST_RUN_CONSOLE_RPC, ""].isNotEmpty() &&
+                Prefs[Prefs.TOKEN, ""].isNotBlank(),
             tooltipText = stringResource(id = R.string.main_consoleRpc_details),
             featureDocsLink = ToolTipContent.CONSOLE_RPC_DOCS_LINK
         ),
@@ -151,12 +165,6 @@ fun homeFeaturesProvider(
             showSwitch = hasUsageAccess.value && hasNotificationAccess.value && userVerified,
             tooltipText = stringResource(id = R.string.main_experimentalRpc_details),
             featureDocsLink = ToolTipContent.EXPERIMENTAL_RPC_DOCS_LINK
-        ),
-        HomeFeature(
-            title = stringResource(id = R.string.main_comingSoon),
-            icon = R.drawable.ic_info,
-            shape = RoundedCornerShape(20.dp, 44.dp, 20.dp, 44.dp),
-            showSwitch = false
         )
     )
 }

@@ -1,19 +1,17 @@
-# Terms of Service and Privacy Policy
+# Vortex Privacy and Terms
 
-### Privacy Policy
+Vortex is an unofficial Android client. Discord and other external services have their own terms and privacy policies, which apply when you use them.
 
-I take your privacy very seriously. **Kizzy** does not collect any user data, and all sensitive information is securely stored in the local application database on your device.
+## Data and permissions
 
-### **Kizzy** will use the following permissions to provide you with the service.
+The app stores its settings and Discord user token in app-private MMKV preferences. This storage is not encrypted by Vortex. Signing out removes the locally stored token and profile fields but does not revoke the Discord session. App data can also be deleted through Android settings.
 
-- Usage Access permission (for accessing current running app)
-- Notification permission (for getting current mediaplayback details)
-- Storage permission (to save your custom configs)
+Vortex sends data to Discord and may contact third-party services for game presets, profile details, images and update checks. These services can receive network information and the data needed to fulfill requests. Do not use sensitive information in your presence or image uploads.
 
-### Third Party Services
+Usage access supports app detection; notification access supports media detection; notifications and foreground-service permissions keep presence services visible. Storage access may be used for configuration files. Grant only the permissions you need.
 
-This policy does not apply to third-party services that you use with **Kizzy**. You can review the privacy policies of the third-party services you use on their websites.
+Use of a Discord user token and unofficial automation may violate Discord's terms and put your account at risk. Service availability is not guaranteed.
 
-### Open Source License
+## License
 
-**Kizzy** is an open source project under the GNU GPL 3.0 Open Source License ①, which allows you to use, reference, and modify the source code of **Kizzy** for free, but does not allow the modified and derived code to be distributed and sold as closed-source commercial software. For details, please see the full GNU GPL 3.0 Open Source License ②.
+Vortex is distributed under the terms in [License](License). Original copyright and attribution notices remain in the source files.

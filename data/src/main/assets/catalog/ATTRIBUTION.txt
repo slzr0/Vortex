@@ -1,0 +1,17 @@
+Bundled game catalogs
+
+Nintendo and Wii U title data: Rich Presence U Database contributors,
+https://github.com/ninstar/Rich-Presence-U-DB, revision
+37c9f6060328abb75b54307cb67b5ce581915e94. Available under the Open Database
+License 1.0; the complete license is in assets/licenses/nintendo-odbl.txt.
+Original unmodified CSV files are included in this directory. The source
+repository contains the complete database and credits its contributors.
+
+Xbox titles: Xbox-Rich-Presence-Discord contributors,
+https://github.com/MrCoolAndroid/Xbox-Rich-Presence-Discord, revision
+ef444a79e8aa863a7dfad36a9407ee525951ca0a. The original unmodified JSON file
+is included here under the MIT License; the complete copyright and license
+notice is in assets/licenses/xbox-mit.txt.
+
+Game names and artwork remain the property of their respective owners.
+The databases may list titles not available in every region or on every device.

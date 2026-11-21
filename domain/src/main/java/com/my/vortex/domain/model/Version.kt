@@ -14,7 +14,7 @@ class Version(numbers: List<String>) {
     }
 
     constructor() : this(listOf())
-    constructor(string: String?) : this(string?.split(".") ?: listOf())
+    constructor(string: String?) : this(string?.trim()?.removePrefix("v")?.removePrefix("V")?.split(".") ?: listOf())
 
     override fun toString() = "$major.$minor"
 

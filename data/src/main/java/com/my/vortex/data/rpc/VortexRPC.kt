@@ -17,6 +17,7 @@ import com.my.vortex.domain.repository.VortexRepository
 import com.my.vortex.preference.Prefs
 import com.my.vortex.preference.Prefs.CUSTOM_ACTIVITY_TYPE
 import vortex.gateway.DiscordWebSocket
+import vortex.gateway.DiscordWebSocketImpl
 import vortex.gateway.entities.presence.Activity
 import vortex.gateway.entities.presence.Assets
 import vortex.gateway.entities.presence.Metadata
@@ -28,9 +29,20 @@ import kotlinx.coroutines.isActive
 class VortexRPC(
     private val token: String,
     private val vortexRepository: VortexRepository,
-    private val discordWebSocket: DiscordWebSocket,
-    private val logger: Logger
+    discordWebSocket: DiscordWebSocket,
+    private val logger: Logger,
+    private val gatewayFactory: () -> DiscordWebSocket = { DiscordWebSocketImpl(token, logger) }
 ) {
+    private val gatewayLock = Any()
+    private var gateway: DiscordWebSocket? = discordWebSocket
+    private var destroyed = false
+
+    private fun gatewayForStart(): DiscordWebSocket? = synchronized(gatewayLock) {
+        if (destroyed) null else gateway ?: gatewayFactory().also { gateway = it }
+    }
+
+    private fun currentGateway(): DiscordWebSocket? = synchronized(gatewayLock) { gateway }
+
     private lateinit var presence: Presence
     private var activityName: String? = null
     private var applicationIdNumber = Prefs[Prefs.CUSTOM_ACTIVITY_APPLICATION_ID, Constants.APPLICATION_ID]
@@ -51,12 +63,21 @@ class VortexRPC(
     private var url: String? = null
 
     fun closeRPC() {
-        discordWebSocket.close()
+        synchronized(gatewayLock) {
+            gateway?.close()
+            gateway = null
+        }
     }
 
-    fun isRpcRunning(): Boolean {
-        return discordWebSocket.isWebSocketConnected()
+    fun shutdownRPC() {
+        synchronized(gatewayLock) {
+            destroyed = true
+            gateway?.close()
+            gateway = null
+        }
     }
+
+    fun isRpcRunning(): Boolean = currentGateway()?.isRunning() == true
 
     private fun isUserTokenValid(): Boolean {
         return token.isNotBlank()
@@ -83,6 +104,8 @@ class VortexRPC(
                 id = "vortex",
                 size = arrayOf(current, max)
             )
+        } else {
+            this.party = null
         }
         return this
     }
@@ -128,6 +151,7 @@ class VortexRPC(
     }
 
     fun setButton1(button1_Text: String?): VortexRPC {
+        buttons.clear()
         button1_Text?.let { buttons.add(it) }
         return this
     }
@@ -138,6 +162,7 @@ class VortexRPC(
     }
 
     fun setButton1URL(url: String?): VortexRPC {
+        buttonUrl.clear()
         url?.let { buttonUrl.add(it) }
         return this
     }
@@ -197,18 +222,21 @@ class VortexRPC(
                 tag = "VortexRPC",
                 event = "Token Seems to be invalid, Please Login if you haven't"
             )
-        discordWebSocket.connect()
-        discordWebSocket.sendActivity(presence)
+        if (!isUserTokenValid()) return
+        val socket = gatewayForStart() ?: return
+        socket.connect()
+        socket.sendActivity(presence)
     }
 
     suspend fun updateRPC(commonRpc: CommonRpc, enableTimestamps: Boolean? = true) {
-        if (!discordWebSocket.isActive) return
+        val socket = currentGateway() ?: return
+        if (!socket.isActive) return
         var time = Timestamps(start = startTimestamps)
         if (commonRpc.time != null)
             Timestamps(end = commonRpc.time.end, start = commonRpc.time.start).also { time = it }
         if (commonRpc.partyCurrentSize != null && commonRpc.partyMaxSize != null)
             Party(id = "vortex", size = arrayOf(commonRpc.partyCurrentSize, commonRpc.partyMaxSize)).also { party = it }
-        discordWebSocket.sendActivity(
+        socket.sendActivity(
             Presence(
                 activities = listOf(
                     Activity(

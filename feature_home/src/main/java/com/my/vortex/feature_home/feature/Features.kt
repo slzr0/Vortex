@@ -1,6 +1,7 @@
 package com.my.vortex.feature_home.feature
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -26,8 +27,9 @@ fun Features(homeItems: List<HomeFeature> = emptyList(), onValueUpdate: (Int) ->
         homeItems.forEachIndexed { index, item ->
             val colors = MaterialTheme.colorScheme
             Surface(
-                shape = RoundedCornerShape(20.dp),
-                color = if (item.isChecked) colors.primaryContainer else colors.surfaceVariant.copy(alpha = 0.55f),
+                shape = RoundedCornerShape(22.dp),
+                color = if (item.isChecked) colors.primaryContainer else colors.surfaceVariant.copy(alpha = 0.42f),
+                border = BorderStroke(1.dp, if (item.isChecked) colors.primary.copy(alpha = 0.35f) else colors.outlineVariant.copy(alpha = 0.35f)),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Row(
@@ -43,9 +45,15 @@ fun Features(homeItems: List<HomeFeature> = emptyList(), onValueUpdate: (Int) ->
                     }
                     Column(modifier = Modifier.weight(1f)) {
                         Text(item.title, style = MaterialTheme.typography.titleMedium)
+                        if (item.tooltipText.isNotBlank()) {
+                            Text(item.tooltipText, style = MaterialTheme.typography.bodySmall,
+                                color = colors.onSurfaceVariant, maxLines = 2,
+                                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
+                        }
                         if (item.showSwitch) {
                             Text(stringResource(if (item.isChecked) R.string.android_on else R.string.android_off),
-                                style = MaterialTheme.typography.bodySmall, color = colors.onSurfaceVariant)
+                                style = MaterialTheme.typography.labelSmall,
+                                color = if (item.isChecked) colors.primary else colors.onSurfaceVariant)
                         }
                     }
                     if (item.tooltipText.isNotBlank()) {

@@ -12,6 +12,9 @@
 
 package com.my.vortex.data.di
 
+import android.content.Context
+import dagger.hilt.android.qualifiers.ApplicationContext
+import com.my.vortex.data.repository.BundledGameCatalog
 import com.my.vortex.data.BuildConfig
 import com.my.vortex.data.remote.ApiService
 import com.my.vortex.data.remote.Base
@@ -95,8 +98,9 @@ object AppModule {
     @Provides
     fun providesVortexRepository(
         apiService: ApiService,
-        imgurApiService: ImgurApiService
+        imgurApiService: ImgurApiService,
+        @ApplicationContext context: Context
     ): VortexRepository {
-        return VortexRepositoryImpl(apiService, imgurApiService)
+        return VortexRepositoryImpl(apiService, imgurApiService, BundledGameCatalog(context))
     }
 }

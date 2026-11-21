@@ -78,7 +78,7 @@ class AppDetectionService : Service() {
 
     override fun onDestroy() {
         scope.cancel()
-        vortexRPC.closeRPC()
+        vortexRPC.shutdownRPC()
         super.onDestroy()
     }
 
