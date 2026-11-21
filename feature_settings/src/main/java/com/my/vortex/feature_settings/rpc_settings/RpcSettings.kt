@@ -16,6 +16,9 @@ import android.os.Build
 import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.background
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -45,6 +48,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.LargeTopAppBar
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -53,6 +57,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
@@ -75,17 +81,11 @@ import kotlinx.serialization.json.Json
 @Composable
 fun RpcSettings(onBackPressed: () -> Boolean) {
     val context = LocalContext.current
-    var isLowResIconsEnabled by remember { mutableStateOf(Prefs[Prefs.RPC_USE_LOW_RES_ICON, false]) }
     var useImgur by remember { mutableStateOf(Prefs[Prefs.USE_IMGUR, false]) }
     var configsDir by remember { mutableStateOf(Prefs[Prefs.CONFIGS_DIRECTORY, ""]) }
     var showDirConfigDialog by remember { mutableStateOf(false) }
-    var useButtonConfigs by remember { mutableStateOf(Prefs[Prefs.USE_RPC_BUTTONS, false]) }
-    var showButtonsConfigDialog by remember { mutableStateOf(false) }
-    var rpcButtons by remember {
-        mutableStateOf(Json.decodeFromString<RpcButtons>(Prefs[Prefs.RPC_BUTTONS_DATA, "{}"]))
-    }
     var customActivityStatus by remember {
-        mutableStateOf(Prefs[Prefs.CUSTOM_ACTIVITY_STATUS, "dnd"])
+        mutableStateOf(Prefs[Prefs.CUSTOM_ACTIVITY_STATUS, "online"])
     }
     var customActivityType by remember {
         mutableStateOf(Prefs[Prefs.CUSTOM_ACTIVITY_TYPE, 0].toString())
@@ -111,12 +111,22 @@ fun RpcSettings(onBackPressed: () -> Boolean) {
     Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
         LargeTopAppBar(title = {
             Text(
-                text = stringResource(id = R.string.settings),
+                text = stringResource(id = R.string.settings_presence),
                 style = MaterialTheme.typography.headlineLarge,
             )
         }, navigationIcon = { BackButton { onBackPressed() } })
     }) { paddingValues ->
         LazyColumn(modifier = Modifier.padding(paddingValues)) {
+            item {
+                Surface(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
+                    shape = RoundedCornerShape(24.dp), color = Color(0xFF171D3D)) {
+                    Column(Modifier.background(Brush.linearGradient(listOf(Color(0xFF28235D), Color(0xFF10495C))))
+                        .padding(22.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Text(stringResource(R.string.settings_presence), style = MaterialTheme.typography.titleLarge, color = Color.White)
+                        Text(stringResource(R.string.settings_presence_help), style = MaterialTheme.typography.bodyMedium, color = Color(0xFFD8E6F5))
+                    }
+                }
+            }
             item {
                 Subtitle(text = stringResource(R.string.general_settings))
             }
@@ -132,31 +142,9 @@ fun RpcSettings(onBackPressed: () -> Boolean) {
                 }
             }
             item {
-                PreferenceSwitch(
-                    title = stringResource(id = R.string.use_custom_buttons),
-                    description = stringResource(id = R.string.use_custom_buttons_desc),
-                    icon = Icons.Default.Tune,
-                    isChecked = useButtonConfigs,
-                ) {
-                    useButtonConfigs = !useButtonConfigs
-                    Prefs[Prefs.USE_RPC_BUTTONS] = useButtonConfigs
-                }
-            }
-            item {
-                AnimatedVisibility(visible = useButtonConfigs) {
-                    SettingItem(
-                        title = stringResource(R.string.rpc_buttons),
-                        description = stringResource(id = R.string.rpc_settings_button_configs),
-                        icon = Icons.Default.SmartButton
-                    ) {
-                        showButtonsConfigDialog = true
-                    }
-                }
-            }
-            item {
                 SettingItem(
                     title = stringResource(id = R.string.custom_activity_type),
-                    description = stringResource(id = R.string.custom_activity_type_desc),
+                    description = stringResource(id = R.string.settings_default_type_desc),
                     icon = Icons.Default.Code
                 ) {
                     showActivityTypeDialog = true
@@ -166,7 +154,7 @@ fun RpcSettings(onBackPressed: () -> Boolean) {
             item {
                 SettingItem(
                     title = stringResource(id = R.string.custom_activity_status),
-                    description = stringResource(id = R.string.custom_activity_status_desc),
+                    description = stringResource(id = R.string.settings_default_status_desc),
                     icon = Icons.Default.DoNotDisturbOn
                 ) {
                     showActivityStatusDialog = true
@@ -219,17 +207,6 @@ fun RpcSettings(onBackPressed: () -> Boolean) {
                 }
             }
             item {
-                PreferenceSwitch(
-                    title = stringResource(id = R.string.use_low_res_icon),
-                    description = stringResource(id = R.string.use_low_res_icon_desc),
-                    icon = Icons.Default.HighQuality,
-                    isChecked = isLowResIconsEnabled,
-                ) {
-                    isLowResIconsEnabled = !isLowResIconsEnabled
-                    Prefs[Prefs.RPC_USE_LOW_RES_ICON] = isLowResIconsEnabled
-                }
-            }
-            item {
                 SettingItem(
                     title = stringResource(id = R.string.delete_saved_icon_urls),
                     description = stringResource(id = R.string.delete_saved_icon_urls_desc),
@@ -272,64 +249,6 @@ fun RpcSettings(onBackPressed: () -> Boolean) {
                     }
                 })
         }
-        if (showButtonsConfigDialog) {
-            AlertDialog(
-                properties = DialogProperties(usePlatformDefaultWidth = false),
-                modifier = Modifier.padding(20.dp),
-                onDismissRequest = { showButtonsConfigDialog = false },
-                confirmButton = {
-                    TextButton(onClick = {
-                        Prefs[Prefs.RPC_BUTTONS_DATA] = Json.encodeToString(rpcButtons)
-                        showButtonsConfigDialog = false
-                    }
-                    ) {
-                        Text("Save")
-                    }
-                },
-                icon = {
-                    Icon(
-                        imageVector = Icons.Default.Storage, contentDescription = null
-                    )
-                },
-                title = { Text(stringResource(R.string.enter_details)) },
-                text = {
-                    Column {
-                        RpcField(
-                            value = rpcButtons.button1,
-                            label = R.string.activity_button1_text,
-                            isError = rpcButtons.button1.length >= Constants.MAX_ALLOWED_CHARACTER_LENGTH,
-                            errorMessage = stringResource(R.string.activity_button_max_character)
-                        ) {
-                            rpcButtons = rpcButtons.copy(button1 = it)
-                        }
-                        AnimatedVisibility(visible = rpcButtons.button1.isNotEmpty()) {
-                            RpcField(
-                                value = rpcButtons.button1Url,
-                                label = R.string.activity_button1_url
-                            ) {
-                                rpcButtons = rpcButtons.copy(button1Url = it)
-                            }
-                        }
-                        RpcField(
-                            value = rpcButtons.button2,
-                            label = R.string.activity_button2_text,
-                            isError = rpcButtons.button2.length >= Constants.MAX_ALLOWED_CHARACTER_LENGTH,
-                            errorMessage = stringResource(R.string.activity_button_max_character)
-                        ) {
-                            rpcButtons = rpcButtons.copy(button2 = it)
-                        }
-                        AnimatedVisibility(visible = rpcButtons.button2.isNotEmpty()) {
-                            RpcField(
-                                value = rpcButtons.button2Url,
-                                label = R.string.activity_button2_url
-                            ) {
-                                rpcButtons = rpcButtons.copy(button2Url = it)
-                            }
-                        }
-                    }
-                })
-        }
-
         if (showActivityTypeDialog) {
             AlertDialog(
                 onDismissRequest = {
@@ -380,8 +299,9 @@ fun RpcSettings(onBackPressed: () -> Boolean) {
                 },
                 confirmButton = {
                     TextButton(onClick = {
-                        if (customActivityType.toInt() in 0..5) {
-                            Prefs[Prefs.CUSTOM_ACTIVITY_TYPE] = customActivityType.toInt()
+                        val type = customActivityType.toIntOrNull()
+                        if (type != null && type in 0..5) {
+                            Prefs[Prefs.CUSTOM_ACTIVITY_TYPE] = type
                             showActivityTypeDialog = false
                         }
                     }) {
@@ -427,7 +347,7 @@ fun RpcSettings(onBackPressed: () -> Boolean) {
                         RpcField(
                             value = customApplicationId,
                             label = R.string.application_id,
-                            isError = customApplicationId.length !in Constants.MAX_APPLICATION_ID_LENGTH_RANGE || !customApplicationId.all { it.isDigit() },
+                            isError = customApplicationId.isNotEmpty() && (customApplicationId.length !in Constants.MAX_APPLICATION_ID_LENGTH_RANGE || !customApplicationId.all { it.isDigit() }),
                             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                             onValueChange = { newText ->
                                 if (newText.length <= Constants.MAX_APPLICATION_ID_LENGTH_RANGE.last && newText.all { it.isDigit() }) {
@@ -440,7 +360,7 @@ fun RpcSettings(onBackPressed: () -> Boolean) {
                 confirmButton = {
                     TextButton(
                         onClick = {
-                            if (customApplicationId.length !in Constants.MAX_APPLICATION_ID_LENGTH_RANGE || !customApplicationId.all { it.isDigit() }) {
+                            if (customApplicationId.isNotEmpty() && (customApplicationId.length !in Constants.MAX_APPLICATION_ID_LENGTH_RANGE || !customApplicationId.all { it.isDigit() })) {
                                 Toast.makeText(
                                     context,
                                     "Please enter a valid Application ID",

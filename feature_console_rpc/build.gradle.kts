@@ -15,5 +15,6 @@ dependencies {
     implementation (libs.material.icons.extended)
     implementation (libs.coil)
     implementation (libs.activity.compose)
+    implementation (libs.lifecycle.runtime.compose)
     implementation (libs.kotlinx.serialization.json)
 }

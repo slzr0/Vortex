@@ -15,10 +15,8 @@ package com.my.vortex.feature_rpc_base.di
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
-import android.content.ComponentName
 import android.content.Context
 import com.my.vortex.feature_rpc_base.Constants
-import com.my.vortex.feature_rpc_base.services.notificationListenerComponent
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,11 +26,6 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 @Module
 @InstallIn(ServiceComponent::class)
 object RpcBaseModule {
-
-    @Provides
-    fun providesComponentName(
-        @ApplicationContext context: Context
-    ) = notificationListenerComponent(context)
 
     @Provides
     fun providesNotificationManager(

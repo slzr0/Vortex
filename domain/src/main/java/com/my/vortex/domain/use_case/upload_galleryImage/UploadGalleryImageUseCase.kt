@@ -14,6 +14,7 @@ package com.my.vortex.domain.use_case.upload_galleryImage
 
 import com.my.vortex.domain.repository.VortexRepository
 import java.io.File
+import kotlinx.coroutines.CancellationException
 import javax.inject.Inject
 
 class UploadGalleryImageUseCase @Inject constructor(
@@ -21,8 +22,9 @@ class UploadGalleryImageUseCase @Inject constructor(
 ) {
     suspend operator fun invoke(file: File): String? {
         return try {
-            file.deleteOnExit()
             vortexRepository.uploadImage(file)
+        } catch (ex: CancellationException) {
+            throw ex
         } catch (ex: Exception) {
             null
         }

@@ -13,6 +13,7 @@ dependencies {
     implementation (libs.material.icons.extended)
     implementation(libs.accompanist.permission)
     implementation(libs.activity.compose)
+    implementation(libs.lifecycle.runtime.compose)
     implementation(libs.blankj.utilcodex)
     implementation(libs.coil)
     implementation(libs.kotlinx.serialization.json)

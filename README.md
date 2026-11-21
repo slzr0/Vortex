@@ -1,30 +1,26 @@
 # Vortex
 
 Vortex is an Android Discord Rich Presence client built with Kotlin, Jetpack Compose and Material 3.
-Control what you share from a single dashboard, with app, media, console and custom presence modes.
+Choose a game or create a custom activity from a streamlined two-mode workspace.
 
 ## Presence modes
 
 - **Console:** search the game catalog, select a preset, or create a manual game and platform preset when the catalog is unavailable. Your last started preset is saved for quick access.
-- **Apps:** share the app you are using, with usage access enabled.
-- **Media:** share playback activity, with notification access enabled.
 - **Custom:** configure your own presence, images, timestamps and buttons.
-- **Experimental:** switch between supported app and media activity modes.
 
 Only one presence service should run at a time. A running service indicates the Android service is active; it does not guarantee a Discord connection.
 
 ## Getting started
 
-Open your profile to sign in, grant the permissions required by the modes you want to use, then choose a mode from the dashboard. Console includes a bundled game catalog, supplements it with the remote catalog when available, and also supports manual presets. Artwork and Discord presence still require a network connection.
+First enable app notifications when requested, then sign in to Discord. If notifications are already enabled, setup proceeds directly to sign-in. Games and Custom do not require usage access or notification-listener access. Console includes a bundled game catalog, supplements it with the remote catalog when available, and also supports manual presets. Artwork and Discord presence still require a network connection.
 
 ## Troubleshooting
 
-- Sign in from the profile screen before starting Console RPC.
+- Sign in after the permission step before starting an activity. If the permission prompt is denied, use notification settings and return to Vortex.
 - If a title is missing, try another spelling or create a manual preset. Bundled catalogs may not list every game or region.
 - The gateway retries transient disconnections and restores the latest activity. Keep the foreground notification enabled and allow unrestricted battery usage for better reliability; the wake lock can increase battery use. Android, network outages, force-stop, reboots and Discord restrictions can still interrupt presence, so continuous 24/7 operation is not guaranteed.
 - If artwork is missing, verify internet access and image services; text presence can still work without artwork.
 - If presence does not appear, check the app logs and your Discord connection. Discord may change or restrict this unofficial integration.
-- Notification and usage permissions are required for media and app detection respectively.
 
 ## Build
 
@@ -38,9 +34,9 @@ A GitHub Actions workflow builds the debug APK on pushes to `main` and can also 
 
 ## Privacy and compatibility
 
-The sign-in screen uses an in-app WebView and retrieves a Discord user token, which the existing RPC implementation stores in app-private MMKV preferences without encryption. Signing out clears the locally saved token and profile fields; it does not revoke the Discord session. This unofficial method may stop working and may violate Discord's terms. See [Privacy and Terms](TERMS_OF_SERVICE.md).
+The sign-in screen uses an in-app WebView and retrieves a Discord user token, which the existing RPC implementation stores in app-private MMKV preferences without encryption. MMKV preferences are excluded from Android cloud backup and device transfer to avoid copying the token; settings and favorites stored there will not transfer either. Signing out clears the locally saved token and profile fields; it does not revoke the Discord session. This unofficial method may stop working and may violate Discord's terms. See [Privacy and Terms](TERMS_OF_SERVICE.md).
 
-Existing application identifiers, preference keys and legacy components remain for upgrade compatibility. Third-party services are still used for supplemental catalog entries, artwork, profile information and image handling. Vortex release checks target this repository; no release may be available yet.
+Existing application identifiers and preference keys remain for upgrade compatibility. App detection, media and experimental entry points are no longer exposed. Third-party services are still used for supplemental catalog entries, artwork, profile information and image handling. Vortex release checks target this repository; no release may be available yet.
 
 This is a derivative open-source project. Original copyright and attribution notices are retained in source files; see [License](License).
 

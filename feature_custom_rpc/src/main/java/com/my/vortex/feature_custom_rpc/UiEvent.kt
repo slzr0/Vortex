@@ -13,7 +13,7 @@
 package com.my.vortex.feature_custom_rpc
 
 import com.my.vortex.domain.model.rpc.RpcConfig
-import java.io.File
+import android.net.Uri
 
 sealed interface UiEvent {
     object TriggerBottomSheet: UiEvent
@@ -23,7 +23,8 @@ sealed interface UiEvent {
     class SetFieldsFromConfig(val config: RpcConfig): UiEvent
     object TriggerStartTimeStampsDialog: UiEvent
     object TriggerStopTimeStampsDialog: UiEvent
-    class UploadImage(val file: File,val callback: (result: String) -> Unit): UiEvent
+    class UploadImage(val uri: Uri, val callback: (result: String?) -> Unit): UiEvent
+    class SetImage(val image: String, val large: Boolean): UiEvent
 
     sealed interface SheetEvent: UiEvent {
         object TriggerLoadDialog: SheetEvent

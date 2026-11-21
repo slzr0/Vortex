@@ -13,8 +13,12 @@
 package com.my.vortex.feature_custom_rpc
 
 import android.content.Intent
+import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.background
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -31,6 +35,8 @@ import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material3.Button
+import androidx.compose.material3.Surface
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -45,21 +51,26 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import com.my.vortex.data.rpc.Constants
 import com.my.vortex.data.rpc.Constants.MAX_ALLOWED_CHARACTER_LENGTH
-import com.my.vortex.data.utils.uriToFile
 import com.my.vortex.domain.model.user.User
 import com.my.vortex.feature_custom_rpc.components.BottomSheet
 import com.my.vortex.feature_custom_rpc.components.DateTimePickerDialog
@@ -72,13 +83,9 @@ import com.my.vortex.feature_custom_rpc.components.sheet.SaveConfigDialog
 import com.my.vortex.feature_custom_rpc.components.sheet.ShareConfig
 import com.my.vortex.feature_custom_rpc.components.sheet.dataToString
 import com.my.vortex.feature_rpc_base.AppUtils
-import com.my.vortex.feature_rpc_base.services.AppDetectionService
 import com.my.vortex.feature_rpc_base.services.CustomRpcService
-import com.my.vortex.feature_rpc_base.services.ExperimentalRpc
-import com.my.vortex.feature_rpc_base.services.MediaRpcService
 import com.my.vortex.preference.Prefs
 import com.my.vortex.resources.R
-import com.my.vortex.ui.components.BackButton
 import com.my.vortex.ui.components.RpcField
 import com.my.vortex.ui.components.SwitchBar
 import com.my.vortex.ui.components.Subtitle
@@ -151,7 +158,7 @@ fun CustomRPC(
     }
     if (state.showPreviewDialog) {
         val json = Prefs[Prefs.USER_DATA, "{}"]
-        val user = Json.decodeFromString<User>(json)
+        val user = runCatching { Json.decodeFromString<User>(json) }.getOrDefault(User())
         PreviewDialog(
             user = user,
             rpc = state.rpcConfig,
@@ -189,7 +196,6 @@ fun CustomRpcScreen(
                         style = MaterialTheme.typography.headlineLarge,
                     )
                 },
-                navigationIcon = { BackButton { onBackPressed() } },
                 scrollBehavior = scrollBehavior,
                 actions = {
                     IconButton(onClick = { onEvent(UiEvent.TriggerBottomSheet) }) {
@@ -219,32 +225,66 @@ private fun RpcTextFieldsColumn(
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
     var isCustomRpcEnabled by remember {
-        mutableStateOf(AppUtils.customRpcRunning() && Prefs[Prefs.ACTIVE_CUSTOM_RPC_MODE, ""] != "console")
+        mutableStateOf(AppUtils.customRpcRunning() && Prefs[Prefs.ACTIVE_CUSTOM_RPC_MODE, ""] == "custom")
     }
-    LazyColumn(
-        modifier = Modifier.fillMaxSize()
-    ) {
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                isCustomRpcEnabled = AppUtils.customRpcRunning() && Prefs[Prefs.ACTIVE_CUSTOM_RPC_MODE, ""] == "custom"
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+    fun startCustom() {
+        if (uiState.rpcConfig.name.isBlank() || uiState.rpcConfig.name.length > 128) {
+            Toast.makeText(context, R.string.custom_name_required, Toast.LENGTH_LONG).show()
+            return
+        }
+        val config = uiState.rpcConfig.dataToString()
+        val started = runCatching {
+            context.stopService(Intent(context, CustomRpcService::class.java))
+            checkNotNull(context.startService(Intent(context, CustomRpcService::class.java).putExtra("RPC", config)))
+        }.isSuccess
+        if (started) {
+            Prefs[Prefs.LAST_RUN_CUSTOM_RPC] = config
+            Prefs[Prefs.ACTIVE_CUSTOM_RPC_MODE] = "custom"
+        } else {
+            Toast.makeText(context, R.string.custom_start_failed, Toast.LENGTH_LONG).show()
+        }
+        isCustomRpcEnabled = started
+    }
+    LazyColumn(modifier = Modifier.fillMaxSize()) {
         item {
-            SwitchBar(
-                title = stringResource(id = R.string.enable_customRpc),
-                isChecked = isCustomRpcEnabled
-            ) {
-                isCustomRpcEnabled = !isCustomRpcEnabled
-                when (isCustomRpcEnabled) {
-                    true -> {
-                        context.stopService(Intent(context, AppDetectionService::class.java))
-                        context.stopService(Intent(context, MediaRpcService::class.java))
-                        context.stopService(Intent(context, ExperimentalRpc::class.java))
-                        val intent = Intent(context, CustomRpcService::class.java)
-                        val string = uiState.rpcConfig.dataToString()
-                        intent.putExtra("RPC", string)
-                        Prefs[Prefs.LAST_RUN_CUSTOM_RPC] = string
+            Surface(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
+                shape = RoundedCornerShape(26.dp), color = Color(0xFF171D3D)) {
+                Column(Modifier.background(Brush.linearGradient(listOf(Color(0xFF28235D), Color(0xFF10495C))))
+                    .padding(22.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text("V O R T E X  /  C R E A T E", style = MaterialTheme.typography.labelLarge, color = Color(0xFF9DEAFF))
+                    Text(stringResource(R.string.custom_hero_title), style = MaterialTheme.typography.headlineSmall, color = Color.White)
+                    Text(stringResource(R.string.custom_hero_desc), style = MaterialTheme.typography.bodyMedium, color = Color(0xFFD8E6F5))
+                }
+            }
+        }
+        item {
+            SwitchBar(title = stringResource(id = R.string.enable_customRpc), isChecked = isCustomRpcEnabled) {
+                if (isCustomRpcEnabled) {
+                    if (Prefs[Prefs.ACTIVE_CUSTOM_RPC_MODE, ""] == "custom") {
                         context.stopService(Intent(context, CustomRpcService::class.java))
-                        Prefs[Prefs.ACTIVE_CUSTOM_RPC_MODE] = "custom"
-                        context.startService(intent)
                     }
-
-                    false -> context.stopService(Intent(context, CustomRpcService::class.java))
+                    isCustomRpcEnabled = false
+                } else startCustom()
+            }
+        }
+        if (isCustomRpcEnabled) {
+            item {
+                Column(Modifier.fillMaxWidth().padding(horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(stringResource(R.string.custom_service_hint), style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Button(onClick = { startCustom() }, modifier = Modifier.fillMaxWidth()) {
+                        Text(stringResource(R.string.custom_apply_changes))
+                    }
                 }
             }
         }
@@ -566,10 +606,14 @@ private fun RpcTextFieldsColumn(
                             showProgress = showProgress
                         ) { uri ->
                             showProgress = true
-                            onEvent(UiEvent.UploadImage(context.uriToFile(uri)) { result ->
+                            onEvent(UiEvent.UploadImage(uri) { result ->
                                 showProgress = false
-                                openPickerDialog = false
-                                onEvent(UiEvent.SetFieldsFromConfig(uiState.rpcConfig.copy(largeImg = result)))
+                                if (result.isNullOrBlank()) {
+                                    Toast.makeText(context, R.string.custom_upload_failed, Toast.LENGTH_LONG).show()
+                                } else {
+                                    openPickerDialog = false
+                                    onEvent(UiEvent.SetImage(result, large = true))
+                                }
                             })
                         }
                     }) {
@@ -611,10 +655,14 @@ private fun RpcTextFieldsColumn(
                             showProgress = showProgress
                         ) { uri ->
                             showProgress = true
-                            onEvent(UiEvent.UploadImage(context.uriToFile(uri)) { result ->
+                            onEvent(UiEvent.UploadImage(uri) { result ->
                                 showProgress = false
-                                openPickerDialog = false
-                                onEvent(UiEvent.SetFieldsFromConfig(uiState.rpcConfig.copy(smallImg = result)))
+                                if (result.isNullOrBlank()) {
+                                    Toast.makeText(context, R.string.custom_upload_failed, Toast.LENGTH_LONG).show()
+                                } else {
+                                    openPickerDialog = false
+                                    onEvent(UiEvent.SetImage(result, large = false))
+                                }
                             })
                         }
                     }) {

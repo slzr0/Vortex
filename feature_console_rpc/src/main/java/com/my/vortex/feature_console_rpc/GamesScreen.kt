@@ -18,6 +18,7 @@ import android.net.Uri
 import android.os.PowerManager
 import android.provider.Settings
 import android.widget.Toast
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -61,6 +62,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -72,13 +75,9 @@ import coil.compose.AsyncImage
 import com.my.vortex.domain.model.Game
 import com.my.vortex.domain.model.rpc.RpcConfig
 import com.my.vortex.feature_rpc_base.AppUtils
-import com.my.vortex.feature_rpc_base.services.AppDetectionService
 import com.my.vortex.feature_rpc_base.services.CustomRpcService
-import com.my.vortex.feature_rpc_base.services.ExperimentalRpc
-import com.my.vortex.feature_rpc_base.services.MediaRpcService
 import com.my.vortex.preference.Prefs
 import com.my.vortex.resources.R
-import com.my.vortex.ui.components.BackButton
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -157,9 +156,6 @@ fun GamesScreen(
         val startTime = game.consoleStartTime(previous, isSameServiceRunning, System.currentTimeMillis())
         val config = json.encodeToString(game.toConsoleConfig(startTime, status, showElapsed))
         val result = runCatching {
-            context.stopService(Intent(context, AppDetectionService::class.java))
-            context.stopService(Intent(context, MediaRpcService::class.java))
-            context.stopService(Intent(context, ExperimentalRpc::class.java))
             context.stopService(Intent(context, CustomRpcService::class.java))
             val service = Intent(context, CustomRpcService::class.java).putExtra("RPC", config)
             checkNotNull(context.startService(service))
@@ -185,8 +181,7 @@ fun GamesScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.main_consoleRpc)) },
-                navigationIcon = { BackButton { onBackPressed() } }
+                title = { Text(stringResource(R.string.games_activity_title), style = MaterialTheme.typography.headlineSmall) }
             )
         }
     ) { padding ->
@@ -198,25 +193,27 @@ fun GamesScreen(
             item {
                 Surface(
                     shape = RoundedCornerShape(24.dp),
-                    color = MaterialTheme.colorScheme.primaryContainer,
+                    color = Color(0xFF171D3D),
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                        Text(stringResource(R.string.console_hero_title), style = MaterialTheme.typography.headlineSmall)
-                        Text(stringResource(R.string.console_hero_description), style = MaterialTheme.typography.bodyMedium)
+                    Column(Modifier.background(Brush.linearGradient(listOf(Color(0xFF28235D), Color(0xFF10495C))))
+                        .padding(22.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                        Text("V O R T E X  /  P L A Y", color = Color(0xFF9DEAFF), style = MaterialTheme.typography.labelLarge)
+                        Text(stringResource(R.string.console_hero_title), color = Color.White, style = MaterialTheme.typography.headlineSmall)
+                        Text(stringResource(R.string.console_hero_description), color = Color(0xFFD8E6F5), style = MaterialTheme.typography.bodyMedium)
                         Text(
                             selected?.let { "${it.game_title} · ${it.platform}" }
                                 ?: stringResource(R.string.console_no_selection),
-                            style = MaterialTheme.typography.titleMedium
+                            style = MaterialTheme.typography.titleMedium, color = Color.White
                         )
                         selected?.let { game ->
                             TextButton(onClick = { toggleFavorite(game) }) {
-                                Text(stringResource(if (favorites.any { it.sameConsoleGame(game) }) R.string.console_remove_favorite else R.string.console_add_favorite))
+                                Text(stringResource(if (favorites.any { it.sameConsoleGame(game) }) R.string.console_remove_favorite else R.string.console_add_favorite), color = Color(0xFF9DEAFF))
                             }
                         }
                         Text(
                             stringResource(if (running) R.string.console_service_running else R.string.console_service_stopped),
-                            style = MaterialTheme.typography.labelMedium
+                            style = MaterialTheme.typography.labelMedium, color = Color(0xFFD8E6F5)
                         )
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             Button(onClick = { startPresence() }, enabled = selected != null) {
@@ -228,7 +225,7 @@ fun GamesScreen(
                                         context.stopService(Intent(context, CustomRpcService::class.java))
                                     }
                                     running = false
-                                }) { Text(stringResource(R.string.console_stop)) }
+                                }) { Text(stringResource(R.string.console_stop), color = Color.White) }
                             }
                         }
                     }
