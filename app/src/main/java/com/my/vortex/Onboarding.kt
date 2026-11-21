@@ -202,13 +202,13 @@ internal fun SignInScreen(onCompleted: () -> Unit) {
 @Composable
 internal fun ConnectedScreen(onSignOut: () -> Unit) {
     SetupShell(step = 2, eyebrow = "SETUP COMPLETE", title = "You’re in.",
-        description = "Your Discord account is connected on this device.") {
+        description = "Your Discord sign-in is saved on this device.") {
         SetupCard {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Icon(Icons.Outlined.CheckCircle, contentDescription = null, tint = Lime)
                 Text("All set", color = White, fontSize = 20.sp, fontWeight = FontWeight.SemiBold)
                 Text("Loading, permissions, and sign-in are ready. The rest of your Vortex space will come next.", color = Mist, lineHeight = 22.sp)
-                StatusPill("CONNECTED", true)
+                StatusPill("SESSION SAVED", true)
             }
         }
         SecondaryAction("Sign out", onSignOut, Modifier.fillMaxWidth())
