@@ -34,6 +34,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.my.vortex.resources.R
 import com.my.vortex.feature_settings.SettingsDrawer
 import com.my.vortex.feature_rpc_base.services.VortexTileService
@@ -43,6 +44,8 @@ import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -67,8 +70,8 @@ import com.my.vortex.feature_logs.LogScreen
 import com.my.vortex.feature_logs.LogsViewModel
 import com.my.vortex.feature_media_rpc.MediaRPC
 import com.my.vortex.feature_media_rpc.MediaScreenViewModel
-import com.my.vortex.domain.model.user.User
-import com.my.vortex.feature_profile.ui.user.OAuthAccountScreen
+import com.my.vortex.feature_profile.ui.login.LoginScreen
+import com.my.vortex.feature_profile.ui.user.UserState
 import com.my.vortex.feature_profile.ui.user.UserScreen
 import com.my.vortex.feature_profile.ui.user.UserViewModel
 import com.my.vortex.feature_rpc_base.AppUtils
@@ -94,10 +97,23 @@ import xyz.dead8309.feature_experimental_rpc.apps.ExperimentalRpcAppsScreen
 internal fun ComponentActivity.Vortex(
     usageAccessStatus: MutableState<Boolean>,
     notificationListenerAccess: MutableState<Boolean>,
-    user: User,
-    onLogout: () -> Unit,
 ) {
     val navController = rememberAnimatedNavController()
+    var user by remember { mutableStateOf(Prefs.getUser()) }
+    var loggedIn by remember {
+        mutableStateOf(Prefs[Prefs.TOKEN, ""].isNotEmpty() && Prefs[Prefs.USER_ID, ""].isNotEmpty())
+    }
+    var accountGeneration by remember { mutableIntStateOf(0) }
+    val logout = {
+        Prefs.remove(Prefs.TOKEN)
+        Prefs.remove(Prefs.USER_DATA)
+        Prefs.remove(Prefs.USER_ID)
+        Prefs.remove(Prefs.USER_BIO)
+        Prefs.remove(Prefs.USER_NITRO)
+        user = null
+        loggedIn = false
+        accountGeneration++
+    }
     val entry by navController.currentBackStackEntryAsState()
     val currentRoute = entry?.destination?.route
     val tabs = listOf(
@@ -171,13 +187,13 @@ internal fun ComponentActivity.Vortex(
                         }
                     },
                     showBadge = showBadge,
-                    onLogout = onLogout,
+                    onLogout = logout,
                     navigateToSetup = { navController.navigate(Routes.SETUP) },
                     features = homeFeaturesProvider(
                         navigateTo = { navController.navigate(it) },
                         hasUsageAccess = usageAccessStatus,
                         hasNotificationAccess = notificationListenerAccess,
-                        userVerified = Prefs.getUser()?.verified == true
+                        userVerified = user?.verified == true
                     ),
                     user = user,
                     navigateToProfile = {
@@ -253,11 +269,29 @@ internal fun ComponentActivity.Vortex(
                 )
             }
             animatedComposable(Routes.PROFILE) {
-                OAuthAccountScreen(
-                    user = user,
-                    onBackPressed = { navController.popBackStack() },
-                    onLogout = onLogout
-                )
+                if (loggedIn) {
+                    val viewModel: UserViewModel = viewModel(
+                        key = "profile-$accountGeneration",
+                        factory = this@Vortex.defaultViewModelProviderFactory
+                    )
+                    val state = viewModel.state.value
+                    LaunchedEffect(state) {
+                        if (state is UserState.LoadingCompleted) user = state.user
+                    }
+                    UserScreen(
+                        state = state,
+                        onBackPressed = { navController.popBackStack() },
+                        onLoggedOut = logout
+                    )
+                } else {
+                    LoginScreen(
+                        onCompleted = {
+                            accountGeneration++
+                            loggedIn = true
+                        },
+                        onBackPressed = { navController.popBackStack() }
+                    )
+                }
             }
             animatedComposable(Routes.CONSOLE_RPC) {
                 val viewModel by viewModels<GamesViewModel>()

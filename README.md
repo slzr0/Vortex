@@ -46,24 +46,13 @@ upstream release feed, not a Vortex release feed.
 This project is derived from [Kizzy](https://github.com/dead8309/Kizzy); see
 `License` and the original source for license and attribution information.
 
-## Discord OAuth login
+## Discord login
 
-Sign-in opens the Vortex OAuth server in the browser. Its `vortex://callback`
-redirect supplies an access token and Discord profile to the app. The token is
-stored in app-private Preferences DataStore (excluded from Android backup), and
-logout clears that session. It does not revoke the token at Discord.
-
-The existing RPC implementation is unchanged: it still reads its original RPC
-credentials, not this OAuth token. A Discord OAuth access token must not be
-assumed to be a Discord Gateway user token. Consequently OAuth sign-in alone
-does not establish RPC connectivity.
-
-The current server contract puts a bearer token in a custom-scheme redirect and
-does not provide a state parameter. Other apps can register the same scheme, and
-callbacks cannot be bound to an initiating login. Before production use, update
-the server and client to use a verified HTTPS App Link, an authorization-code
-exchange with PKCE, and a validated state value. The current DataStore is private
-to the app but is not encrypted at rest.
-
-Instrumented callback and session tests can be run on a connected Android device
-with `bash gradlew :app:connectedDebugAndroidTest`.
+The profile screen opens Discord's login page in an in-app WebView. After login,
+Kizzy's original JavaScript-based flow retrieves the Discord user token and stores
+it in the existing MMKV preferences used by RPC. Logout removes the saved token
+and profile fields locally; it does not revoke the Discord session. This method
+is dependent on Discord's web client and may stop working if it changes. Using a
+Discord user token for automated RPC may violate Discord's terms and can put the
+account at risk. The token is not encrypted by this application's preference
+storage.

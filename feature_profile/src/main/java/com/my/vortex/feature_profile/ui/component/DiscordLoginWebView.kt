@@ -54,6 +54,13 @@ internal fun DiscordLoginWebView(
             settings.javaScriptEnabled = true
             settings.domStorageEnabled = true
 
+            /*
+                Motorola users are not able to sign into discord in a WebView:
+                This issue is the fault of how Motorola phones (on every model) form the WebKit UA,
+                which breaks Discord's UA parsing. This makes the browser unidentifiable.
+
+                see https://github.com/dead8309/Kizzy/issues/345#issuecomment-2699729072
+             */
             if (android.os.Build.MANUFACTURER.equals(MOTOROLA, ignoreCase = true)) {
                 settings.userAgentString = SAMSUNG_USER_AGENT
             }

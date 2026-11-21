@@ -13,7 +13,6 @@ android {
         applicationId = "com.my.kizzy"
         versionCode = libs.versions.version.code.get().toInt()
         versionName = libs.versions.version.name.get()
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -56,12 +55,9 @@ dependencies {
     implementation (libs.app.compat)
     implementation (libs.accompanist.navigation.animation)
     implementation (libs.compose.navigation)
-    implementation (libs.datastore.preferences)
     implementation (libs.lifecycle.runtime)
+    implementation (libs.lifecycle.viewmodel.compose)
     implementation (libs.kotlinx.coroutine)
-    androidTestImplementation (libs.androidx.test.ext.junit)
-    androidTestImplementation (libs.androidx.test.core)
-    androidTestImplementation (libs.junit)
     implementation (libs.kotlinx.serialization.json)
 
 

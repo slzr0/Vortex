@@ -12,12 +12,6 @@
     <string name="custom_buttons_section">Buttons</string>
     <string name="custom_images_section">Images</string>
     <string name="custom_options_section">Activity options</string>
-    <string name="oauth_subtitle">Your Discord presence, in one place.</string>
-    <string name="oauth_sign_in">Sign in with Discord</string>
-    <string name="oauth_browser_unavailable">No browser is available to open Discord sign-in.</string>
-    <string name="oauth_invalid_callback">Could not complete sign-in. Please try again.</string>
-    <string name="oauth_storage_error">Could not access your session. Please try again.</string>
-    <string name="oauth_signed_in_as">Signed in as</string>
     <string name="connect_account_title">Connect your Discord account</string>
     <string name="connect_account_description">Sign in to manage your presence and view your profile.</string>
     <string name="logs_empty">No log entries to show.</string>
