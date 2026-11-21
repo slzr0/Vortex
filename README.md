@@ -1,58 +1,19 @@
 # Vortex
 
-Vortex is an Android Discord Rich Presence client built with Kotlin, Jetpack Compose and Material 3.
-Choose a game or create a custom activity from a streamlined two-mode workspace.
+Vortex is being rebuilt with Kotlin, Jetpack Compose and Material 3. This first stage contains a new loading screen, notification-access setup and in-app Discord sign-in. After sign-in, a confirmation screen allows signing out. The previous Games, Custom and Settings screens are not exposed in this build; their source remains in the repository for possible later work.
 
-## Presence modes
+## Android support
 
-- **Console:** search the game catalog, select a preset, or create a manual game and platform preset when the catalog is unavailable. Your last started preset is saved for quick access.
-- **Custom:** configure your own presence, images, timestamps and buttons. The editor preview loads direct HTTP(S) artwork links after a short delay; Discord asset keys remain placeholders in this preview.
+The app's minimum version is Android 9 (API 28). This rebuild is intended for Android 9 through Android 14 (API 34). Android 13 and later use the runtime notification permission; on older versions, notifications can be enabled in system settings if disabled. No maximum SDK restriction is imposed, but versions beyond Android 14 have not been verified.
 
-Only one presence service should run at a time. A running service indicates the Android service is active; it does not guarantee a Discord connection.
+## Sign-in and privacy
 
-## Getting started
-
-After a short Vortex launch screen, enable app notifications when requested, then sign in to Discord. If notifications are already enabled, setup proceeds directly to sign-in. Games and Custom do not require usage access or notification-listener access. Console includes a bundled game catalog, supplements it with the remote catalog when available, and also supports manual presets. Artwork and Discord presence still require a network connection.
-
-## Design references
-
-Vortex uses its own Compose components rather than bundling a glass library. The optional Glass appearance in Settings has three color intensities and uses tinted layers rather than real-time background blur. [Now in Android](https://github.com/android/nowinandroid) is a reference for Compose architecture. [Haze](https://github.com/chrisbanes/haze), [PrismalAGSL](https://github.com/styropyr0/PrismalAGSL), and [Mochi Compose](https://github.com/feice11/mochi-compose) were reviewed for glass effects and controls, but are not included. Mochi Compose requires Kotlin 2.3, while this project currently uses Kotlin 1.9. For presence workflows, [Music Presence](https://github.com/ungive/discord-music-presence), [Shiori](https://github.com/lennmoe/shiori), [Discord Presence Manager](https://github.com/DinoCDX/discord-presence-manager), and [Nowly](https://github.com/nowly-presence/nowly) were reviewed for status controls, previews, and configuration. These projects are not bundled as dependencies; Vortex retains Games and Custom modes.
-
-## Troubleshooting
-
-- Sign in after the permission step before starting an activity. If the permission prompt is denied, use notification settings and return to Vortex.
-- If a title is missing, try another spelling or create a manual preset. Bundled catalogs may not list every game or region.
-- The gateway retries transient disconnections and restores the latest activity. Keep the foreground notification enabled and allow unrestricted battery usage for better reliability; the wake lock can increase battery use. Android, network outages, force-stop, reboots and Discord restrictions can still interrupt presence, so continuous 24/7 operation is not guaranteed.
-- If artwork is missing, verify internet access and image services; text presence can still work without artwork.
-- If presence does not appear, check the app logs and your Discord connection. Discord may change or restrict this unofficial integration.
+The existing unofficial Discord WebView sign-in extracts a user token and stores it in app-private MMKV preferences without encryption. It may violate Discord's terms or stop working. Sign-out clears local session data, but does not revoke the Discord session. MMKV data is excluded from cloud backup and device transfer. See [Privacy and Terms](TERMS_OF_SERVICE.md).
 
 ## Build
 
-Use Android Studio, Android SDK 36 and JDK 17, or run:
+Use JDK 17 and Android SDK 36, then run `./gradlew assembleDebug`. GitHub Actions builds and uploads the debug APK for pushes to `main` or manual runs.
 
-```sh
-bash gradlew :app:assembleDebug
-```
+## Attribution
 
-A GitHub Actions workflow builds the debug APK on pushes to `main` and can also be run manually.
-
-## Privacy and compatibility
-
-The sign-in screen uses an in-app WebView and retrieves a Discord user token, which the existing RPC implementation stores in app-private MMKV preferences without encryption. MMKV preferences are excluded from Android cloud backup and device transfer to avoid copying the token; settings and favorites stored there will not transfer either. Signing out clears the locally saved token and profile fields; it does not revoke the Discord session. This unofficial method may stop working and may violate Discord's terms. See [Privacy and Terms](TERMS_OF_SERVICE.md).
-
-Existing application identifiers and preference keys remain for upgrade compatibility. App detection, media and experimental entry points are no longer exposed. Third-party services are still used for supplemental catalog entries, artwork, profile information and image handling. Vortex release checks target this repository; no release may be available yet.
-
-This is a derivative open-source project. Original copyright and attribution notices are retained in source files; see [License](License).
-
-## Credits
-
-- [Read You](https://github.com/Ashinch/ReadYou) and [Seal](https://github.com/JunkFood02/Seal) — UI components.
-- [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) — color utilities.
-- [Rich-Presence-U](https://github.com/ninstar/Rich-Presence-U) and [Rich Presence U Database](https://github.com/ninstar/Rich-Presence-U-DB) — Nintendo and Wii U game data, under the [Open Database License 1.0](data/src/main/assets/licenses/nintendo-odbl.txt). Original CSV files and source revision are included in [catalog attribution](data/src/main/assets/catalog/ATTRIBUTION.txt).
-- [Logra](https://github.com/wingio/Logra) — logs UI.
-- [Xbox-Rich-Presence-Discord](https://github.com/MrCoolAndroid/Xbox-Rich-Presence-Discord) — Xbox game data, under the [MIT License](data/src/main/assets/licenses/xbox-mit.txt); original JSON and source revision are included in the catalog assets.
-- [Monet](https://github.com/Kyant0/Monet) — Material 3 palettes.
-
-## Console tools
-
-Save catalog or manual presets as favorites, filter games by platform, and choose your Discord status and whether elapsed time is shown. Console options take effect when you start or update the presence. The background-readiness card links to Android battery and notification settings; manufacturers can impose additional restrictions, and those settings cannot guarantee continuous presence.
+Original copyright and attribution notices remain in the source and in [License](License). Bundled game catalog data and its attribution remain in [catalog attribution](data/src/main/assets/catalog/ATTRIBUTION.txt), including the [ODbL](data/src/main/assets/licenses/nintendo-odbl.txt) and [MIT](data/src/main/assets/licenses/xbox-mit.txt) notices.

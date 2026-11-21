@@ -10,21 +10,11 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.NotificationsActive
-import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -33,68 +23,46 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.my.vortex.resources.R
-import com.my.vortex.ui.components.SetupProgress
-import com.my.vortex.ui.components.glassScaffoldColor
-import com.my.vortex.ui.components.glassSurfaceColor
-import com.my.vortex.ui.components.vortexGlass
-import com.my.vortex.ui.components.VortexHero
+import androidx.compose.ui.unit.sp
 
 @Composable
-internal fun PermissionSetup(onRefresh: () -> Unit) {
+internal fun PermissionSetup(notificationsEnabled: Boolean, onRefresh: () -> Unit, onContinue: () -> Unit) {
     val context = LocalContext.current
-    var denied by remember { mutableStateOf(false) }
-    val launcher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
-        denied = !granted
+    var requested by remember { mutableStateOf(false) }
+    val launcher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) {
+        requested = true
         onRefresh()
     }
-    fun openNotificationSettings() {
-        val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)
+    fun openSettings() {
+        val primary = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)
         val fallback = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:${context.packageName}"))
-        if (runCatching { context.startActivity(intent) }.isFailure && runCatching { context.startActivity(fallback) }.isFailure) {
-            Toast.makeText(context, R.string.setup_settings_unavailable, Toast.LENGTH_LONG).show()
+        if (runCatching { context.startActivity(primary) }.isFailure && runCatching { context.startActivity(fallback) }.isFailure) {
+            Toast.makeText(context, "Unable to open settings on this device.", Toast.LENGTH_LONG).show()
         }
     }
-    Scaffold(containerColor = glassScaffoldColor()) { padding ->
-        LazyColumn(Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(22.dp),
-            verticalArrangement = Arrangement.spacedBy(20.dp)) {
-            item { SetupProgress(step = 1) }
-            item {
-                VortexHero(stringResource(R.string.setup_step_one), stringResource(R.string.setup_welcome),
-                    stringResource(R.string.setup_intro))
+    SetupShell(step = 1, eyebrow = "LET’S GET YOU SET UP", title = "A little access.\nA lot of control.",
+        description = "First, turn on notifications so you can see and control Vortex when it runs in the background.") {
+        SetupCard {
+            Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                Icon(Icons.Outlined.NotificationsActive, contentDescription = null, tint = Lime)
+                Text("Notifications", color = White, fontSize = 20.sp)
+                Text(if (notificationsEnabled) "Notifications are enabled on this device." else
+                    "A visible notification keeps you informed whenever a background activity is running.", color = Mist, lineHeight = 22.sp)
+                StatusPill(if (notificationsEnabled) "ENABLED" else "NEEDS YOUR ACCESS", notificationsEnabled)
             }
-            item {
-                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Text(stringResource(R.string.setup_permission_label), color = MaterialTheme.colorScheme.primary,
-                        style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
-                    Surface(modifier = Modifier.vortexGlass(RoundedCornerShape(24.dp)), shape = RoundedCornerShape(24.dp), color = glassSurfaceColor(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = .55f))) {
-                        Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                            Surface(shape = RoundedCornerShape(16.dp), color = MaterialTheme.colorScheme.primaryContainer) {
-                                Icon(Icons.Outlined.NotificationsActive, contentDescription = null,
-                                    tint = MaterialTheme.colorScheme.onPrimaryContainer, modifier = Modifier.padding(12.dp).size(26.dp))
-                            }
-                            Text(stringResource(R.string.setup_notifications_title), style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.SemiBold)
-                            Text(stringResource(R.string.setup_notifications_desc), style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant)
-                            if (denied) Text(stringResource(R.string.setup_permission_denied), color = MaterialTheme.colorScheme.error,
-                                style = MaterialTheme.typography.bodySmall)
-                            if (Build.VERSION.SDK_INT >= 33) {
-                                Button(onClick = { launcher.launch(Manifest.permission.POST_NOTIFICATIONS) }, modifier = Modifier.fillMaxWidth()) {
-                                    Text(stringResource(R.string.setup_allow_notifications))
-                                }
-                            }
-                            OutlinedButton(onClick = ::openNotificationSettings, modifier = Modifier.fillMaxWidth()) {
-                                Text(stringResource(R.string.setup_open_notification_settings))
-                            }
-                        }
-                    }
-                    Text(stringResource(R.string.setup_minimal_permissions), style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant)
-                }
+        }
+        Text("No notification reading, usage access, or storage access is needed for this step.", color = Mist, fontSize = 13.sp, lineHeight = 20.sp, modifier = Modifier.padding(top = 4.dp))
+        if (notificationsEnabled) {
+            PrimaryAction("Continue to Discord", onContinue)
+        } else {
+            if (requested) Text("Still off? Enable notifications in Android settings, then come back.", color = Lime, fontSize = 13.sp)
+            if (Build.VERSION.SDK_INT >= 33 && !requested) {
+                PrimaryAction("Allow notifications", { launcher.launch(Manifest.permission.POST_NOTIFICATIONS) })
+            } else {
+                PrimaryAction("Open notification settings", ::openSettings)
             }
+            if (Build.VERSION.SDK_INT >= 33 && !requested) SecondaryAction("Open settings instead", ::openSettings, Modifier.fillMaxWidth())
         }
     }
 }

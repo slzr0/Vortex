@@ -11,6 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.my.kizzy"
+        minSdk = 28
         versionCode = libs.versions.version.code.get().toInt()
         versionName = libs.versions.version.name.get()
         vectorDrawables {
