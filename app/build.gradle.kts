@@ -1,68 +1,36 @@
-@file:Suppress("UnstableApiUsage")
-
 plugins {
-    id("vortex.android.application")
-    id("vortex.android.application.compose")
-    id("vortex.android.hilt")
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
     namespace = "com.my.vortex"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.my.kizzy"
+        applicationId = "com.my.vortex"
         minSdk = 28
-        versionCode = libs.versions.version.code.get().toInt()
-        versionName = libs.versions.version.name.get()
-        vectorDrawables {
-            useSupportLibrary = true
-        }
-    }
-    buildTypes {
-        release {
-            isShrinkResources = true
-            isMinifyEnabled = true
-        }
+        targetSdk = 36
+        versionCode = 1
+        versionName = "1.0"
     }
 
-    packagingOptions.resources.excludes.add("/META-INF/{AL2.0,LGPL2.1}")
-
-    dependenciesInfo {
-        includeInApk = false
-        includeInBundle = true
+    buildFeatures { compose = true }
+    composeOptions { kotlinCompilerExtensionVersion = "1.5.13" }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
+    kotlinOptions { jvmTarget = "17" }
 }
+
 dependencies {
-    testImplementation (libs.junit)
-    implementation (projects.domain)
-    implementation (projects.theme)
-    implementation (projects.featureCrashHandler)
-    implementation (projects.featureProfile)
-    implementation (projects.featureAbout)
-    implementation (projects.featureSettings)
-    implementation (projects.featureLogs)
-    implementation (projects.featureRpcBase)
-    implementation (projects.featureConsoleRpc)
-    implementation (projects.featureCustomRpc)
-    implementation (projects.common.preference)
-    implementation (projects.common.navigation)
-    implementation (projects.common.resources)
-    implementation (projects.common.components)
-    implementation (libs.material.icons.extended)
-
-    implementation (libs.activity.compose)
-    implementation (libs.lifecycle.runtime.compose)
-    implementation (libs.core.ktx)
-    implementation (libs.app.compat)
-    implementation (libs.accompanist.navigation.animation)
-    implementation (libs.compose.navigation)
-    implementation (libs.lifecycle.runtime)
-    implementation (libs.lifecycle.viewmodel.compose)
-    implementation (libs.kotlinx.coroutine)
-    implementation (libs.kotlinx.serialization.json)
-
-
-    implementation (libs.material3)
-    implementation (libs.androidx.material)
-    implementation (libs.material3.windows.size)
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.activity:activity-compose:1.9.3")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.6")
+    implementation("androidx.compose.ui:ui:1.7.6")
+    implementation("androidx.compose.material3:material3:1.3.0")
+    implementation("androidx.compose.material:material-icons-extended:1.7.6")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    testImplementation("junit:junit:4.13.2")
 }

@@ -1,3 +1,0 @@
-<p>Vortex makes it easy to share your Discord presence with a focused Games and Custom activity workspace.</p>
-<p>Search the game catalog, save favorites and manual presets, customize your status and create your own activity. Set up notifications, connect Discord, and make Vortex yours with appearance and background settings.</p>
-<p>Vortex is an unofficial client. Discord connectivity and third-party catalog availability are not guaranteed.</p>

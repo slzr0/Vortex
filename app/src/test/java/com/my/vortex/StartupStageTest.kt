@@ -4,13 +4,14 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class StartupStageTest {
-    @Test fun permissionsAlwaysComeFirst() {
-        assertEquals(StartupStage.PERMISSIONS, startupStage(false, false))
-        assertEquals(StartupStage.PERMISSIONS, startupStage(false, true))
+    @Test fun accessComesFirst() {
+        assertEquals(StartupStage.PERMISSIONS, startupStage(false, false, false))
+        assertEquals(StartupStage.PERMISSIONS, startupStage(false, true, true))
+        assertEquals(StartupStage.PERMISSIONS, startupStage(true, false, true))
     }
 
-    @Test fun signInIsRequiredAfterPermissions() {
-        assertEquals(StartupStage.SIGN_IN, startupStage(true, false))
-        assertEquals(StartupStage.MAIN, startupStage(true, true))
+    @Test fun accountFollowsAccess() {
+        assertEquals(StartupStage.SIGN_IN, startupStage(true, true, false))
+        assertEquals(StartupStage.COMPLETE, startupStage(true, true, true))
     }
 }
