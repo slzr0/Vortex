@@ -18,6 +18,7 @@ import android.graphics.Bitmap
 import android.os.Build
 import android.os.Handler
 import android.os.Looper
+import android.webkit.CookieManager
 import android.webkit.WebChromeClient
 import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
@@ -33,20 +34,44 @@ import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
-import com.my.vortex.isDiscordAppUrl
+import com.my.vortex.isPlausibleSessionToken
 import com.my.vortex.isDiscordWebUrl
 import org.json.JSONTokener
 
-private const val TOKEN_SCRIPT = """(function(){try{var f=document.createElement('iframe');document.body.appendChild(f);var t=f.contentWindow.localStorage.getItem('token');f.remove();return t ? JSON.parse(t) : null;}catch(e){return null;}})()"""
+internal const val TOKEN_SCRIPT = """(function(){
+    if (location.protocol !== 'https:' || (location.hostname !== 'discord.com' && location.hostname !== 'www.discord.com')) return null;
+    function read(storage) {
+        try {
+            var value = storage.getItem('token');
+            if (!value) return null;
+            try { var decoded = JSON.parse(value); if (typeof decoded !== 'string') return null; value = decoded; } catch (_) {}
+            return typeof value === 'string' && value.length >= 20 && value.length <= 4096 ? value : null;
+        } catch (_) { return null; }
+    }
+    var frame = null;
+    try {
+        frame = document.createElement('iframe');
+        frame.style.display = 'none';
+        (document.body || document.documentElement).appendChild(frame);
+        var value = read(frame.contentWindow.localStorage);
+        if (value) return value;
+    } catch (_) {} finally { if (frame) frame.remove(); }
+    try { return read(window.localStorage); } catch (_) { return null; }
+})()"""
 private const val SAMSUNG_USER_AGENT = "Mozilla/5.0 (Linux; Android 14; SM-S921U; Build/UP1A.231005.007) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.363"
 
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
-fun DiscordLoginWebView(onLoginCompleted: (String) -> Unit, onProgress: (Int) -> Unit, onError: () -> Unit) {
+fun DiscordLoginWebView(
+    onLoginCompleted: (String) -> Unit, onProgress: (Int) -> Unit, onError: () -> Unit,
+    checkRequest: Int, onCheckEmpty: () -> Unit
+) {
     val context = LocalContext.current
     val completed = rememberUpdatedState(onLoginCompleted)
     val progress = rememberUpdatedState(onProgress)
     val error = rememberUpdatedState(onError)
+    val requestedCheck = rememberUpdatedState(checkRequest)
+    val checkEmpty = rememberUpdatedState(onCheckEmpty)
     val view = remember(context) {
         WebView(context).apply {
             settings.javaScriptEnabled = true
@@ -54,6 +79,8 @@ fun DiscordLoginWebView(onLoginCompleted: (String) -> Unit, onProgress: (Int) ->
             settings.mixedContentMode = WebSettings.MIXED_CONTENT_NEVER_ALLOW
             settings.allowFileAccess = false
             settings.allowContentAccess = false
+            CookieManager.getInstance().setAcceptCookie(true)
+            CookieManager.getInstance().setAcceptThirdPartyCookies(this, true)
             if (Build.MANUFACTURER.equals("motorola", ignoreCase = true)) settings.userAgentString = SAMSUNG_USER_AGENT
         }
     }
@@ -61,22 +88,28 @@ fun DiscordLoginWebView(onLoginCompleted: (String) -> Unit, onProgress: (Int) ->
         val handler = Handler(Looper.getMainLooper())
         var finished = false
         var evaluating = false
+        var lastCheck = checkRequest
         val poll = object : Runnable {
             override fun run() {
                 if (finished) return
-                if (!evaluating && isDiscordAppUrl(view.url.orEmpty())) {
+                val manual = requestedCheck.value != lastCheck
+                if (!evaluating && isDiscordWebUrl(view.url.orEmpty())) {
                     evaluating = true
+                    if (manual) lastCheck = requestedCheck.value
                     view.evaluateJavascript(TOKEN_SCRIPT) { result ->
                         evaluating = false
                         val token = try { JSONTokener(result ?: "null").nextValue() as? String } catch (_: Exception) { null }
-                        if (!finished && isDiscordAppUrl(view.url.orEmpty()) && !token.isNullOrBlank()) {
+                        if (!finished && isDiscordWebUrl(view.url.orEmpty()) && token != null && isPlausibleSessionToken(token)) {
                             finished = true
                             handler.removeCallbacks(this)
                             completed.value(token)
-                        }
+                        } else if (!finished && manual) checkEmpty.value()
                     }
+                } else if (!evaluating && manual) {
+                    lastCheck = requestedCheck.value
+                    checkEmpty.value()
                 }
-                if (!finished) handler.postDelayed(this, 1500)
+                if (!finished) handler.postDelayed(this, 1000)
             }
         }
         view.webViewClient = object : WebViewClient() {

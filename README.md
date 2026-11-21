@@ -14,10 +14,10 @@ The app has a new application ID, `com.my.vortex`, so it installs separately fro
 
 ## Discord sign-in
 
-The unofficial in-app WebView sign-in extracts a user token on Discord app pages and checks it against Discord before saving it encrypted with Android Keystore. WebView also retains its own site data until sign-out. External HTTPS links open in the device browser; other top-level destinations are blocked. Discord may change or block this approach, and it may violate Discord's terms. Sign-out removes the local session and WebView data; it does not revoke the Discord session. App backup is disabled. Never share the token.
+The unofficial in-app WebView sign-in checks Discord pages for a user token and verifies it with Discord before saving it encrypted with Android Keystore. The sign-in screen includes a manual session check if automatic detection does not happen. WebView enables third-party cookies for sign-in challenges and retains site data until sign-out. External HTTPS links open in the device browser; other top-level destinations are blocked. Discord may change or block this approach, and it may violate Discord's terms. Sign-out removes the local session and WebView data; it does not revoke the Discord session. App backup is disabled. Never share the token.
 
 ## Build
 
-Use JDK 17 and Android SDK 36 and run `./gradlew assembleDebug`. The workflow builds on pushes to `main` and can be started manually, uploading the debug APK as an artifact.
+Use JDK 17 and Android SDK 36 and run `./gradlew assembleDebug`. The workflow builds on pushes to `main` and can be started manually, uploading the debug APK as an artifact. Run `./gradlew testDebugUnitTest` and `node scripts/test-discord-session.js` for local tests.
 
 The adapted WebView source includes its original copyright notice. See [License](License).
