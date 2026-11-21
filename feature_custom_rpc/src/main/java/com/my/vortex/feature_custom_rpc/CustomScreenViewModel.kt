@@ -13,18 +13,24 @@
 package com.my.vortex.feature_custom_rpc
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.my.vortex.data.utils.uriToFile
 import com.my.vortex.domain.model.rpc.RpcConfig
 import com.my.vortex.domain.use_case.upload_galleryImage.UploadGalleryImageUseCase
 import com.my.vortex.feature_custom_rpc.components.sheet.stringToData
 import com.my.vortex.preference.Prefs
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.consumeAsFlow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.File
@@ -33,18 +39,22 @@ import javax.inject.Inject
 @SuppressLint("StaticFieldLeak")
 @HiltViewModel
 class CustomScreenViewModel @Inject constructor(
-    private val uploadGalleryImageUseCase: UploadGalleryImageUseCase
+    private val uploadGalleryImageUseCase: UploadGalleryImageUseCase,
+    @ApplicationContext private val context: Context
 ) : ViewModel() {
     private val _uiState: MutableStateFlow<UiState> = MutableStateFlow(UiState())
     val uiState: StateFlow<UiState> = _uiState
     private val uiEventChannel = Channel<UiEvent>(capacity = Channel.UNLIMITED)
 
     init {
-        if (Prefs[Prefs.APPLY_FIELDS_FROM_LAST_RUN_RPC, false]) {
-            _uiState.value = _uiState.value.copy(
-                rpcConfig = Prefs[Prefs.LAST_RUN_CUSTOM_RPC, ""].stringToData()
-            )
+        val lastConfig = Prefs[Prefs.LAST_RUN_CUSTOM_RPC, ""]
+        val initialConfig = if (Prefs[Prefs.APPLY_FIELDS_FROM_LAST_RUN_RPC, false] && lastConfig.isNotBlank()) {
+            lastConfig.stringToData()
+        } else {
+            RpcConfig(type = Prefs[Prefs.CUSTOM_ACTIVITY_TYPE, 0].toString(),
+                status = Prefs[Prefs.CUSTOM_ACTIVITY_STATUS, "online"])
         }
+        _uiState.value = _uiState.value.copy(rpcConfig = initialConfig)
         viewModelScope.launch {
             uiEventChannel.consumeAsFlow()
                 .collect { event ->
@@ -53,12 +63,21 @@ class CustomScreenViewModel @Inject constructor(
         }
     }
 
-    private suspend fun uploadImage(file: File, result: (String) -> Unit) {
-        uploadGalleryImageUseCase(file)?.let {
-            withContext(Dispatchers.Main) {
-                result(it.drop(3))
+    private suspend fun uploadImage(uri: Uri, result: (String?) -> Unit) {
+        val uploaded = withContext(Dispatchers.IO) {
+            var file: File? = null
+            try {
+                file = context.uriToFile(uri)
+                uploadGalleryImageUseCase(file)?.removePrefix("mp:")
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                null
+            } finally {
+                file?.delete()
             }
         }
+        withContext(Dispatchers.Main) { result(uploaded) }
     }
 
     fun onEvent(event: UiEvent) {
@@ -104,9 +123,13 @@ class CustomScreenViewModel @Inject constructor(
             }
 
             is UiEvent.UploadImage -> {
-                uploadImage(event.file) {
-                    event.callback(it)
-                }
+                viewModelScope.launch { uploadImage(event.uri, event.callback) }
+            }
+
+            is UiEvent.SetImage -> {
+                val config = _uiState.value.rpcConfig
+                _uiState.value = _uiState.value.copy(rpcConfig = if (event.large)
+                    config.copy(largeImg = event.image) else config.copy(smallImg = event.image))
             }
 
             UiEvent.SheetEvent.TriggerStoragePermissionRequest -> {

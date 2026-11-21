@@ -34,4 +34,12 @@ data class ReadyUser(
     val bio: String? = null,
     @SerialName("premium_type")
     val premiumType: Int? = null,
+    @SerialName("username")
+    val username: String? = null,
+    @SerialName("global_name")
+    val globalName: String? = null,
+    @SerialName("avatar")
+    val avatar: String? = null,
+    @SerialName("discriminator")
+    val discriminator: String? = null,
 )

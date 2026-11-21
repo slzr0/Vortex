@@ -131,14 +131,16 @@ private fun getFileExtension(context: Context, uri: Uri): String? =
     }
 
 fun Context.uriToFile(uri: Uri): File {
-    val file = File(cacheDir,getFileName(uri))
-    val inputStream = contentResolver.openInputStream(uri)
-    inputStream?.use { input ->
-        file.outputStream().use { out ->
-            input.copyTo(out)
-        }
+    val extension = getFileExtension(this, uri)?.takeIf { it.matches(Regex("[A-Za-z0-9]+")) } ?: "tmp"
+    val file = File.createTempFile("vortex-upload-", ".$extension", cacheDir)
+    try {
+        val input = contentResolver.openInputStream(uri) ?: throw java.io.IOException("Unable to open image")
+        input.use { source -> file.outputStream().use { destination -> source.copyTo(destination) } }
+        return file
+    } catch (e: Exception) {
+        file.delete()
+        throw e
     }
-    return file
 }
 
 fun Context.shareAsFile(content: String?, fileName: String) {

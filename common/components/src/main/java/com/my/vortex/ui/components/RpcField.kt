@@ -22,6 +22,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -48,7 +49,7 @@ fun RpcField(
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 6.dp)
     ) {
-        OutlinedTextField(shape = RoundedCornerShape(16.dp), modifier = Modifier
+        OutlinedTextField(shape = RoundedCornerShape(18.dp), modifier = Modifier
             .fillMaxWidth(),
             value = value,
             onValueChange = {
@@ -57,6 +58,11 @@ fun RpcField(
             enabled = enabled,
             label = { Text(stringResource(id = label)) },
             keyboardOptions = keyboardOptions,
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.32f),
+                unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.32f),
+                unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
+            ),
             trailingIcon = trailingIcon,
             isError = isError
         )
