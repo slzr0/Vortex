@@ -244,6 +244,7 @@ internal fun PermissionScreen(enabled: Boolean, asked: Boolean, usageEnabled: Bo
 internal fun SignInScreen(onToken: (String) -> Boolean) {
     var showLogin by remember { mutableStateOf(false) }
     var verifying by remember { mutableStateOf(false) }
+    var clearing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf(false) }
     var webError by remember { mutableStateOf(false) }
     var webProgress by remember { mutableIntStateOf(0) }
@@ -263,13 +264,19 @@ internal fun SignInScreen(onToken: (String) -> Boolean) {
         }
         if (error) {
             Text("Couldn’t verify or save your session. Check your connection, then try again.", color = Color(0xFFFFB6AD), fontSize = 13.sp, lineHeight = 20.sp)
-            SecondaryAction("Clear Discord web session", {
-                CookieManager.getInstance().removeAllCookies { CookieManager.getInstance().flush() }
+            if (!clearing) SecondaryAction("Clear Discord web session", {
+                clearing = true
                 WebStorage.getInstance().deleteAllData()
-                error = false
+                CookieManager.getInstance().removeAllCookies {
+                    CookieManager.getInstance().flush()
+                    clearing = false
+                    error = false
+                }
             })
         }
-        if (verifying) {
+        if (clearing) {
+            Text("Clearing Discord web session…", color = Subtle, fontSize = 14.sp)
+        } else if (verifying) {
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 CircularProgressIndicator(Modifier.size(20.dp), color = Accent, strokeWidth = 2.dp)
                 Text("Checking your session with Discord…", color = Subtle, fontSize = 14.sp)
